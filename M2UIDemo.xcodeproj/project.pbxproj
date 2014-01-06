@@ -39,6 +39,11 @@
 		99BA20091859DE4B00EF5A74 /* help_phone3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99BA20051859DE4B00EF5A74 /* help_phone3.jpg */; };
 		99D27C1D1855AE8000513BA9 /* refresh_blue_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D27C1B1855AE8000513BA9 /* refresh_blue_arrow.png */; };
 		99D27C1E1855AE8000513BA9 /* refresh_blue_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */; };
+		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
+		99E06E72187A501E0037ED3D /* MTVCRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E71187A501E0037ED3D /* MTVCRootView.m */; };
+		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */; };
+		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
+		99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E7D187A86660037ED3D /* MRVCSubViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +106,15 @@
 		99BA20051859DE4B00EF5A74 /* help_phone3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help_phone3.jpg; sourceTree = "<group>"; };
 		99D27C1B1855AE8000513BA9 /* refresh_blue_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_blue_arrow.png; sourceTree = "<group>"; };
 		99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_blue_arrow@2x.png"; sourceTree = "<group>"; };
+		99E06E6D187A4FFB0037ED3D /* MTVCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVCRootViewController.h; sourceTree = "<group>"; };
+		99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVCRootViewController.m; sourceTree = "<group>"; };
+		99E06E70187A501E0037ED3D /* MTVCRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVCRootView.h; sourceTree = "<group>"; };
+		99E06E71187A501E0037ED3D /* MTVCRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVCRootView.m; sourceTree = "<group>"; };
+		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView.h; sourceTree = "<group>"; };
+		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView.m; sourceTree = "<group>"; };
+		99E06E78187A5E230037ED3D /* white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_rect@2x.png"; sourceTree = "<group>"; };
+		99E06E7C187A86660037ED3D /* MRVCSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRVCSubViewController.h; sourceTree = "<group>"; };
+		99E06E7D187A86660037ED3D /* MRVCSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRVCSubViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,10 +244,12 @@
 			isa = PBXGroup;
 			children = (
 				997B40FC1856B95600931A53 /* CoreUIKit */,
+				99E06E7A187A61160037ED3D /* CommonUIKit */,
 				995F3ADB184C30F4005F349B /* 数据加载 */,
 				99B626E11856B6120081DF4D /* 提示框 */,
 				99BA1FFA1859DA2100EF5A74 /* 启动帮助 */,
 				995E3FAA1862ECF100A46778 /* UITableView */,
+				99E06E6B187A4F540037ED3D /* Tabbar切换view */,
 				995F3AD8184C2DC2005F349B /* RootViewController.h */,
 				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 			);
@@ -334,6 +350,7 @@
 		99D27C191855AE2000513BA9 /* iamges */ = {
 			isa = PBXGroup;
 			children = (
+				99E06E77187A5E230037ED3D /* common */,
 				99BA20011859DE4B00EF5A74 /* help */,
 				99D27C1A1855AE8000513BA9 /* refresh */,
 				995E3FB21862F8C100A46778 /* table */,
@@ -348,6 +365,44 @@
 				99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */,
 			);
 			path = refresh;
+			sourceTree = "<group>";
+		};
+		99E06E6B187A4F540037ED3D /* Tabbar切换view */ = {
+			isa = PBXGroup;
+			children = (
+				99E06E6C187A4F960037ED3D /* 子viewController */,
+			);
+			name = "Tabbar切换view";
+			sourceTree = "<group>";
+		};
+		99E06E6C187A4F960037ED3D /* 子viewController */ = {
+			isa = PBXGroup;
+			children = (
+				99E06E6D187A4FFB0037ED3D /* MTVCRootViewController.h */,
+				99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */,
+				99E06E70187A501E0037ED3D /* MTVCRootView.h */,
+				99E06E71187A501E0037ED3D /* MTVCRootView.m */,
+				99E06E7C187A86660037ED3D /* MRVCSubViewController.h */,
+				99E06E7D187A86660037ED3D /* MRVCSubViewController.m */,
+			);
+			name = "子viewController";
+			sourceTree = "<group>";
+		};
+		99E06E77187A5E230037ED3D /* common */ = {
+			isa = PBXGroup;
+			children = (
+				99E06E78187A5E230037ED3D /* white_rect@2x.png */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		99E06E7A187A61160037ED3D /* CommonUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */,
+				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */,
+			);
+			name = CommonUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +482,7 @@
 			files = (
 				995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */,
 				99BA20081859DE4B00EF5A74 /* help_phone2.jpg in Resources */,
+				99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */,
 				995F3AB1184C2D59005F349B /* InfoPlist.strings in Resources */,
 				99BA20061859DE4B00EF5A74 /* help_phone0.jpg in Resources */,
 				99BA20091859DE4B00EF5A74 /* help_phone3.jpg in Resources */,
@@ -452,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */,
 				995F3AE2184C3350005F349B /* M2BaseRefreshView.m in Sources */,
 				997B41991857386000931A53 /* M2StatusBarToast.m in Sources */,
 				99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */,
@@ -459,10 +516,13 @@
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
 				99BA1FFD1859DA4200EF5A74 /* LaunchHelpViewController.m in Sources */,
+				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */,
 				995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */,
 				99BA20001859DA4F00EF5A74 /* M2HelpView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
+				99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */,
+				99E06E72187A501E0037ED3D /* MTVCRootView.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,
 				997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */,
