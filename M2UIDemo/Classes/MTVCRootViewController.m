@@ -8,19 +8,27 @@
 
 #import "MTVCRootViewController.h"
 #import "M2MultiRowTabbarView.h"
+#import "MRVCSubViewController.h"
 
-@interface MTVCRootViewController ()<M2MultiRowTabbarViewDelegate>
+#define MTVCRVC_SubViewControllerCount 3
 
+@interface MTVCRootViewController ()<M2MultiRowTabbarViewDelegate>{
+    NSMutableArray *_subViewControllers;
+}
+@property (nonatomic) M2MultiRowTabbarView *tabbarView;
+@property (nonatomic) int lastIndex;
 @end
 
 @implementation MTVCRootViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
         // Custom initialization
+        _subViewControllers = [NSMutableArray array];
     }
+    
     return self;
 }
 
@@ -32,17 +40,34 @@
     CGRect frame = [UIScreen mainScreen].bounds;
     
     // tabbar
-    M2MultiRowTabbarView *tabbarView = [[M2MultiRowTabbarView alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(frame), 100)
-                                                                         titles:[self numberTitlesWithCount:3]
+    _tabbarView = [[M2MultiRowTabbarView alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(frame), 100)
+                                                                         titles:[self numberTitlesWithCount:MTVCRVC_SubViewControllerCount]
                                                                  itemCountInRow:2];
-    tabbarView.delegate = self;
-    tabbarView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:tabbarView];
+    _tabbarView.delegate = self;
+    _tabbarView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:_tabbarView];
     
     // content
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(tabbarView.frame) + 10, CGRectGetWidth(frame), CGRectGetHeight(frame) - 64 -CGRectGetMaxY(tabbarView.frame) - 10 - 10)];
-    contentView.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:contentView];
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_tabbarView.frame) + 10, CGRectGetWidth(frame), CGRectGetHeight(frame) - 64 -CGRectGetMaxY(_tabbarView.frame) - 10 - 10)];
+    containerView.backgroundColor = [UIColor lightGrayColor];
+    containerView.clipsToBounds = YES;
+    [self.view addSubview:containerView];
+    
+    // build sub viewControllers
+    MRVCSubViewController *subViewController = nil;
+    for (int i = 0; i < MTVCRVC_SubViewControllerCount; i++) {
+        subViewController = [MRVCSubViewController new];
+        subViewController.subTitle = [NSString stringWithFormat:@"SubViewController(%d)", i];
+        subViewController.view.backgroundColor = randomColor;
+        [_subViewControllers addObject:subViewController];
+    }
+    
+    // manage sub viewControllers
+    subViewController = [_subViewControllers objectAtIndex:0];
+    [self addChildViewController:subViewController];
+    [containerView addSubview:subViewController.view];
+    [subViewController didMoveToParentViewController:self];
+    _lastIndex = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,6 +79,51 @@
 #pragma mark - M2MultiRowTabbarViewDelegate
 - (void)onTapItemWithIndex:(int)index inView:(M2MultiRowTabbarView*)view{
     NSLog(@"tapIndex(%d)  @@%s", index, __func__);
+    if (index == _lastIndex) {
+        // 有的需求可能刷新当前界面，类似下面代码；本示例只简单忽略；
+        // MRVCSubViewController *subViewController = [_subViewControllers objectAtIndex:_lastIndex];
+        // [subViewController reloadData];
+        return;
+    }
+    _tabbarView.userInteractionEnabled = NO;
+    MRVCSubViewController *fromViewController = [_subViewControllers objectAtIndex:_lastIndex];
+    MRVCSubViewController *toViewController = [_subViewControllers objectAtIndex:index];
+    [fromViewController willMoveToParentViewController:nil];
+    [self addChildViewController:toViewController];
+    
+    // 无动画
+    __weak MTVCRootViewController *weakSelf = self;
+    [self transitionFromViewController:fromViewController
+                      toViewController:toViewController
+                              duration:0
+                               options:UIViewAnimationOptionTransitionNone
+                            animations:nil
+                            completion:^(BOOL finished) {//TODO:一直有个疑问，动画的block示例中为什么从来不用__block、__weak等
+                                [fromViewController removeFromParentViewController];
+                                [toViewController didMoveToParentViewController:self];
+                                weakSelf.lastIndex = index;
+                                weakSelf.tabbarView.userInteractionEnabled = YES;
+                            }];
+    
+    // 自己写动画的效果
+//    BOOL isToLeft = index > _lastIndex;
+//    CGRect frame = fromViewController.view.frame;
+//    toViewController.view.frame = CGRectMake(CGRectGetWidth(frame) * (isToLeft ? 1 : -1), CGRectGetMinY(frame), CGRectGetWidth(frame), CGRectGetHeight(frame));
+//    __weak MTVCRootViewController *weakSelf = self;
+//    [self transitionFromViewController:fromViewController
+//                      toViewController:toViewController
+//                              duration:0.25
+//                               options:UIViewAnimationOptionTransitionNone
+//                            animations:^{
+//                                fromViewController.view.frame = CGRectMake(CGRectGetWidth(frame)  * (isToLeft ? -1 : 1), CGRectGetMinY(frame), CGRectGetWidth(frame), CGRectGetHeight(frame));
+//                                toViewController.view.frame = frame;
+//                            }
+//                            completion:^(BOOL finished) {
+//                                [fromViewController removeFromParentViewController];
+//                                [toViewController didMoveToParentViewController:self];
+//                                weakSelf.lastIndex = index;
+//                                weakSelf.tabbarView.userInteractionEnabled = YES;
+//                            }];
 }
 
 #pragma mark - tools

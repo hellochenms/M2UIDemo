@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MRVCSubOneViewController : UIViewController
-
+@interface MRVCSubViewController : UIViewController
+@property (nonatomic, copy) NSString *subTitle;
 @end
