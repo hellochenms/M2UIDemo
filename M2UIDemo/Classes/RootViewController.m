@@ -27,7 +27,8 @@
         _sections = @[@"数据加载",
                       @"提示框",
                       @"启动帮助",
-                      @"UITableView"];
+                      @"UITableView",
+                      @"Tabbar切换View"];
         _rows = @[
                   @[
                       @[@"下拉刷新", @"PullDownRefreshViewController"],
@@ -41,6 +42,9 @@
                       ],
                   @[
                       @[@"测试性能", @"TestTableViewController"]
+                      ],
+                  @[
+                      @[@"子ViewController", @"MTVCRootViewController"]
                       ]
                   ];
     }

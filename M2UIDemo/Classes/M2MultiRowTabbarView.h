@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTMultiRowTabbarView : UIView
+#define M2MRTV_Default_ItemCountInRow 3
 
+@protocol M2MultiRowTabbarViewDelegate;
+
+@interface M2MultiRowTabbarView : UIView
+- (id)initWithFrame:(CGRect)frame
+             titles:(NSArray*)titles
+     itemCountInRow:(int)itemCountInRow;
+@property (nonatomic, weak) id<M2MultiRowTabbarViewDelegate> delegate;
+@end
+
+@protocol M2MultiRowTabbarViewDelegate <NSObject>
+- (void)onTapItemWithIndex:(int)index inView:(M2MultiRowTabbarView*)view;
 @end
