@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */; };
+		990C2617187AA0C500B3E45A /* M2ShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */; };
+		990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2619187AA34000B3E45A /* MShowFullInfoView.m */; };
 		995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FAC1862ED9000A46778 /* TestTableViewController.m */; };
 		995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FB01862F48700A46778 /* TestCustomCell.m */; };
 		995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 995E3FB31862F8C100A46778 /* 163_icon@2x.png */; };
@@ -57,6 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		990C2612187AA0A900B3E45A /* MShowFullInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MShowFullInfoViewController.h; sourceTree = "<group>"; };
+		990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MShowFullInfoViewController.m; sourceTree = "<group>"; };
+		990C2615187AA0C500B3E45A /* M2ShowFullInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFullInfoView.h; sourceTree = "<group>"; };
+		990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFullInfoView.m; sourceTree = "<group>"; };
+		990C2618187AA34000B3E45A /* MShowFullInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MShowFullInfoView.h; sourceTree = "<group>"; };
+		990C2619187AA34000B3E45A /* MShowFullInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MShowFullInfoView.m; sourceTree = "<group>"; };
 		995E3FAB1862ED9000A46778 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
 		995E3FAC1862ED9000A46778 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		995E3FAF1862F48700A46778 /* TestCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomCell.h; sourceTree = "<group>"; };
@@ -141,6 +150,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		990C2610187A9C6400B3E45A /* App详情页常用控件 */ = {
+			isa = PBXGroup;
+			children = (
+				990C2611187A9C8500B3E45A /* 可展开的详细信息 */,
+			);
+			name = "App详情页常用控件";
+			sourceTree = "<group>";
+		};
+		990C2611187A9C8500B3E45A /* 可展开的详细信息 */ = {
+			isa = PBXGroup;
+			children = (
+				990C2612187AA0A900B3E45A /* MShowFullInfoViewController.h */,
+				990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */,
+				990C2618187AA34000B3E45A /* MShowFullInfoView.h */,
+				990C2619187AA34000B3E45A /* MShowFullInfoView.m */,
+				990C2615187AA0C500B3E45A /* M2ShowFullInfoView.h */,
+				990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */,
+			);
+			name = "可展开的详细信息";
+			sourceTree = "<group>";
+		};
 		995E3FAA1862ECF100A46778 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,13 +273,14 @@
 		995F3AD5184C2D96005F349B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				997B40FC1856B95600931A53 /* CoreUIKit */,
-				99E06E7A187A61160037ED3D /* CommonUIKit */,
+				997B40FC1856B95600931A53 /* M2CoreUIKit */,
+				99E06E7A187A61160037ED3D /* M2CommonUIKit */,
 				995F3ADB184C30F4005F349B /* 数据加载 */,
 				99B626E11856B6120081DF4D /* 提示框 */,
 				99BA1FFA1859DA2100EF5A74 /* 启动帮助 */,
 				995E3FAA1862ECF100A46778 /* UITableView */,
 				99E06E6B187A4F540037ED3D /* Tabbar切换view */,
+				990C2610187A9C6400B3E45A /* App详情页常用控件 */,
 				995F3AD8184C2DC2005F349B /* RootViewController.h */,
 				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 			);
@@ -275,7 +306,7 @@
 			name = "下拉刷新";
 			sourceTree = "<group>";
 		};
-		997B40FC1856B95600931A53 /* CoreUIKit */ = {
+		997B40FC1856B95600931A53 /* M2CoreUIKit */ = {
 			isa = PBXGroup;
 			children = (
 				997B41001856B9EB00931A53 /* M2NavigationController.h */,
@@ -283,7 +314,7 @@
 				997B40FD1856B99D00931A53 /* M2ViewController.h */,
 				997B40FE1856B99D00931A53 /* M2ViewController.m */,
 			);
-			name = CoreUIKit;
+			name = M2CoreUIKit;
 			sourceTree = "<group>";
 		};
 		99B626E11856B6120081DF4D /* 提示框 */ = {
@@ -396,13 +427,13 @@
 			path = common;
 			sourceTree = "<group>";
 		};
-		99E06E7A187A61160037ED3D /* CommonUIKit */ = {
+		99E06E7A187A61160037ED3D /* M2CommonUIKit */ = {
 			isa = PBXGroup;
 			children = (
 				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */,
 				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */,
 			);
-			name = CommonUIKit;
+			name = M2CommonUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +543,7 @@
 				995F3AE2184C3350005F349B /* M2BaseRefreshView.m in Sources */,
 				997B41991857386000931A53 /* M2StatusBarToast.m in Sources */,
 				99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */,
+				990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */,
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
@@ -519,6 +551,7 @@
 				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */,
 				995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */,
 				99BA20001859DA4F00EF5A74 /* M2HelpView.m in Sources */,
+				990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
 				99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */,
@@ -526,6 +559,7 @@
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,
 				997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */,
+				990C2617187AA0C500B3E45A /* M2ShowFullInfoView.m in Sources */,
 				995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

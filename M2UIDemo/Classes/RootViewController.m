@@ -28,7 +28,8 @@
                       @"提示框",
                       @"启动帮助",
                       @"UITableView",
-                      @"Tabbar切换View"];
+                      @"Tabbar切换View",
+                      @"App详情页常用控件"];
         _rows = @[
                   @[
                       @[@"下拉刷新", @"PullDownRefreshViewController"],
@@ -45,6 +46,9 @@
                       ],
                   @[
                       @[@"子ViewController", @"MTVCRootViewController"]
+                      ],
+                  @[
+                      @[@"可展开的详细信息", @"MShowFullInfoViewController"]
                       ]
                   ];
     }
