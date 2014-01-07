@@ -165,8 +165,6 @@
 				990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */,
 				990C2618187AA34000B3E45A /* MShowFullInfoView.h */,
 				990C2619187AA34000B3E45A /* MShowFullInfoView.m */,
-				990C2615187AA0C500B3E45A /* M2ShowFullInfoView.h */,
-				990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */,
 			);
 			name = "可展开的详细信息";
 			sourceTree = "<group>";
@@ -432,6 +430,8 @@
 			children = (
 				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */,
 				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */,
+				990C2615187AA0C500B3E45A /* M2ShowFullInfoView.h */,
+				990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */,
 			);
 			name = M2CommonUIKit;
 			sourceTree = "<group>";

@@ -14,8 +14,9 @@
 @property (nonatomic, readonly) UILabel *titleLabel;
 @property (nonatomic, readonly) UILabel *infoLabel;
 @property (nonatomic, readonly) UIButton *showFullInfoButton;
-@property (nonatomic) float maxHeight;
+@property (nonatomic) int maxNumberOfLinesWhenNotOpenning;
 @property (nonatomic, weak) id<M2ShowFullInfoViewDelegate> delegate;
++ (float)defaultHeight;
 - (void)reloadData:(NSString*)info;
 @end
 
