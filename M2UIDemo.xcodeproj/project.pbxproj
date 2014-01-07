@@ -10,6 +10,9 @@
 		990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */; };
 		990C2617187AA0C500B3E45A /* M2ShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */; };
 		990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2619187AA34000B3E45A /* MShowFullInfoView.m */; };
+		990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C261D187BACDC00B3E45A /* _tempTestViewController.m */; };
+		990C2621187BAD7600B3E45A /* image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990C2620187BAD7600B3E45A /* image@2x.png */; };
+		990C2626187BB11D00B3E45A /* MResizableImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2625187BB11D00B3E45A /* MResizableImageViewController.m */; };
 		995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FAC1862ED9000A46778 /* TestTableViewController.m */; };
 		995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FB01862F48700A46778 /* TestCustomCell.m */; };
 		995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 995E3FB31862F8C100A46778 /* 163_icon@2x.png */; };
@@ -66,6 +69,11 @@
 		990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFullInfoView.m; sourceTree = "<group>"; };
 		990C2618187AA34000B3E45A /* MShowFullInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MShowFullInfoView.h; sourceTree = "<group>"; };
 		990C2619187AA34000B3E45A /* MShowFullInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MShowFullInfoView.m; sourceTree = "<group>"; };
+		990C261C187BACDC00B3E45A /* _tempTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _tempTestViewController.h; sourceTree = "<group>"; };
+		990C261D187BACDC00B3E45A /* _tempTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _tempTestViewController.m; sourceTree = "<group>"; };
+		990C2620187BAD7600B3E45A /* image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image@2x.png"; path = "../_temp/image@2x.png"; sourceTree = "<group>"; };
+		990C2624187BB11D00B3E45A /* MResizableImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MResizableImageViewController.h; sourceTree = "<group>"; };
+		990C2625187BB11D00B3E45A /* MResizableImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MResizableImageViewController.m; sourceTree = "<group>"; };
 		995E3FAB1862ED9000A46778 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
 		995E3FAC1862ED9000A46778 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		995E3FAF1862F48700A46778 /* TestCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomCell.h; sourceTree = "<group>"; };
@@ -167,6 +175,39 @@
 				990C2619187AA34000B3E45A /* MShowFullInfoView.m */,
 			);
 			name = "可展开的详细信息";
+			sourceTree = "<group>";
+		};
+		990C261B187BACBF00B3E45A /* _临时测试 */ = {
+			isa = PBXGroup;
+			children = (
+				990C261C187BACDC00B3E45A /* _tempTestViewController.h */,
+				990C261D187BACDC00B3E45A /* _tempTestViewController.m */,
+			);
+			name = "_临时测试";
+			sourceTree = "<group>";
+		};
+		990C261F187BAD7600B3E45A /* _temp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = _temp;
+			sourceTree = "<group>";
+		};
+		990C2622187BB0BF00B3E45A /* 平铺拉伸图片 */ = {
+			isa = PBXGroup;
+			children = (
+				990C2623187BB0D100B3E45A /* 平铺拉伸图片 */,
+			);
+			name = "平铺拉伸图片";
+			sourceTree = "<group>";
+		};
+		990C2623187BB0D100B3E45A /* 平铺拉伸图片 */ = {
+			isa = PBXGroup;
+			children = (
+				990C2624187BB11D00B3E45A /* MResizableImageViewController.h */,
+				990C2625187BB11D00B3E45A /* MResizableImageViewController.m */,
+			);
+			name = "平铺拉伸图片";
 			sourceTree = "<group>";
 		};
 		995E3FAA1862ECF100A46778 /* UITableView */ = {
@@ -271,6 +312,7 @@
 		995F3AD5184C2D96005F349B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				990C261B187BACBF00B3E45A /* _临时测试 */,
 				997B40FC1856B95600931A53 /* M2CoreUIKit */,
 				99E06E7A187A61160037ED3D /* M2CommonUIKit */,
 				995F3ADB184C30F4005F349B /* 数据加载 */,
@@ -279,6 +321,7 @@
 				995E3FAA1862ECF100A46778 /* UITableView */,
 				99E06E6B187A4F540037ED3D /* Tabbar切换view */,
 				990C2610187A9C6400B3E45A /* App详情页常用控件 */,
+				990C2622187BB0BF00B3E45A /* 平铺拉伸图片 */,
 				995F3AD8184C2DC2005F349B /* RootViewController.h */,
 				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 			);
@@ -383,6 +426,7 @@
 				99BA20011859DE4B00EF5A74 /* help */,
 				99D27C1A1855AE8000513BA9 /* refresh */,
 				995E3FB21862F8C100A46778 /* table */,
+				990C261F187BAD7600B3E45A /* _temp */,
 			);
 			path = iamges;
 			sourceTree = "<group>";
@@ -420,6 +464,7 @@
 		99E06E77187A5E230037ED3D /* common */ = {
 			isa = PBXGroup;
 			children = (
+				990C2620187BAD7600B3E45A /* image@2x.png */,
 				99E06E78187A5E230037ED3D /* white_rect@2x.png */,
 			);
 			path = common;
@@ -521,6 +566,7 @@
 				99D27C1E1855AE8000513BA9 /* refresh_blue_arrow@2x.png in Resources */,
 				995F3AB9184C2D59005F349B /* Images.xcassets in Resources */,
 				99BA20071859DE4B00EF5A74 /* help_phone1.jpg in Resources */,
+				990C2621187BAD7600B3E45A /* image@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +592,7 @@
 				990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */,
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
+				990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
 				99BA1FFD1859DA4200EF5A74 /* LaunchHelpViewController.m in Sources */,
 				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */,
@@ -556,6 +603,7 @@
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
 				99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */,
 				99E06E72187A501E0037ED3D /* MTVCRootView.m in Sources */,
+				990C2626187BB11D00B3E45A /* MResizableImageViewController.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,
 				997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */,

@@ -30,7 +30,8 @@
                       @"启动帮助",
                       @"UITableView",
                       @"Tabbar切换View",
-                      @"App详情页常用控件"];
+                      @"App详情页常用控件",
+                      @"平铺拉伸图片"];
         _rows = @[
                   @[
                       @[@"_临时测试", @"_tempTestViewController"]
@@ -53,6 +54,9 @@
                       ],
                   @[
                       @[@"可展开的详细信息", @"MShowFullInfoViewController"]
+                      ],
+                  @[
+                      @[@"平铺拉伸图片", @"MResizableImageViewController"]
                       ]
                   ];
     }

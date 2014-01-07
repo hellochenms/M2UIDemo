@@ -27,6 +27,37 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIImage *originImage = [UIImage imageNamed:@"_temp1"];
+    UIImage *image = nil;
+    UIImageView *imageView = nil;
+    
+    // 默认:直接拉伸
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 300, 90)];
+    imageView.backgroundColor = [UIColor blackColor];
+    imageView.image = originImage;
+    [self.view addSubview:imageView];
+    
+    // 居中：设置imageViewcontentMode
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(imageView.frame) + 5, 300, 90)];
+    imageView.backgroundColor = [UIColor blackColor];
+    imageView.contentMode = UIViewContentModeCenter;
+    imageView.image = originImage;
+    [self.view addSubview:imageView];
+    
+    // 平铺
+    image = [originImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(imageView.frame) + 5, 300, 90)];
+    imageView.backgroundColor = [UIColor blackColor];
+    imageView.image = image;
+    [self.view addSubview:imageView];
+    
+    // 局部拉伸
+    image = [originImage resizableImageWithCapInsets:UIEdgeInsetsMake(14.5, 14.5, 14.5, 14.5)];// 其实也是平铺，平铺了中间的点
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(imageView.frame) + 5, 300, 90)];
+    imageView.backgroundColor = [UIColor blackColor];
+    imageView.image = image;
+    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning
