@@ -24,7 +24,8 @@
     self = [super init];
     if (self) {
         // Custom initialization
-        _sections = @[@"数据加载",
+        _sections = @[@"_临时测试",
+                      @"数据加载",
                       @"提示框",
                       @"启动帮助",
                       @"UITableView",
@@ -32,7 +33,10 @@
                       @"App详情页常用控件"];
         _rows = @[
                   @[
-                      @[@"下拉刷新", @"PullDownRefreshViewController"],
+                      @[@"_临时测试", @"_tempTestViewController"]
+                      ],
+                  @[
+                      @[@"下拉刷新", @"PullDownRefreshViewController"]
                       ],
                   @[
                       @[@"屏幕中央", @"CenterToastViewController"],
