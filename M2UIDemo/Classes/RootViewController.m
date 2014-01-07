@@ -31,7 +31,8 @@
                       @"UITableView",
                       @"Tabbar切换View",
                       @"App详情页常用控件",
-                      @"平铺拉伸图片"];
+                      @"平铺拉伸图片",
+                      @"瀑布流"];
         _rows = @[
                   @[
                       @[@"_临时测试", @"_tempTestViewController"]
@@ -57,6 +58,9 @@
                       ],
                   @[
                       @[@"平铺拉伸图片", @"MResizableImageViewController"]
+                      ],
+                  @[
+                      @[@"个人设计", @"MWaterFallMeViewController"]
                       ]
                   ];
     }
