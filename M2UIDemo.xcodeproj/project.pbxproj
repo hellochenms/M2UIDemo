@@ -11,8 +11,11 @@
 		990C2617187AA0C500B3E45A /* M2ShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */; };
 		990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2619187AA34000B3E45A /* MShowFullInfoView.m */; };
 		990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C261D187BACDC00B3E45A /* _tempTestViewController.m */; };
-		990C2621187BAD7600B3E45A /* image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990C2620187BAD7600B3E45A /* image@2x.png */; };
+		990C2621187BAD7600B3E45A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990C2620187BAD7600B3E45A /* icon@2x.png */; };
 		990C2626187BB11D00B3E45A /* MResizableImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2625187BB11D00B3E45A /* MResizableImageViewController.m */; };
+		990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C264D187BDBC000B3E45A /* MWaterFallMeViewController.m */; };
+		990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2650187BDC2100B3E45A /* M2WaterFallView.m */; };
+		990C2655187BDE3400B3E45A /* chinadragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990C2654187BDE3400B3E45A /* chinadragon@2x.png */; };
 		995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FAC1862ED9000A46778 /* TestTableViewController.m */; };
 		995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FB01862F48700A46778 /* TestCustomCell.m */; };
 		995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 995E3FB31862F8C100A46778 /* 163_icon@2x.png */; };
@@ -71,9 +74,14 @@
 		990C2619187AA34000B3E45A /* MShowFullInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MShowFullInfoView.m; sourceTree = "<group>"; };
 		990C261C187BACDC00B3E45A /* _tempTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _tempTestViewController.h; sourceTree = "<group>"; };
 		990C261D187BACDC00B3E45A /* _tempTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _tempTestViewController.m; sourceTree = "<group>"; };
-		990C2620187BAD7600B3E45A /* image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image@2x.png"; path = "../_temp/image@2x.png"; sourceTree = "<group>"; };
+		990C2620187BAD7600B3E45A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../_temp/icon@2x.png"; sourceTree = "<group>"; };
 		990C2624187BB11D00B3E45A /* MResizableImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MResizableImageViewController.h; sourceTree = "<group>"; };
 		990C2625187BB11D00B3E45A /* MResizableImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MResizableImageViewController.m; sourceTree = "<group>"; };
+		990C264C187BDBC000B3E45A /* MWaterFallMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWaterFallMeViewController.h; sourceTree = "<group>"; };
+		990C264D187BDBC000B3E45A /* MWaterFallMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWaterFallMeViewController.m; sourceTree = "<group>"; };
+		990C264F187BDC2100B3E45A /* M2WaterFallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2WaterFallView.h; sourceTree = "<group>"; };
+		990C2650187BDC2100B3E45A /* M2WaterFallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2WaterFallView.m; sourceTree = "<group>"; };
+		990C2654187BDE3400B3E45A /* chinadragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chinadragon@2x.png"; sourceTree = "<group>"; };
 		995E3FAB1862ED9000A46778 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
 		995E3FAC1862ED9000A46778 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		995E3FAF1862F48700A46778 /* TestCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomCell.h; sourceTree = "<group>"; };
@@ -210,6 +218,34 @@
 			name = "平铺拉伸图片";
 			sourceTree = "<group>";
 		};
+		990C2647187BDB0A00B3E45A /* 瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				990C2648187BDB1300B3E45A /* 个人设计 */,
+			);
+			name = "瀑布流";
+			sourceTree = "<group>";
+		};
+		990C2648187BDB1300B3E45A /* 个人设计 */ = {
+			isa = PBXGroup;
+			children = (
+				990C264C187BDBC000B3E45A /* MWaterFallMeViewController.h */,
+				990C264D187BDBC000B3E45A /* MWaterFallMeViewController.m */,
+				990C264F187BDC2100B3E45A /* M2WaterFallView.h */,
+				990C2650187BDC2100B3E45A /* M2WaterFallView.m */,
+			);
+			name = "个人设计";
+			sourceTree = "<group>";
+		};
+		990C2653187BDC6C00B3E45A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				990C2654187BDE3400B3E45A /* chinadragon@2x.png */,
+				990C2620187BAD7600B3E45A /* icon@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		995E3FAA1862ECF100A46778 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +358,7 @@
 				99E06E6B187A4F540037ED3D /* Tabbar切换view */,
 				990C2610187A9C6400B3E45A /* App详情页常用控件 */,
 				990C2622187BB0BF00B3E45A /* 平铺拉伸图片 */,
+				990C2647187BDB0A00B3E45A /* 瀑布流 */,
 				995F3AD8184C2DC2005F349B /* RootViewController.h */,
 				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 			);
@@ -422,6 +459,7 @@
 		99D27C191855AE2000513BA9 /* iamges */ = {
 			isa = PBXGroup;
 			children = (
+				990C2653187BDC6C00B3E45A /* images */,
 				99E06E77187A5E230037ED3D /* common */,
 				99BA20011859DE4B00EF5A74 /* help */,
 				99D27C1A1855AE8000513BA9 /* refresh */,
@@ -464,7 +502,6 @@
 		99E06E77187A5E230037ED3D /* common */ = {
 			isa = PBXGroup;
 			children = (
-				990C2620187BAD7600B3E45A /* image@2x.png */,
 				99E06E78187A5E230037ED3D /* white_rect@2x.png */,
 			);
 			path = common;
@@ -561,12 +598,13 @@
 				99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */,
 				995F3AB1184C2D59005F349B /* InfoPlist.strings in Resources */,
 				99BA20061859DE4B00EF5A74 /* help_phone0.jpg in Resources */,
+				990C2655187BDE3400B3E45A /* chinadragon@2x.png in Resources */,
 				99BA20091859DE4B00EF5A74 /* help_phone3.jpg in Resources */,
 				99D27C1D1855AE8000513BA9 /* refresh_blue_arrow.png in Resources */,
 				99D27C1E1855AE8000513BA9 /* refresh_blue_arrow@2x.png in Resources */,
 				995F3AB9184C2D59005F349B /* Images.xcassets in Resources */,
 				99BA20071859DE4B00EF5A74 /* help_phone1.jpg in Resources */,
-				990C2621187BAD7600B3E45A /* image@2x.png in Resources */,
+				990C2621187BAD7600B3E45A /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +637,7 @@
 				995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */,
 				99BA20001859DA4F00EF5A74 /* M2HelpView.m in Sources */,
 				990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */,
+				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
 				99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */,
@@ -609,6 +648,7 @@
 				997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */,
 				990C2617187AA0C500B3E45A /* M2ShowFullInfoView.m in Sources */,
 				995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */,
+				990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

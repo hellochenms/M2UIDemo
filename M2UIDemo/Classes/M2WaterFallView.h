@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface M2WaterFallView : UIView
+@protocol M2WaterFallViewDataSource;
+@protocol M2WaterFallViewDelegate;
 
+@interface M2WaterFallView : UIView<UITableViewDelegate>
+@property (nonatomic, weak) id<M2WaterFallViewDataSource> dataSource;
+@property (nonatomic, weak) id<M2WaterFallViewDelegate> delegate;
+- (void)reloadData;
+@end
+
+@protocol M2WaterFallViewDataSource <NSObject>
+@required
+- (NSInteger)numberOfItemsForWaterFallView:(M2WaterFallView *)waterFallView;
+- (UIView *)waterFallView:(M2WaterFallView *)waterFallView viewForIndex:(int)index;
+@end
+
+@protocol M2WaterFallViewDelegate <NSObject>
+@optional
+- (void)waterFallView:(M2WaterFallView *)waterFallView didSelectItemAtIndex:(int)index;
+- (void)waterFallView:(M2WaterFallView *)waterFallView willRemoveView:(UIView *)view forIndex:(int)index;
 @end

@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    UIImage *originImage = [UIImage imageNamed:@"_temp1"];
+    UIImage *originImage = [UIImage imageNamed:@"icon"];
     UIImage *image = nil;
     UIImageView *imageView = nil;
     
