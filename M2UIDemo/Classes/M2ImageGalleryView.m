@@ -12,8 +12,9 @@
 #define M2IGV_ItemTag           6000
 
 @interface M2ImageGalleryView(){
-    UIScrollView *_mainView;
+    UIScrollView    *_mainView;
 }
+@property (nonatomic) float             fullScreenHeight;
 @property (nonatomic) NSMutableArray    *items;
 @property (nonatomic) BOOL              isFullScreen;
 @end
@@ -25,7 +26,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        _fullScreenHeight = CGRectGetHeight(frame);
         _items = [NSMutableArray array];
+        self.clipsToBounds = YES;
         
         _mainView = [[UIScrollView alloc] initWithFrame:self.bounds];
         _mainView.showsHorizontalScrollIndicator = NO;
@@ -41,6 +44,15 @@
     return self;
 }
 
+#pragma mark - setter
+- (void)setNotFullScreenHeight:(float)aNotFullScreenHeight{
+    _notFullScreenHeight = aNotFullScreenHeight;
+    CGRect selfFrame = self.frame;
+    selfFrame.size.height = _notFullScreenHeight;
+    self.frame = selfFrame;
+}
+
+#pragma mark - public
 - (void)reloadDataWithImages:(NSArray *)images{
     // clear old
     UIView *oldContainer = nil;
@@ -90,24 +102,28 @@
         [_delegate galleryView:self willChangeIsFullScreen:_isFullScreen withAnimationDuration:M2IGV_AnimationDuration];
     }
 
-    if (!_isLandscape) {
-        return;
-    }
-
     __weak M2ImageGalleryView *weakSelf = self;
     [UIView animateWithDuration:M2IGV_AnimationDuration
                      animations:^{
-                         UIView *container = nil;
-                         UIImageView *item = nil;
-                         for (container in weakSelf.items) {
-                             item = (UIImageView *)[container viewWithTag:M2IGV_ItemTag];
-                             if (weakSelf.isFullScreen) {
-                                 CGAffineTransform transform = item.transform;
-                                 transform = CGAffineTransformTranslate(transform, 0, (CGRectGetHeight(self.bounds) - CGRectGetWidth(self.bounds)) / 2);
-                                 transform = CGAffineTransformRotate(transform, M_PI_2);
-                                 item.transform = transform;
-                             }else{
-                                 item.transform = CGAffineTransformIdentity;
+                         // self
+                         CGRect selfFrame = self.frame;
+                         selfFrame.size.height = weakSelf.isFullScreen ? weakSelf.fullScreenHeight : weakSelf.notFullScreenHeight;
+                         weakSelf.frame = selfFrame;
+                         
+                         // items
+                         if (weakSelf.isLandscape) {
+                             UIView *container = nil;
+                             UIImageView *item = nil;
+                             for (container in weakSelf.items) {
+                                 item = (UIImageView *)[container viewWithTag:M2IGV_ItemTag];
+                                 if (weakSelf.isFullScreen) {
+                                     CGAffineTransform transform = item.transform;
+                                     transform = CGAffineTransformTranslate(transform, 0, (CGRectGetHeight(self.bounds) - CGRectGetWidth(self.bounds)) / 2);
+                                     transform = CGAffineTransformRotate(transform, M_PI_2);
+                                     item.transform = transform;
+                                 }else{
+                                     item.transform = CGAffineTransformIdentity;
+                                 }
                              }
                          }
                      }];
