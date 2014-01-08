@@ -32,7 +32,8 @@
                       @"Tabbar切换View",
                       @"App详情页常用控件",
                       @"平铺拉伸图片",
-                      @"瀑布流"];
+                      @"瀑布流",
+                      @"多图联播"];
         _rows = @[
                   @[
                       @[@"_临时测试", @"_tempTestViewController"]
@@ -61,6 +62,9 @@
                       ],
                   @[
                       @[@"个人设计", @"MWaterFallMeViewController"]
+                      ],
+                  @[
+                      @[@"不循环图片联播点击全屏", @"MImageGalleryViewController"]
                       ]
                   ];
     }
