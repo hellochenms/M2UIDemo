@@ -33,7 +33,8 @@
                       @"App详情页常用控件",
                       @"平铺拉伸图片",
                       @"瀑布流",
-                      @"多图联播"];
+                      @"多图联播",
+                      @"键盘相关"];
         _rows = @[
                   @[
                       @[@"_临时测试", @"_tempTestViewController"]
@@ -65,6 +66,9 @@
                       ],
                   @[
                       @[@"不循环图片联播点击全屏", @"MImageGalleryViewController"]
+                      ],
+                  @[
+                      @[@"键盘上方的输入框", @"MKeyboardInputViewController"]
                       ]
                   ];
     }
