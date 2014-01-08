@@ -7,13 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol MKeyboardInputViewDelegate;
 
 @interface MKeyboardInputView : UIView
-@property (nonatomic, weak) id<MKeyboardInputViewDelegate> delegate;
-@end
-
-@protocol MKeyboardInputViewDelegate <NSObject>
-- (void)willBeginEditingInkeyboardInputView:(MKeyboardInputView *)keyboardInputView;
-- (void)willEndEditingInkeyboardInputView:(MKeyboardInputView *)keyboardInputView;
 @end

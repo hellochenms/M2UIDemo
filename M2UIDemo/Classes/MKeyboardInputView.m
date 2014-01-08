@@ -7,11 +7,14 @@
 //
 
 #import "MKeyboardInputView.h"
+#import "M2InputView.h"
+#import "M2Toast.h"
 
-@interface MKeyboardInputView()<UITextFieldDelegate>{
-    UITextField *_textField;
+@interface MKeyboardInputView()<M2InputViewDelegate>{
+    M2InputView *_inputView;
     UIButton    *_button;
 }
+@property (nonatomic) UIControl *coverView;
 @end
 
 @implementation MKeyboardInputView
@@ -21,20 +24,11 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor lightGrayColor];
-        
-        // Initialization code
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 5, CGRectGetWidth(frame) - 10 * 2, 50)];
-        CGRect windowFrame = [UIScreen mainScreen].bounds;
-        CGPoint point = [self convertPoint:CGPointMake(0, CGRectGetHeight(windowFrame)) fromView:[UIApplication sharedApplication].keyWindow];
-        CGRect frame = _textField.frame;
-        frame.origin.y = point.y - 10;
-        _textField.backgroundColor = [UIColor blueColor];
-        _textField.delegate = self;
-        [self addSubview:_textField];
+        self.clipsToBounds = YES;
         
         //
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
-        _button.frame = CGRectMake(10, 60, CGRectGetWidth(frame) - 10 * 2, 50);
+        _button.frame = CGRectMake(10, 10, CGRectGetWidth(frame) - 10 * 2, 50);
         _button.backgroundColor = [UIColor blueColor];
         _button.titleLabel.font = [UIFont systemFontOfSize:14];
         [_button setTitle:@"评论" forState:UIControlStateNormal];
@@ -42,33 +36,57 @@
         [self addSubview:_button];
         
         //
+        _coverView = [[UIControl alloc] initWithFrame: self.bounds];
+        _coverView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        [_coverView addTarget:self action:@selector(onTapCover) forControlEvents:UIControlEventTouchUpInside];
+        _coverView.hidden = YES;
+        [self addSubview:_coverView];
+        
+        //
+        _inputView = [[M2InputView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame), CGRectGetWidth(frame), 120)];
+        _inputView.delegate = self;
+        [self addSubview:_inputView];
     }
     return self;
 }
 
 #pragma mark -
 - (void)onTapButton{
-    if (_delegate && [_delegate respondsToSelector:@selector(willBeginEditingInkeyboardInputView:)]) {
-        [_delegate willBeginEditingInkeyboardInputView:self];
-    }
-    [_textField becomeFirstResponder];
+    [_inputView show];
+}
+- (void)onTapCover{
+    [_inputView hide];
 }
 
-#pragma mark - UITextFieldDelegate
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if (_delegate && [_delegate respondsToSelector:@selector(willBeginEditingInkeyboardInputView:)]) {
-        [_delegate willBeginEditingInkeyboardInputView:self];
+#pragma mark - M2InputViewDelegate
+- (void)inputView:(M2InputView *)inputView willChangeStateWithWillShow:(BOOL)willShow{
+    __weak MKeyboardInputView *weakSelf = self;
+    if (willShow) {
+        weakSelf.coverView.alpha = 0;
+        weakSelf.coverView.hidden = NO;
+        [UIView animateWithDuration:0.25
+                         animations:^{
+                             weakSelf.coverView.alpha = 1;
+                         }];
+    }else{
+        [UIView animateWithDuration:0.25
+                         animations:^{
+                             weakSelf.coverView.alpha = 0;
+                         }
+                         completion:^(BOOL finished) {
+                             weakSelf.coverView.hidden = YES;
+                         }];
     }
-    
+}
+- (BOOL)inputView:(M2InputView *)inputView checkText:(NSString*)text{
+    if (text.length <= 0) {
+        [M2Toast showText:@"内容不能为空"];
+        return NO;
+    }
     return YES;
 }
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    if (_delegate && [_delegate respondsToSelector:@selector(willEndEditingInkeyboardInputView:)]) {
-        [_delegate willEndEditingInkeyboardInputView:self];
-    }
-    [[UIApplication sharedApplication].keyWindow endEditing:YES];
-    
-    return YES;
+- (void)inputView:(M2InputView *)inputView submitWithText:(NSString*)text{
+    NSLog(@"submit(%@)  @@%s", text, __func__);
 }
 
 @end

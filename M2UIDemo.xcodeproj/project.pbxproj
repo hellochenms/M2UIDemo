@@ -45,6 +45,9 @@
 		9963DD26187D031700571748 /* portrait_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9963DD1E187D031700571748 /* portrait_2.jpg */; };
 		9963DD27187D031700571748 /* portrait_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9963DD1F187D031700571748 /* portrait_3.jpg */; };
 		9963DD2A187D2F5F00571748 /* MImageGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD29187D2F5F00571748 /* MImageGalleryView.m */; };
+		9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD2F187D41D200571748 /* MKeyboardInputViewController.m */; };
+		9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD32187D443A00571748 /* MKeyboardInputView.m */; };
+		9963DD4B187D55BB00571748 /* M2InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD4A187D55BB00571748 /* M2InputView.m */; };
 		997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B40FE1856B99D00931A53 /* M2ViewController.m */; };
 		997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B41011856B9EB00931A53 /* M2NavigationController.m */; };
 		997B41801857234000931A53 /* M2Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B417F1857234000931A53 /* M2Toast.m */; };
@@ -134,6 +137,12 @@
 		9963DD1F187D031700571748 /* portrait_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portrait_3.jpg; sourceTree = "<group>"; };
 		9963DD28187D2F5F00571748 /* MImageGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MImageGalleryView.h; sourceTree = "<group>"; };
 		9963DD29187D2F5F00571748 /* MImageGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MImageGalleryView.m; sourceTree = "<group>"; };
+		9963DD2E187D41D200571748 /* MKeyboardInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKeyboardInputViewController.h; sourceTree = "<group>"; };
+		9963DD2F187D41D200571748 /* MKeyboardInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKeyboardInputViewController.m; sourceTree = "<group>"; };
+		9963DD31187D443A00571748 /* MKeyboardInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKeyboardInputView.h; sourceTree = "<group>"; };
+		9963DD32187D443A00571748 /* MKeyboardInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKeyboardInputView.m; sourceTree = "<group>"; };
+		9963DD49187D55BB00571748 /* M2InputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2InputView.h; sourceTree = "<group>"; };
+		9963DD4A187D55BB00571748 /* M2InputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2InputView.m; sourceTree = "<group>"; };
 		997B40FD1856B99D00931A53 /* M2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ViewController.h; sourceTree = "<group>"; };
 		997B40FE1856B99D00931A53 /* M2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ViewController.m; sourceTree = "<group>"; };
 		997B41001856B9EB00931A53 /* M2NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2NavigationController.h; sourceTree = "<group>"; };
@@ -206,6 +215,8 @@
 				990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */,
 				990C2618187AA34000B3E45A /* MShowFullInfoView.h */,
 				990C2619187AA34000B3E45A /* MShowFullInfoView.m */,
+				990C2615187AA0C500B3E45A /* M2ShowFullInfoView.h */,
+				990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */,
 			);
 			name = "可展开的详细信息";
 			sourceTree = "<group>";
@@ -375,7 +386,6 @@
 			children = (
 				990C261B187BACBF00B3E45A /* _临时测试 */,
 				997B40FC1856B95600931A53 /* M2CoreUIKit */,
-				99E06E7A187A61160037ED3D /* M2CommonUIKit */,
 				995F3ADB184C30F4005F349B /* 数据加载 */,
 				99B626E11856B6120081DF4D /* 提示框 */,
 				99BA1FFA1859DA2100EF5A74 /* 启动帮助 */,
@@ -385,6 +395,7 @@
 				990C2622187BB0BF00B3E45A /* 平铺拉伸图片 */,
 				990C2647187BDB0A00B3E45A /* 瀑布流 */,
 				9963DD0D187CF59300571748 /* 多图联播 */,
+				9963DD2B187D40FC00571748 /* 键盘相关 */,
 				995F3AD8184C2DC2005F349B /* RootViewController.h */,
 				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 			);
@@ -413,17 +424,9 @@
 		9963DD0D187CF59300571748 /* 多图联播 */ = {
 			isa = PBXGroup;
 			children = (
-				9963DD0E187CF59C00571748 /* 循环广告位联播 */,
 				9963DD0F187CF5C100571748 /* 不循环图片联播点击全屏 */,
 			);
 			name = "多图联播";
-			sourceTree = "<group>";
-		};
-		9963DD0E187CF59C00571748 /* 循环广告位联播 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "循环广告位联播";
 			sourceTree = "<group>";
 		};
 		9963DD0F187CF5C100571748 /* 不循环图片联播点击全屏 */ = {
@@ -452,6 +455,36 @@
 				9963DD1F187D031700571748 /* portrait_3.jpg */,
 			);
 			path = test;
+			sourceTree = "<group>";
+		};
+		9963DD2B187D40FC00571748 /* 键盘相关 */ = {
+			isa = PBXGroup;
+			children = (
+				9963DD2C187D410800571748 /* 键盘上方的输入框 */,
+			);
+			name = "键盘相关";
+			sourceTree = "<group>";
+		};
+		9963DD2C187D410800571748 /* 键盘上方的输入框 */ = {
+			isa = PBXGroup;
+			children = (
+				9963DD2E187D41D200571748 /* MKeyboardInputViewController.h */,
+				9963DD2F187D41D200571748 /* MKeyboardInputViewController.m */,
+				9963DD31187D443A00571748 /* MKeyboardInputView.h */,
+				9963DD32187D443A00571748 /* MKeyboardInputView.m */,
+				9963DD49187D55BB00571748 /* M2InputView.h */,
+				9963DD4A187D55BB00571748 /* M2InputView.m */,
+			);
+			name = "键盘上方的输入框";
+			sourceTree = "<group>";
+		};
+		9963DD2D187D419D00571748 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */,
+				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		997B40FC1856B95600931A53 /* M2CoreUIKit */ = {
@@ -552,6 +585,7 @@
 		99E06E6B187A4F540037ED3D /* Tabbar切换view */ = {
 			isa = PBXGroup;
 			children = (
+				9963DD2D187D419D00571748 /* Common */,
 				99E06E6C187A4F960037ED3D /* 子viewController */,
 			);
 			name = "Tabbar切换view";
@@ -576,17 +610,6 @@
 				99E06E78187A5E230037ED3D /* white_rect@2x.png */,
 			);
 			path = common;
-			sourceTree = "<group>";
-		};
-		99E06E7A187A61160037ED3D /* M2CommonUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */,
-				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */,
-				990C2615187AA0C500B3E45A /* M2ShowFullInfoView.h */,
-				990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */,
-			);
-			name = M2CommonUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -712,12 +735,15 @@
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
 				9963DD2A187D2F5F00571748 /* MImageGalleryView.m in Sources */,
 				990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */,
+				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
 				99BA1FFD1859DA4200EF5A74 /* LaunchHelpViewController.m in Sources */,
 				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */,
 				995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */,
 				99BA20001859DA4F00EF5A74 /* M2HelpView.m in Sources */,
 				990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */,
+				9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */,
+				9963DD4B187D55BB00571748 /* M2InputView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
