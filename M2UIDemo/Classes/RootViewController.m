@@ -34,7 +34,8 @@
                       @"平铺拉伸图片",
                       @"瀑布流",
                       @"多图联播",
-                      @"键盘相关"];
+                      @"键盘相关",
+                      @"上滑scrollView上推其他View"];
         _rows = @[
                   @[
                       @[@"_临时测试", @"_tempTestViewController"]
@@ -69,6 +70,9 @@
                       ],
                   @[
                       @[@"键盘上方的输入框", @"MKeyboardInputViewController"]
+                      ],
+                  @[
+                      @[@"上滑超过阈值时上推", @"MRearchThresholdViewController"]
                       ]
                   ];
     }
