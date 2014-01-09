@@ -61,7 +61,7 @@
     CGRect belowAreaFrame = CGRectMake(CGRectGetMinX(_belowAreaContainerView.frame), CGRectGetMaxY(_showFullInfoView.frame) + 10, CGRectGetWidth(_belowAreaContainerView.frame), CGRectGetHeight(_belowAreaContainerView.frame));
      _mainView.contentSize = CGSizeMake(CGRectGetWidth(_mainView.bounds), CGRectGetMaxY(belowAreaFrame) + 5);
     __weak MShowFullInfoView *weakSelf = self;
-    [UIView animateWithDuration:0.25
+    [UIView animateWithDuration:animationDuration
                      animations:^{
                          weakSelf.belowAreaContainerView.frame = belowAreaFrame;
                      }];

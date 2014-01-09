@@ -48,6 +48,10 @@
 		9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD2F187D41D200571748 /* MKeyboardInputViewController.m */; };
 		9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD32187D443A00571748 /* MKeyboardInputView.m */; };
 		9963DD4B187D55BB00571748 /* M2InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD4A187D55BB00571748 /* M2InputView.m */; };
+		9963DD5E187E465A00571748 /* MRearchThresholdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD5D187E465A00571748 /* MRearchThresholdViewController.m */; };
+		9963DD61187E467100571748 /* MRearchThresholdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD60187E467100571748 /* MRearchThresholdView.m */; };
+		9963DD64187E48ED00571748 /* MScrollableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD63187E48ED00571748 /* MScrollableView.m */; };
+		9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD66187E502000571748 /* M2ScrollableViewObserver.m */; };
 		997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B40FE1856B99D00931A53 /* M2ViewController.m */; };
 		997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B41011856B9EB00931A53 /* M2NavigationController.m */; };
 		997B41801857234000931A53 /* M2Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B417F1857234000931A53 /* M2Toast.m */; };
@@ -63,7 +67,6 @@
 		99D27C1D1855AE8000513BA9 /* refresh_blue_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D27C1B1855AE8000513BA9 /* refresh_blue_arrow.png */; };
 		99D27C1E1855AE8000513BA9 /* refresh_blue_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */; };
 		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
-		99E06E72187A501E0037ED3D /* MTVCRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E71187A501E0037ED3D /* MTVCRootView.m */; };
 		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */; };
 		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
 		99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E7D187A86660037ED3D /* MRVCSubViewController.m */; };
@@ -143,6 +146,14 @@
 		9963DD32187D443A00571748 /* MKeyboardInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKeyboardInputView.m; sourceTree = "<group>"; };
 		9963DD49187D55BB00571748 /* M2InputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2InputView.h; sourceTree = "<group>"; };
 		9963DD4A187D55BB00571748 /* M2InputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2InputView.m; sourceTree = "<group>"; };
+		9963DD5C187E465A00571748 /* MRearchThresholdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRearchThresholdViewController.h; sourceTree = "<group>"; };
+		9963DD5D187E465A00571748 /* MRearchThresholdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRearchThresholdViewController.m; sourceTree = "<group>"; };
+		9963DD5F187E467100571748 /* MRearchThresholdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRearchThresholdView.h; sourceTree = "<group>"; };
+		9963DD60187E467100571748 /* MRearchThresholdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRearchThresholdView.m; sourceTree = "<group>"; };
+		9963DD62187E48ED00571748 /* MScrollableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MScrollableView.h; sourceTree = "<group>"; };
+		9963DD63187E48ED00571748 /* MScrollableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MScrollableView.m; sourceTree = "<group>"; };
+		9963DD65187E502000571748 /* M2ScrollableViewObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ScrollableViewObserver.h; sourceTree = "<group>"; };
+		9963DD66187E502000571748 /* M2ScrollableViewObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ScrollableViewObserver.m; sourceTree = "<group>"; };
 		997B40FD1856B99D00931A53 /* M2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ViewController.h; sourceTree = "<group>"; };
 		997B40FE1856B99D00931A53 /* M2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ViewController.m; sourceTree = "<group>"; };
 		997B41001856B9EB00931A53 /* M2NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2NavigationController.h; sourceTree = "<group>"; };
@@ -167,8 +178,6 @@
 		99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_blue_arrow@2x.png"; sourceTree = "<group>"; };
 		99E06E6D187A4FFB0037ED3D /* MTVCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVCRootViewController.h; sourceTree = "<group>"; };
 		99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVCRootViewController.m; sourceTree = "<group>"; };
-		99E06E70187A501E0037ED3D /* MTVCRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVCRootView.h; sourceTree = "<group>"; };
-		99E06E71187A501E0037ED3D /* MTVCRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVCRootView.m; sourceTree = "<group>"; };
 		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView.h; sourceTree = "<group>"; };
 		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView.m; sourceTree = "<group>"; };
 		99E06E78187A5E230037ED3D /* white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_rect@2x.png"; sourceTree = "<group>"; };
@@ -396,6 +405,7 @@
 				990C2647187BDB0A00B3E45A /* 瀑布流 */,
 				9963DD0D187CF59300571748 /* 多图联播 */,
 				9963DD2B187D40FC00571748 /* 键盘相关 */,
+				9963DD5A187E458F00571748 /* 上滑scrollView上推其他View */,
 				995F3AD8184C2DC2005F349B /* RootViewController.h */,
 				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 			);
@@ -485,6 +495,29 @@
 				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		9963DD5A187E458F00571748 /* 上滑scrollView上推其他View */ = {
+			isa = PBXGroup;
+			children = (
+				9963DD5B187E45AE00571748 /* 上滑超过阈值时上推 */,
+			);
+			name = "上滑scrollView上推其他View";
+			sourceTree = "<group>";
+		};
+		9963DD5B187E45AE00571748 /* 上滑超过阈值时上推 */ = {
+			isa = PBXGroup;
+			children = (
+				9963DD5C187E465A00571748 /* MRearchThresholdViewController.h */,
+				9963DD5D187E465A00571748 /* MRearchThresholdViewController.m */,
+				9963DD5F187E467100571748 /* MRearchThresholdView.h */,
+				9963DD60187E467100571748 /* MRearchThresholdView.m */,
+				9963DD62187E48ED00571748 /* MScrollableView.h */,
+				9963DD63187E48ED00571748 /* MScrollableView.m */,
+				9963DD65187E502000571748 /* M2ScrollableViewObserver.h */,
+				9963DD66187E502000571748 /* M2ScrollableViewObserver.m */,
+			);
+			name = "上滑超过阈值时上推";
 			sourceTree = "<group>";
 		};
 		997B40FC1856B95600931A53 /* M2CoreUIKit */ = {
@@ -596,8 +629,6 @@
 			children = (
 				99E06E6D187A4FFB0037ED3D /* MTVCRootViewController.h */,
 				99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */,
-				99E06E70187A501E0037ED3D /* MTVCRootView.h */,
-				99E06E71187A501E0037ED3D /* MTVCRootView.m */,
 				99E06E7C187A86660037ED3D /* MRVCSubViewController.h */,
 				99E06E7D187A86660037ED3D /* MRVCSubViewController.m */,
 			);
@@ -728,15 +759,18 @@
 				99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */,
 				995F3AE2184C3350005F349B /* M2BaseRefreshView.m in Sources */,
 				997B41991857386000931A53 /* M2StatusBarToast.m in Sources */,
+				9963DD61187E467100571748 /* MRearchThresholdView.m in Sources */,
 				9963DD12187CF75A00571748 /* M2ImageGalleryView.m in Sources */,
 				99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */,
 				990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */,
+				9963DD5E187E465A00571748 /* MRearchThresholdViewController.m in Sources */,
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
 				9963DD2A187D2F5F00571748 /* MImageGalleryView.m in Sources */,
 				990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */,
 				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
+				9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */,
 				99BA1FFD1859DA4200EF5A74 /* LaunchHelpViewController.m in Sources */,
 				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */,
 				995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */,
@@ -746,10 +780,10 @@
 				9963DD4B187D55BB00571748 /* M2InputView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
+				9963DD64187E48ED00571748 /* MScrollableView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
 				99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */,
-				99E06E72187A501E0037ED3D /* MTVCRootView.m in Sources */,
 				990C2626187BB11D00B3E45A /* MResizableImageViewController.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,
