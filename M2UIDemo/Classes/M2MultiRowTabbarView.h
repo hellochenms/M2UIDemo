@@ -14,17 +14,18 @@
 #define M2MRTV_Default_ItemCountInRow 3
 #define M2MRTV_ItemHorizontalMargin 2
 #define M2MRTV_ItemVerticalMargin   2
+#define M2MRTV_ItemBackgroundImageName @"white_rect"
 
 @protocol M2MultiRowTabbarViewDelegate;
 
 @interface M2MultiRowTabBarView : UIView<UITableViewDelegate>
 - (id)initWithFrame:(CGRect)frame
              titles:(NSArray*)titles
-     itemCountInRow:(int)itemCountInRow;
+     itemCountInRow:(NSUInteger)itemCountInRow;
 @property (nonatomic, weak) id<M2MultiRowTabbarViewDelegate> delegate;
 @property (nonatomic) NSArray *disableIndexs;// item is NSNumber;
 @end
 
 @protocol M2MultiRowTabbarViewDelegate <NSObject>
-- (void)tabBarView:(M2MultiRowTabBarView *)tableView didSelectRowAtIndex:(int)index;
+- (void)tabBarView:(M2MultiRowTabBarView *)tableView didSelectRowAtIndex:(NSUInteger)index;
 @end

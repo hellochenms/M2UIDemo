@@ -9,8 +9,6 @@
 #import "M2MultiRowTabBarView_Master.h"
 
 #define M2MRTV_ItemOffset           6000
-#define M2MRTV_ItemHorizontalMargin 2
-#define M2MRTV_ItemVerticalMargin   2
 
 @implementation M2MultiRowTabBarView_Master{
     UIView *_containerView;
@@ -18,7 +16,7 @@
 
 - (id)initWithFrame:(CGRect)frame
              titles:(NSArray*)titles
-     itemCountInRow:(int)itemCountInRow{
+     itemCountInRow:(NSUInteger)itemCountInRow{
     self = [super initWithFrame:frame];
     if (!titles && [titles count] <= 0) {
         return self;
@@ -34,12 +32,12 @@
         [self addSubview:_containerView];
         
         // items
-        int count = [titles count];
-        int rowCount = (count - 1) / itemCountInRow + 1;
+        NSUInteger count = [titles count];
+        NSUInteger rowCount = (count - 1) / itemCountInRow + 1;
         UIButton *button = nil;
         float itemWidth = CGRectGetWidth(_containerView.frame) / itemCountInRow - M2MRTV_ItemHorizontalMargin * 2;
         float itemHeight = CGRectGetHeight(_containerView.frame) / rowCount - M2MRTV_ItemVerticalMargin * 2;
-        for (int i = 0; i < count; i++) {
+        for (NSUInteger i = 0; i < count; i++) {
             button = [self buttonWithFrame:CGRectMake((itemWidth + M2MRTV_ItemHorizontalMargin * 2) * (i % itemCountInRow) + M2MRTV_ItemHorizontalMargin, (itemHeight + M2MRTV_ItemVerticalMargin * 2) * (i / itemCountInRow) + M2MRTV_ItemVerticalMargin, itemWidth, itemHeight)
                                   andTitle:[titles objectAtIndex:i]
                                   andIndex:i];
@@ -51,10 +49,10 @@
 }
 
 #pragma mark -
-- (UIButton*)buttonWithFrame:(CGRect)frame andTitle:(NSString*)title andIndex:(int)index{
+- (UIButton*)buttonWithFrame:(CGRect)frame andTitle:(NSString*)title andIndex:(NSUInteger)index{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = frame;
-    [button setBackgroundImage:[UIImage imageNamed:@"white_rect"] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:M2MRTV_ItemBackgroundImageName] forState:UIControlStateNormal];
     button.layer.borderColor = [UIColor grayColor].CGColor;
     button.layer.borderWidth = 1;
     button.titleLabel.font = [UIFont systemFontOfSize:14];

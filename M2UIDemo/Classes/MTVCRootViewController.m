@@ -78,7 +78,7 @@
 }
 
 #pragma mark - M2MultiRowTabbarViewDelegate
-- (void)tabBarView:(M2MultiRowTabBarView *)tableView didSelectRowAtIndex:(int)index{
+- (void)tabBarView:(M2MultiRowTabBarView *)tableView didSelectRowAtIndex:(NSUInteger)index{
     NSLog(@"tapIndex(%d)  @@%s", index, __func__);
     if (index == _lastIndex) {
         // 有的需求可能刷新当前界面，类似下面代码；本示例只简单忽略；

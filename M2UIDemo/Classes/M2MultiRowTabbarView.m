@@ -17,7 +17,7 @@
 
 - (id)initWithFrame:(CGRect)frame
              titles:(NSArray*)titles
-     itemCountInRow:(int)itemCountInRow{
+     itemCountInRow:(NSUInteger)itemCountInRow{
     self = [super initWithFrame:frame];
     if (!titles && [titles count] <= 0) {
         return self;
@@ -25,25 +25,25 @@
     
     if (self) {
         //
-
+        
         
         if (itemCountInRow <= 0) {
             itemCountInRow = M2MRTV_Default_ItemCountInRow;
         }
-
+        
         // container
         _containerView = [[UIView alloc] initWithFrame:CGRectMake(M2MRTV_ItemHorizontalMargin, M2MRTV_ItemVerticalMargin, CGRectGetWidth(frame) - M2MRTV_ItemHorizontalMargin * 2, CGRectGetHeight(frame) - M2MRTV_ItemVerticalMargin * 2)];
         [self addSubview:_containerView];
         
         // items
-        int count = [titles count];
+        NSUInteger count = [titles count];
         _items = [NSMutableArray arrayWithCapacity:count];
         
-        int rowCount = (count - 1) / itemCountInRow + 1;
+        NSUInteger rowCount = (count - 1) / itemCountInRow + 1;
         UIButton *button = nil;
         float itemWidth = CGRectGetWidth(_containerView.frame) / itemCountInRow - M2MRTV_ItemHorizontalMargin * 2;
         float itemHeight = CGRectGetHeight(_containerView.frame) / rowCount - M2MRTV_ItemVerticalMargin * 2;
-        for (int i = 0; i < count; i++) {
+        for (NSUInteger i = 0; i < count; i++) {
             button = [self buttonWithFrame:CGRectMake((itemWidth + M2MRTV_ItemHorizontalMargin * 2) * (i % itemCountInRow) + M2MRTV_ItemHorizontalMargin, (itemHeight + M2MRTV_ItemVerticalMargin * 2) * (i / itemCountInRow) + M2MRTV_ItemVerticalMargin, itemWidth, itemHeight)
                                   andTitle:[titles objectAtIndex:i]
                                   andIndex:i];
@@ -56,10 +56,10 @@
 }
 
 #pragma mark - item build & event
-- (UIButton*)buttonWithFrame:(CGRect)frame andTitle:(NSString*)title andIndex:(int)index{
+- (UIButton*)buttonWithFrame:(CGRect)frame andTitle:(NSString*)title andIndex:(NSUInteger)index{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = frame;
-    [button setBackgroundImage:[UIImage imageNamed:@"white_rect"] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:M2MRTV_ItemBackgroundImageName] forState:UIControlStateNormal];
     button.layer.borderColor = [UIColor grayColor].CGColor;
     button.layer.borderWidth = 1;
     button.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -86,11 +86,11 @@
     }
     
     NSNumber *indexNumber = nil;
-    int index = 0;
-    int maxIndex = [_items count] - 1;
+    NSInteger index = 0;
+    NSUInteger maxIndex = [_items count] - 1;
     UIButton *button = nil;
     for (indexNumber in _disableIndexs) {
-        index = [indexNumber intValue];
+        index = [indexNumber integerValue];
         if (index >= 0 && index <= maxIndex) {
             button = [_items objectAtIndex:index];
             button.enabled = NO;
