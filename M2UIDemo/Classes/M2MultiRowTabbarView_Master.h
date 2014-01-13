@@ -5,6 +5,9 @@
 //  Created by Chen Meisong on 14-1-6.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
+//  分支：Master；
+//  特点：只实现了最基本的功能，且Item没有公开，项目需要改造本类以定制；
+
 
 #import <UIKit/UIKit.h>
 
@@ -12,7 +15,7 @@
 
 @protocol M2MultiRowTabbarViewDelegate;
 
-@interface M2MultiRowTabbarView_V1 : UIView
+@interface M2MultiRowTabbarView_Master : UIView
 - (id)initWithFrame:(CGRect)frame
              titles:(NSArray*)titles
      itemCountInRow:(int)itemCountInRow;
@@ -20,5 +23,5 @@
 @end
 
 @protocol M2MultiRowTabbarViewDelegate <NSObject>
-- (void)onTapItemWithIndex:(int)index inView:(M2MultiRowTabbarView_V1*)view;
+- (void)onTapItemWithIndex:(int)index inView:(M2MultiRowTabbarView_Master*)view;
 @end

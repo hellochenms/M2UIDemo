@@ -7,7 +7,7 @@
 //
 
 #import "MTVCRootViewController.h"
-#import "M2MultiRowTabbarView_V1.h"
+#import "M2MultiRowTabbarView.h"
 #import "MRVCSubViewController.h"
 
 #define MTVCRVC_SubViewControllerCount 3
@@ -15,7 +15,7 @@
 @interface MTVCRootViewController ()<M2MultiRowTabbarViewDelegate>{
     NSMutableArray *_subViewControllers;
 }
-@property (nonatomic) M2MultiRowTabbarView_V1 *tabbarView;
+@property (nonatomic) M2MultiRowTabbarView *tabbarView;
 @property (nonatomic) int lastIndex;
 @end
 
@@ -40,11 +40,12 @@
     CGRect frame = [UIScreen mainScreen].bounds;
     
     // tabbar
-    _tabbarView = [[M2MultiRowTabbarView_V1 alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(frame), 100)
+    _tabbarView = [[M2MultiRowTabbarView alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(frame), 100)
                                                                          titles:[self numberTitlesWithCount:MTVCRVC_SubViewControllerCount]
                                                                  itemCountInRow:2];
     _tabbarView.delegate = self;
     _tabbarView.backgroundColor = [UIColor blueColor];
+    _tabbarView.disableIndexs = @[@(1)];
     [self.view addSubview:_tabbarView];
     
     // content
@@ -77,7 +78,7 @@
 }
 
 #pragma mark - M2MultiRowTabbarViewDelegate
-- (void)onTapItemWithIndex:(int)index inView:(M2MultiRowTabbarView_V1*)view{
+- (void)onTapItemWithIndex:(int)index inView:(M2MultiRowTabbarView*)view{
     NSLog(@"tapIndex(%d)  @@%s", index, __func__);
     if (index == _lastIndex) {
         // 有的需求可能刷新当前界面，类似下面代码；本示例只简单忽略；

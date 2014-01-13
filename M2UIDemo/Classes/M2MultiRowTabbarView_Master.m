@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2MultiRowTabbarView_V1.h"
+#import "M2MultiRowTabbarView_Master.h"
 
 #define M2MRTV_ItemOffset           6000
 #define M2MRTV_ItemHorizontalMargin 2
 #define M2MRTV_ItemVerticalMargin   2
 
-@implementation M2MultiRowTabbarView_V1{
+@implementation M2MultiRowTabbarView_Master{
     UIView *_containerView;
 }
 

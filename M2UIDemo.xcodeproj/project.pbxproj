@@ -34,6 +34,7 @@
 		995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995F3AD9184C2DC2005F349B /* RootViewController.m */; };
 		995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995F3ADE184C313C005F349B /* PullDownRefreshViewController.m */; };
 		995F3AE2184C3350005F349B /* M2BaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 995F3AE1184C334F005F349B /* M2BaseRefreshView.m */; };
+		996332101883BAD30038BCE3 /* M2MultiRowTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963320F1883BAD30038BCE3 /* M2MultiRowTabbarView.m */; };
 		9963DD12187CF75A00571748 /* M2ImageGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD11187CF75A00571748 /* M2ImageGalleryView.m */; };
 		9963DD15187CF77100571748 /* MImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD14187CF77100571748 /* MImageGalleryViewController.m */; };
 		9963DD20187D031700571748 /* landscape_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9963DD18187D031700571748 /* landscape_0.jpg */; };
@@ -67,7 +68,7 @@
 		99D27C1D1855AE8000513BA9 /* refresh_blue_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D27C1B1855AE8000513BA9 /* refresh_blue_arrow.png */; };
 		99D27C1E1855AE8000513BA9 /* refresh_blue_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */; };
 		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
-		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */; };
+		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */; };
 		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
 		99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E7D187A86660037ED3D /* MRVCSubViewController.m */; };
 /* End PBXBuildFile section */
@@ -126,6 +127,8 @@
 		995F3ADE184C313C005F349B /* PullDownRefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDownRefreshViewController.m; sourceTree = "<group>"; };
 		995F3AE0184C334F005F349B /* M2BaseRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2BaseRefreshView.h; sourceTree = "<group>"; };
 		995F3AE1184C334F005F349B /* M2BaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2BaseRefreshView.m; sourceTree = "<group>"; };
+		9963320E1883BAD30038BCE3 /* M2MultiRowTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView.h; sourceTree = "<group>"; };
+		9963320F1883BAD30038BCE3 /* M2MultiRowTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView.m; sourceTree = "<group>"; };
 		9963DD10187CF75A00571748 /* M2ImageGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ImageGalleryView.h; sourceTree = "<group>"; };
 		9963DD11187CF75A00571748 /* M2ImageGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ImageGalleryView.m; sourceTree = "<group>"; };
 		9963DD13187CF77100571748 /* MImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MImageGalleryViewController.h; sourceTree = "<group>"; };
@@ -178,8 +181,8 @@
 		99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_blue_arrow@2x.png"; sourceTree = "<group>"; };
 		99E06E6D187A4FFB0037ED3D /* MTVCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVCRootViewController.h; sourceTree = "<group>"; };
 		99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVCRootViewController.m; sourceTree = "<group>"; };
-		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView.h; sourceTree = "<group>"; };
-		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView.m; sourceTree = "<group>"; };
+		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView_Master.h; sourceTree = "<group>"; };
+		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView_Master.m; sourceTree = "<group>"; };
 		99E06E78187A5E230037ED3D /* white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_rect@2x.png"; sourceTree = "<group>"; };
 		99E06E7C187A86660037ED3D /* MRVCSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRVCSubViewController.h; sourceTree = "<group>"; };
 		99E06E7D187A86660037ED3D /* MRVCSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRVCSubViewController.m; sourceTree = "<group>"; };
@@ -491,8 +494,10 @@
 		9963DD2D187D419D00571748 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView.h */,
-				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView.m */,
+				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */,
+				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */,
+				9963320E1883BAD30038BCE3 /* M2MultiRowTabbarView.h */,
+				9963320F1883BAD30038BCE3 /* M2MultiRowTabbarView.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -766,13 +771,14 @@
 				9963DD5E187E465A00571748 /* MRearchThresholdViewController.m in Sources */,
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
+				996332101883BAD30038BCE3 /* M2MultiRowTabbarView.m in Sources */,
 				9963DD2A187D2F5F00571748 /* MImageGalleryView.m in Sources */,
 				990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */,
 				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
 				9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */,
 				99BA1FFD1859DA4200EF5A74 /* LaunchHelpViewController.m in Sources */,
-				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView.m in Sources */,
+				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */,
 				995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */,
 				99BA20001859DA4F00EF5A74 /* M2HelpView.m in Sources */,
 				990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */,
