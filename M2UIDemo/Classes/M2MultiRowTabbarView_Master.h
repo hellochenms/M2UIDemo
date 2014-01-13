@@ -15,7 +15,7 @@
 
 @protocol M2MultiRowTabbarViewDelegate;
 
-@interface M2MultiRowTabbarView_Master : UIView
+@interface M2MultiRowTabBarView_Master : UIView
 - (id)initWithFrame:(CGRect)frame
              titles:(NSArray*)titles
      itemCountInRow:(int)itemCountInRow;
@@ -23,5 +23,5 @@
 @end
 
 @protocol M2MultiRowTabbarViewDelegate <NSObject>
-- (void)onTapItemWithIndex:(int)index inView:(M2MultiRowTabbarView_Master*)view;
+- (void)tabBarView:(M2MultiRowTabBarView_Master *)tableView didSelectRowAtIndex:(int)index;
 @end

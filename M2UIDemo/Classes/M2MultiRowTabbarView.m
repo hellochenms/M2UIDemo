@@ -6,13 +6,11 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2MultiRowTabbarView.h"
+#import "M2MultiRowTabBarView.h"
 
 #define M2MRTV_ItemOffset           6000
-#define M2MRTV_ItemHorizontalMargin 2
-#define M2MRTV_ItemVerticalMargin   2
 
-@implementation M2MultiRowTabbarView{
+@implementation M2MultiRowTabBarView{
     UIView *_containerView;
     NSMutableArray *_items;
 }
@@ -74,8 +72,8 @@
     return button;
 }
 - (void)onTapButton:(UIButton*)sender{
-    if (_delegate && [_delegate respondsToSelector:@selector(onTapItemWithIndex:inView:)]) {
-        [_delegate onTapItemWithIndex:sender.tag - M2MRTV_ItemOffset inView:self];
+    if (_delegate && [_delegate respondsToSelector:@selector(tabBarView:didSelectRowAtIndex:)]) {
+        [_delegate tabBarView:self didSelectRowAtIndex:sender.tag - M2MRTV_ItemOffset];
     }
 }
 

@@ -12,10 +12,12 @@
 #import <UIKit/UIKit.h>
 
 #define M2MRTV_Default_ItemCountInRow 3
+#define M2MRTV_ItemHorizontalMargin 2
+#define M2MRTV_ItemVerticalMargin   2
 
 @protocol M2MultiRowTabbarViewDelegate;
 
-@interface M2MultiRowTabbarView : UIView
+@interface M2MultiRowTabBarView : UIView<UITableViewDelegate>
 - (id)initWithFrame:(CGRect)frame
              titles:(NSArray*)titles
      itemCountInRow:(int)itemCountInRow;
@@ -24,5 +26,5 @@
 @end
 
 @protocol M2MultiRowTabbarViewDelegate <NSObject>
-- (void)onTapItemWithIndex:(int)index inView:(M2MultiRowTabbarView*)view;
+- (void)tabBarView:(M2MultiRowTabBarView *)tableView didSelectRowAtIndex:(int)index;
 @end
