@@ -10,14 +10,14 @@
 
 @implementation M2GalleryViewCell
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+#pragma mark -
+- (void)didLoadImageFinish{
+    //  加载image完毕isDidLoadImageFinish置YES
+    self.isDidLoadImageFinish = YES;
+    //  加载image完毕通知delegate
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didLoadImageFinishByCell:)]) {
+        [self.delegate didLoadImageFinishByCell:self];
     }
-    
-    return self;
 }
 
 @end
