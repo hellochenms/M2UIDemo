@@ -1,21 +1,21 @@
 //
-//  MImageGalleryViewController.m
+//  MImageGalleryViewController_B.m
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-1-8.
+//  Created by Chen Meisong on 14-1-14.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "MImageGalleryViewController.h"
-#import "MImageGalleryView.h"
+#import "MImageGalleryViewController_B.h"
+#import "MImageGalleryView_B.h"
 
 #define MIGVC_ImageCount 4
 
-@interface MImageGalleryViewController ()
-@property (nonatomic) MImageGalleryView *galleryView;
+@interface MImageGalleryViewController_B ()
+@property (nonatomic) MImageGalleryView_B *galleryView;
 @end
 
-@implementation MImageGalleryViewController
+@implementation MImageGalleryViewController_B
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +32,7 @@
 	// Do any additional setup after loading the view.
     
     CGRect frame = [UIScreen mainScreen].bounds;
-    _galleryView = [[MImageGalleryView alloc] initWithFrame:CGRectMake(0, 5, CGRectGetWidth(frame), CGRectGetHeight(frame) - 64 - 5 * 2)];
+    _galleryView = [[MImageGalleryView_B alloc] initWithFrame:CGRectMake(0, 5, CGRectGetWidth(frame), CGRectGetHeight(frame) - 64 - 5 * 2)];
     _galleryView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:_galleryView];
 }

@@ -10,7 +10,7 @@
 
 @protocol M2ImageGalleryViewDelegate;
 
-@interface M2ImageGalleryView : UIView
+@interface M2ImageGalleryView_A : UIView
 @property (nonatomic) BOOL isLandscape;
 @property (nonatomic) float notFullScreenHeight;
 @property (nonatomic, weak) id<M2ImageGalleryViewDelegate> delegate;
@@ -18,5 +18,5 @@
 @end
 
 @protocol M2ImageGalleryViewDelegate <NSObject>
-- (void)galleryView:(M2ImageGalleryView *)galleryView willChangeIsFullScreen:(BOOL)isFullScreen withAnimationDuration:(float)animationDuration;
+- (void)galleryView:(M2ImageGalleryView_A *)galleryView willChangeIsFullScreen:(BOOL)isFullScreen withAnimationDuration:(float)animationDuration;
 @end

@@ -25,8 +25,6 @@
     
     if (self) {
         //
-        
-        
         if (itemCountInRow <= 0) {
             itemCountInRow = M2MRTV_Default_ItemCountInRow;
         }

@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2ImageGalleryView.h"
+#import "M2ImageGalleryView_A.h"
 
 #define M2IGV_AnimationDuration 0.25
 #define M2IGV_ItemTag           6000
 
-@interface M2ImageGalleryView(){
+@interface M2ImageGalleryView_A(){
     UIScrollView    *_mainView;
 }
 @property (nonatomic) float             fullScreenHeight;
@@ -19,7 +19,7 @@
 @property (nonatomic) BOOL              isFullScreen;
 @end
 
-@implementation M2ImageGalleryView
+@implementation M2ImageGalleryView_A
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -102,7 +102,7 @@
         [_delegate galleryView:self willChangeIsFullScreen:_isFullScreen withAnimationDuration:M2IGV_AnimationDuration];
     }
 
-    __weak M2ImageGalleryView *weakSelf = self;
+    __weak M2ImageGalleryView_A *weakSelf = self;
     [UIView animateWithDuration:M2IGV_AnimationDuration
                      animations:^{
                          // self

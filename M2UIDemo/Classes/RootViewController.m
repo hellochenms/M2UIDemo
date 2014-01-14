@@ -63,10 +63,11 @@
                       @[@"平铺拉伸图片", @"MResizableImageViewController"]
                       ],
                   @[
-                      @[@"个人设计", @"MWaterFallMeViewController"]
+                      @[@"无复用", @"MWaterFallMeViewController"]
                       ],
                   @[
-                      @[@"不循环图片联播点击全屏", @"MImageGalleryViewController"]
+                      @[@"图片浏览点击全屏A", @"MImageGalleryViewController_A"],
+                      @[@"图片浏览点击全屏B", @"MImageGalleryViewController_B"]
                       ],
                   @[
                       @[@"键盘上方的输入框", @"MKeyboardInputViewController"]

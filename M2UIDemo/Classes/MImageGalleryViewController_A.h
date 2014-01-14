@@ -8,6 +8,6 @@
 
 #import "M2ViewController.h"
 
-@interface MImageGalleryViewController : M2ViewController
+@interface MImageGalleryViewController_A : M2ViewController
 
 @end

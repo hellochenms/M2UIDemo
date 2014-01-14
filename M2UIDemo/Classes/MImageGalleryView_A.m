@@ -6,20 +6,20 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "MImageGalleryView.h"
-#import "M2ImageGalleryView.h"
+#import "MImageGalleryView_A.h"
+#import "M2ImageGalleryView_A.h"
 
 #define MIGV_ImageCount 4
 
-@interface MImageGalleryView()<M2ImageGalleryViewDelegate>{
-    M2ImageGalleryView  *_galleryView;
+@interface MImageGalleryView_A()<M2ImageGalleryViewDelegate>{
+    M2ImageGalleryView_A  *_galleryView;
     BOOL                _isLandscape;
 }
 @property (nonatomic) UIButton  *backButton;
 @property (nonatomic) UILabel   *toolBarView;
 @end
 
-@implementation MImageGalleryView
+@implementation MImageGalleryView_A
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,7 +30,7 @@
         _isLandscape = YES;
         
         // build
-        _galleryView = [[M2ImageGalleryView alloc] initWithFrame:self.bounds];
+        _galleryView = [[M2ImageGalleryView_A alloc] initWithFrame:self.bounds];
         _galleryView.backgroundColor = [UIColor lightGrayColor];
         _galleryView.notFullScreenHeight = 100;
         _galleryView.delegate = self;
@@ -70,10 +70,10 @@
 }
 
 #pragma mark - M2ImageGalleryViewDelegate
-- (void)galleryView:(M2ImageGalleryView *)galleryView willChangeIsFullScreen:(BOOL)isFullScreen withAnimationDuration:(float)animationDuration{
+- (void)galleryView:(M2ImageGalleryView_A *)galleryView willChangeIsFullScreen:(BOOL)isFullScreen withAnimationDuration:(float)animationDuration{
     CGRect backButtonFrame = [self backButtonFrameWithIsFullScreen:isFullScreen];
     CGRect toolBarViewFrame = [self toolBarViewFrameWithIsFullScreen:isFullScreen];
-    __weak MImageGalleryView *weakSelf = self;
+    __weak MImageGalleryView_A *weakSelf = self;
     [UIView animateWithDuration:animationDuration
                      animations:^{
                          weakSelf.backButton.frame = backButtonFrame;

@@ -1,13 +1,13 @@
 //
-//  MImageGalleryView.h
+//  MImageGalleryView_B.h
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-1-8.
+//  Created by Chen Meisong on 14-1-14.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MImageGalleryView : UIView
+@interface MImageGalleryView_B : UIView
 
 @end
