@@ -62,7 +62,7 @@
     return [_imageNames count];
 }
 - (M2GalleryViewCell *)galleryView:(M2GalleryView *)galleryView itemAtIndex:(NSInteger)index{
-    MIGalleryViewCell_B *view = [[MIGalleryViewCell_B alloc] initWithFrame: CGRectMake(0, 0, CGRectGetWidth(_galleryView.bounds), _galleryView.fullScreenHeight)];
+    MIGalleryViewCell_B *view = [MIGalleryViewCell_B new];
     view.imageName = [_imageNames objectAtIndex:index];
     
     return view;
