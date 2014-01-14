@@ -17,8 +17,6 @@
     NSMutableArray  *_itemContainers;
     UIScrollView    *_mainView;
     BOOL            _isFullScreen;
-    float           _originHeight;
-    float           _fullScreenHeight;
     NSInteger       _curIndex;
 }
 @end
@@ -58,6 +56,7 @@
     return self;
 }
 
+#pragma mark - public
 - (void)reloadData{
     // clear old
     UIView *oldItemContainer = nil;
@@ -68,12 +67,12 @@
     _mainView.contentSize = CGSizeMake(0, CGRectGetHeight(_mainView.frame));
     
     // check
-    if (!_datasource
-        || ![_datasource respondsToSelector:@selector(numberOfItemsInGalleryView:)]
-        || ![_datasource respondsToSelector:@selector(galleryView:itemAtIndex:)]) {
+    if (!_dataSource
+        || ![_dataSource respondsToSelector:@selector(numberOfItemsInGalleryView:)]
+        || ![_dataSource respondsToSelector:@selector(galleryView:itemAtIndex:)]) {
         return;
     }
-    NSInteger count = [_datasource numberOfItemsInGalleryView:self];
+    NSInteger count = [_dataSource numberOfItemsInGalleryView:self];
     if (count <= 0) {
         return;
     }
@@ -97,10 +96,7 @@
         [_itemContainers addObject:newItemContainer];
         
         // item
-        item = [_datasource galleryView:self itemAtIndex:i];
-        if (item.imageView) {
-            item.imageView.contentMode = UIViewContentModeScaleAspectFill;
-        }
+        item = [_dataSource galleryView:self itemAtIndex:i];
         item.delegate = self;
         item.tag = M2GV_ItemTag;
         // 调整item frame
@@ -115,6 +111,12 @@
 #pragma mark - tap event
 - (void)onTap:(UIGestureRecognizer*)tap{
     _isFullScreen = !_isFullScreen;
+    
+    // delegate
+    if (_delegate && [_delegate respondsToSelector:@selector(galleryView:willChangeIsFullScreen:withAnimationDuration:)]) {
+        [_delegate galleryView:self willChangeIsFullScreen:_isFullScreen withAnimationDuration:M2GV_AnimationDuration];
+    }
+    
     // self
     CGRect frame = self.frame;
     frame.size.height = (_isFullScreen ? _fullScreenHeight : _originHeight);
@@ -151,6 +153,7 @@
 #pragma mark - item frame transform 的调整
 // 根据图片宽高比调整item frame
 - (void)modifyFrameOfItem:(M2GalleryViewCell *)item{
+    NSLog(@"%@  @@%s", NSStringFromCGSize(item.image.size), __func__);
     float widthHeightFactor = 1;
     if (item.image.size.width <= 0 || item.image.size.height <= 0) {
         widthHeightFactor = 1;
@@ -160,7 +163,7 @@
     float itemWidth = 0;
     float itemHeight = 0;
     float containerWidth = CGRectGetWidth(_mainView.bounds);
-    float containerHeight = CGRectGetHeight(_mainView.bounds);
+    float containerHeight = _fullScreenHeight;
     if (widthHeightFactor <= 1) {
         itemWidth = containerWidth;
         itemHeight = containerHeight;
@@ -169,6 +172,7 @@
         itemHeight = containerWidth;
     }
     item.frame = CGRectMake((itemWidth - containerWidth) / 2 * (-1), 0, itemWidth, itemHeight);
+    [item didChangedCellFrame];
 }
 
 // 如果是横屏图片，点击全屏时要有旋转处理

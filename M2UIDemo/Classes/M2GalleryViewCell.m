@@ -10,7 +10,7 @@
 
 @implementation M2GalleryViewCell
 
-#pragma mark -
+#pragma mark - public
 - (void)didLoadImageFinish{
     //  加载image完毕isDidLoadImageFinish置YES
     self.isDidLoadImageFinish = YES;
@@ -19,5 +19,6 @@
         [self.delegate didLoadImageFinishByCell:self];
     }
 }
+- (void)didChangedCellFrame{}
 
 @end

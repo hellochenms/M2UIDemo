@@ -6,24 +6,23 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "MIGalleryViewCell.h"
-@interface MIGalleryViewCell()
+#import "MIGalleryViewCell_B.h"
+@interface MIGalleryViewCell_B()
 @property (nonatomic) UIImageView *customImageView;
 @end
 
-@implementation MIGalleryViewCell
+@implementation MIGalleryViewCell_B
 
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         _customImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        _customImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         _customImageView.contentMode = UIViewContentModeScaleAspectFill;
         [self addSubview:_customImageView];
         
         // TODO：伪装image获取成功；
-        [self performSelector:@selector(didLoadImageFinish) withObject:nil afterDelay:0.5 + arc4random() % 50 / 10.0];
+        [self performSelector:@selector(didLoadImageFinish) withObject:nil afterDelay:0.5 + arc4random() % 10 / 10.0];
     }
     return self;
 }
@@ -42,6 +41,11 @@
     _customImageView.image = [UIImage imageNamed:self.imageName];
     // 2、required：调用父类didLoadImageFinish方法；
     [super didLoadImageFinish];
+}
+
+#pragma mark - override
+- (void)didChangedCellFrame{
+    _customImageView.frame = self.bounds;
 }
 
 @end

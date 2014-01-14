@@ -8,6 +8,6 @@
 
 #import "M2GalleryViewCell.h"
 
-@interface MIGalleryViewCell : M2GalleryViewCell
+@interface MIGalleryViewCell_B : M2GalleryViewCell
 @property (nonatomic, copy) NSString *imageName;
 @end

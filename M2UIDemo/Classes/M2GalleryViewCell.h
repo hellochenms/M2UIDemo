@@ -18,8 +18,8 @@
 // required：您需要在子类的image加载完毕后（类似self.customImageView.image = image之后），调用此方法；
 - (void)didLoadImageFinish;
 
-// optional：建议子类也提供imageView（承载上述image的view）的getter方法，M2GalleryView会调整其图片显示效果；
-@property (nonatomic) UIImageView   *imageView;// optional
+// optional：建议子类实现，cell frame变化时此方法会被调用，子类可能要调整自己的sub view layout；
+- (void)didChangedCellFrame;
 
 // 您不需求手动设置下面两个属性；
 @property (nonatomic, weak)         id<M2GalleryViewCellDelegate> delegate;
@@ -39,8 +39,6 @@
     if (self) {
         // Initialization code
         _customImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        _customImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-        _customImageView.contentMode = UIViewContentModeScaleAspectFill;
         [self addSubview:_customImageView];
         
         // TODO：伪装image获取成功；
@@ -53,9 +51,6 @@
 - (UIImage*)image{
     return _customImageView.image; // 1、required：mage的getter
 }
-- (UIImageView*)imageView{
-    return _customImageView; // optional: 实现imageView的getter
-}
 
 #pragma mark -
 - (void)didLoadImageFinish{
@@ -63,6 +58,11 @@
     _customImageView.image = [UIImage imageNamed:self.imageName];
     // 2、required：调用父类didLoadImageFinish方法；
     [super didLoadImageFinish];
+}
+ 
+#pragma mark - override
+- (void)didChangedCellFrame{
+    _customImageView.frame = self.bounds;
 }
 */
 
