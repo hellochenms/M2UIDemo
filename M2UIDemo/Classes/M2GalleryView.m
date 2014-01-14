@@ -153,7 +153,7 @@
 #pragma mark - item frame transform 的调整
 // 根据图片宽高比调整item frame
 - (void)modifyFrameOfItem:(M2GalleryViewCell *)item{
-    NSLog(@"%@  @@%s", NSStringFromCGSize(item.image.size), __func__);
+//    NSLog(@"%@  @@%s", NSStringFromCGSize(item.image.size), __func__);
     float widthHeightFactor = 1;
     if (item.image.size.width <= 0 || item.image.size.height <= 0) {
         widthHeightFactor = 1;
