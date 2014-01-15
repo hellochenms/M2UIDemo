@@ -35,6 +35,7 @@
         _galleryView.dataSource = self;
         _galleryView.delegate = self;
         UIPageControl *pageControl = [[UIPageControl new] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_galleryView.bounds), 30)];
+        pageControl.userInteractionEnabled = NO;
         _galleryView.pageControl = pageControl;
         [self addSubview:_galleryView];
         
