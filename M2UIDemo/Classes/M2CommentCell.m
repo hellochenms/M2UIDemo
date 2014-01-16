@@ -123,10 +123,8 @@
     BOOL isReplyExists = NO;
     if (replyToComment.length > 0) {
         isReplyExists = YES;
-        if (replyToUser.length <= 0) {
-            replyToUser = @"匿名网友";
-        }
-        _replyTagetLabel.text = [NSString stringWithFormat:@"回复 %@：\n%@", replyToUser, replyToComment];
+        replyToComment = [M2CommentCell replyTargetStringFromReplyToUser:replyToUser replyToComment:replyToComment];
+        _replyTagetLabel.text = replyToComment;
         CGRect frame = _replyTagetLabel.frame;
         frame.size.height = [M2CommentCell heightOfText:replyToComment WithFont:_replyTagetLabel.font limitToWidth:M2CC_ReplyWidth];
         _replyTagetLabel.frame = frame;
@@ -165,10 +163,7 @@
     NSString *replyToUser = [data objectForKey:M2CC_Key_ReplyToUser];
     NSString *replyToComment = [data objectForKey:M2CC_Key_ReplyToComment];
     if (replyToComment.length > 0) {
-        if (replyToUser.length <= 0) {
-            replyToUser = @"匿名网友";
-        }
-        replyToComment = [NSString stringWithFormat:@"回复 %@：\n%@", replyToUser, replyToComment];
+        replyToComment = [self replyTargetStringFromReplyToUser:replyToUser replyToComment:replyToComment];
         height += [self heightOfText:replyToComment WithFont:replyFont limitToWidth:M2CC_ReplyWidth];
     }
     
@@ -178,7 +173,7 @@
     // 评论
     NSString *comment = [data objectForKey:M2CC_Key_Comment];
     if (comment.length > 0) {
-        height += [self heightOfText:comment WithFont:commentFont limitToWidth:280];
+        height += [self heightOfText:comment WithFont:commentFont limitToWidth:M2CC_CommentWidth];
     }
     
     // 下留白
@@ -197,6 +192,12 @@
 #pragma mark - tools
 + (float)heightOfText:(NSString *)text WithFont:(UIFont *)font limitToWidth:(float)width{
     return [text sizeWithFont:font constrainedToSize:CGSizeMake(width, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
+}
+
++ (NSString *)replyTargetStringFromReplyToUser:(NSString *)replyToUser replyToComment:(NSString *)replyToComment{
+    NSString *replyTargetString = [NSString stringWithFormat:@"回复 %@：\n%@", (replyToUser.length > 0 ? replyToUser : @"匿名网友"), replyToComment];
+    
+    return replyTargetString;
 }
 
 - (NSString *)dateStringFromDate:(NSDate *)date{
