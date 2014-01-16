@@ -10,7 +10,7 @@
 
 @protocol M2InputViewDelegate;
 
-@interface M2InputView : UIView
+@interface M2TextInputView : UIView
 @property (nonatomic, readonly) UIButton *cancelButton;
 @property (nonatomic, readonly) UIButton *submitButton;
 @property (nonatomic, weak) id<M2InputViewDelegate> delegate;
@@ -19,7 +19,7 @@
 @end
 
 @protocol M2InputViewDelegate <NSObject>
-- (void)inputView:(M2InputView *)inputView willChangeStateWithWillShow:(BOOL)willShow;
-- (BOOL)inputView:(M2InputView *)inputView checkText:(NSString*)text;
-- (void)inputView:(M2InputView *)inputView submitWithText:(NSString*)text;
+- (void)inputView:(M2TextInputView *)inputView willChangeStateWithIsWillShow:(BOOL)willShow;
+- (BOOL)inputView:(M2TextInputView *)inputView checkText:(NSString*)text;
+- (void)inputView:(M2TextInputView *)inputView willSubmitAfterCheckWithText:(NSString*)text;
 @end

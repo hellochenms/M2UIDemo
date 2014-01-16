@@ -16,6 +16,9 @@
 		990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C264D187BDBC000B3E45A /* MWaterFallMeViewController.m */; };
 		990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2650187BDC2100B3E45A /* M2WaterFallView.m */; };
 		990C2655187BDE3400B3E45A /* chinadragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990C2654187BDE3400B3E45A /* chinadragon@2x.png */; };
+		99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC11887B2B600A3F20E /* MCommentViewController.m */; };
+		99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC41887B2CF00A3F20E /* MCommentView.m */; };
+		99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC71887B32E00A3F20E /* M2CommentCell.m */; };
 		995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FAC1862ED9000A46778 /* TestTableViewController.m */; };
 		995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FB01862F48700A46778 /* TestCustomCell.m */; };
 		995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 995E3FB31862F8C100A46778 /* 163_icon@2x.png */; };
@@ -48,7 +51,7 @@
 		9963DD2A187D2F5F00571748 /* MImageGalleryView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD29187D2F5F00571748 /* MImageGalleryView_A.m */; };
 		9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD2F187D41D200571748 /* MKeyboardInputViewController.m */; };
 		9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD32187D443A00571748 /* MKeyboardInputView.m */; };
-		9963DD4B187D55BB00571748 /* M2InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD4A187D55BB00571748 /* M2InputView.m */; };
+		9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD4A187D55BB00571748 /* M2TextInputView.m */; };
 		9963DD5E187E465A00571748 /* MRearchThresholdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD5D187E465A00571748 /* MRearchThresholdViewController.m */; };
 		9963DD61187E467100571748 /* MRearchThresholdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD60187E467100571748 /* MRearchThresholdView.m */; };
 		9963DD64187E48ED00571748 /* MScrollableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD63187E48ED00571748 /* MScrollableView.m */; };
@@ -105,6 +108,12 @@
 		990C264F187BDC2100B3E45A /* M2WaterFallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2WaterFallView.h; sourceTree = "<group>"; };
 		990C2650187BDC2100B3E45A /* M2WaterFallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2WaterFallView.m; sourceTree = "<group>"; };
 		990C2654187BDE3400B3E45A /* chinadragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chinadragon@2x.png"; sourceTree = "<group>"; };
+		99518FC01887B2B600A3F20E /* MCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCommentViewController.h; sourceTree = "<group>"; };
+		99518FC11887B2B600A3F20E /* MCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCommentViewController.m; sourceTree = "<group>"; };
+		99518FC31887B2CF00A3F20E /* MCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCommentView.h; sourceTree = "<group>"; };
+		99518FC41887B2CF00A3F20E /* MCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCommentView.m; sourceTree = "<group>"; };
+		99518FC61887B32E00A3F20E /* M2CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2CommentCell.h; sourceTree = "<group>"; };
+		99518FC71887B32E00A3F20E /* M2CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2CommentCell.m; sourceTree = "<group>"; };
 		995E3FAB1862ED9000A46778 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
 		995E3FAC1862ED9000A46778 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		995E3FAF1862F48700A46778 /* TestCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomCell.h; sourceTree = "<group>"; };
@@ -152,8 +161,8 @@
 		9963DD2F187D41D200571748 /* MKeyboardInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKeyboardInputViewController.m; sourceTree = "<group>"; };
 		9963DD31187D443A00571748 /* MKeyboardInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKeyboardInputView.h; sourceTree = "<group>"; };
 		9963DD32187D443A00571748 /* MKeyboardInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKeyboardInputView.m; sourceTree = "<group>"; };
-		9963DD49187D55BB00571748 /* M2InputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2InputView.h; sourceTree = "<group>"; };
-		9963DD4A187D55BB00571748 /* M2InputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2InputView.m; sourceTree = "<group>"; };
+		9963DD49187D55BB00571748 /* M2TextInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TextInputView.h; sourceTree = "<group>"; };
+		9963DD4A187D55BB00571748 /* M2TextInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TextInputView.m; sourceTree = "<group>"; };
 		9963DD5C187E465A00571748 /* MRearchThresholdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRearchThresholdViewController.h; sourceTree = "<group>"; };
 		9963DD5D187E465A00571748 /* MRearchThresholdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRearchThresholdViewController.m; sourceTree = "<group>"; };
 		9963DD5F187E467100571748 /* MRearchThresholdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRearchThresholdView.h; sourceTree = "<group>"; };
@@ -231,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				990C2611187A9C8500B3E45A /* 可展开的详细信息 */,
+				99518FBF1887B28600A3F20E /* 评论Cell */,
 			);
 			name = "App详情页常用控件";
 			sourceTree = "<group>";
@@ -313,6 +323,36 @@
 			children = (
 				990C2615187AA0C500B3E45A /* M2ExtensibleInfoView.h */,
 				990C2616187AA0C500B3E45A /* M2ExtensibleInfoView.m */,
+			);
+			name = M2;
+			sourceTree = "<group>";
+		};
+		99518FBF1887B28600A3F20E /* 评论Cell */ = {
+			isa = PBXGroup;
+			children = (
+				99518FCE1887D4AA00A3F20E /* M2 */,
+				99518FC01887B2B600A3F20E /* MCommentViewController.h */,
+				99518FC11887B2B600A3F20E /* MCommentViewController.m */,
+				99518FC31887B2CF00A3F20E /* MCommentView.h */,
+				99518FC41887B2CF00A3F20E /* MCommentView.m */,
+			);
+			name = "评论Cell";
+			sourceTree = "<group>";
+		};
+		99518FCE1887D4AA00A3F20E /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				99518FC61887B32E00A3F20E /* M2CommentCell.h */,
+				99518FC71887B32E00A3F20E /* M2CommentCell.m */,
+			);
+			name = M2;
+			sourceTree = "<group>";
+		};
+		99518FCF1887D4F700A3F20E /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				9963DD49187D55BB00571748 /* M2TextInputView.h */,
+				9963DD4A187D55BB00571748 /* M2TextInputView.m */,
 			);
 			name = M2;
 			sourceTree = "<group>";
@@ -504,12 +544,11 @@
 		9963DD2C187D410800571748 /* 键盘上方的输入框 */ = {
 			isa = PBXGroup;
 			children = (
+				99518FCF1887D4F700A3F20E /* M2 */,
 				9963DD2E187D41D200571748 /* MKeyboardInputViewController.h */,
 				9963DD2F187D41D200571748 /* MKeyboardInputViewController.m */,
 				9963DD31187D443A00571748 /* MKeyboardInputView.h */,
 				9963DD32187D443A00571748 /* MKeyboardInputView.m */,
-				9963DD49187D55BB00571748 /* M2InputView.h */,
-				9963DD4A187D55BB00571748 /* M2InputView.m */,
 			);
 			name = "键盘上方的输入框";
 			sourceTree = "<group>";
@@ -818,7 +857,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */,
 				99C12F2B1884E1C200B92D1C /* M2GalleryViewCell.m in Sources */,
+				99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */,
 				99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */,
 				99C12F221884D90200B92D1C /* MImageGalleryViewController_B.m in Sources */,
 				995F3AE2184C3350005F349B /* M2BaseRefreshView.m in Sources */,
@@ -836,13 +877,14 @@
 				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
 				9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */,
+				99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */,
 				99BA1FFD1859DA4200EF5A74 /* LaunchHelpViewController.m in Sources */,
 				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */,
 				995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */,
 				99BA20001859DA4F00EF5A74 /* M2HelpView.m in Sources */,
 				990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */,
 				9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */,
-				9963DD4B187D55BB00571748 /* M2InputView.m in Sources */,
+				9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
 				9963DD64187E48ED00571748 /* MScrollableView.m in Sources */,

@@ -6,42 +6,44 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2InputView.h"
+#import "M2TextInputView.h"
 
-@interface M2InputView()<UITextViewDelegate>
+@interface M2TextInputView()<UITextViewDelegate>
 @property (nonatomic) UITextView   *textView;
 @property (nonatomic) float         baseY;
 @property (nonatomic) float         baseHeight;
 @end
 
-@implementation M2InputView
+@implementation M2TextInputView
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [UIColor lightGrayColor];
+        self.layer.borderColor = [UIColor grayColor].CGColor;
+        self.layer.borderWidth = 1;
         
         _baseY = CGRectGetMinY(frame);
         _baseHeight = CGRectGetHeight(frame);
         
         // buttons
         _cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 70, 30)];
-        _cancelButton.backgroundColor = [UIColor blueColor];
+        _cancelButton.backgroundColor = [UIColor grayColor];
         [_cancelButton setTitle:@"取消" forState:UIControlStateNormal];
         [_cancelButton addTarget:self action:@selector(onTapCancelButton) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_cancelButton];
         
         _submitButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetWidth(frame) - 5 - 70, 5, 70, 30)];
-        _submitButton.backgroundColor = [UIColor blueColor];
+        _submitButton.backgroundColor = [UIColor grayColor];
         [_submitButton setTitle:@"提交" forState:UIControlStateNormal];
         [_submitButton addTarget:self action:@selector(onTapSubmitButton) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_submitButton];
       
         // text input
-        _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, CGRectGetMaxY(_cancelButton.frame) + 5, CGRectGetWidth(frame) - 5 * 2, CGRectGetHeight(frame) - 5 * 3)];
-        _textView.backgroundColor = [UIColor blueColor];
+        _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, CGRectGetMaxY(_cancelButton.frame) + 5, CGRectGetWidth(frame) - 5 * 2, CGRectGetHeight(frame) - CGRectGetMaxY(_cancelButton.frame) - 5)];
+        _textView.backgroundColor = [UIColor grayColor];
         _textView.delegate = self;
         [self addSubview:_textView];
         
@@ -55,14 +57,14 @@
 
 #pragma mark - public
 - (void)show{
-    if (_delegate && [_delegate respondsToSelector:@selector(inputView:willChangeStateWithWillShow:)]) {
-        [_delegate inputView:self willChangeStateWithWillShow:YES];
+    if (_delegate && [_delegate respondsToSelector:@selector(inputView:willChangeStateWithIsWillShow:)]) {
+        [_delegate inputView:self willChangeStateWithIsWillShow:YES];
     }
     [_textView becomeFirstResponder];
 }
 - (void)hide{
-    if (_delegate && [_delegate respondsToSelector:@selector(inputView:willChangeStateWithWillShow:)]) {
-        [_delegate inputView:self willChangeStateWithWillShow:NO];
+    if (_delegate && [_delegate respondsToSelector:@selector(inputView:willChangeStateWithIsWillShow:)]) {
+        [_delegate inputView:self willChangeStateWithIsWillShow:NO];
     }
     [_textView resignFirstResponder];
 }
@@ -85,7 +87,7 @@
     self.frame = frame;
     
     frame.origin.y = _baseY - frame.size.height;
-    __weak M2InputView *weakSelf = self;
+    __weak M2TextInputView *weakSelf = self;
     [UIView animateWithDuration:animationDuration
                      animations:^{
                          weakSelf.frame = frame;
@@ -94,7 +96,7 @@
 - (void)hideWithAnimationDuration:(float)animationDuration{
     CGRect frame = self.frame;
     frame.origin.y = _baseY;
-    __weak M2InputView *weakSelf = self;
+    __weak M2TextInputView *weakSelf = self;
     [UIView animateWithDuration:animationDuration
                      animations:^{
                          weakSelf.frame = frame;
@@ -119,8 +121,8 @@
         && ![_delegate inputView:self checkText:_textView.text]) {
             return;
     }
-    if ([_delegate respondsToSelector:@selector(inputView:submitWithText:)]) {
-        [_delegate inputView:self submitWithText:_textView.text];
+    if ([_delegate respondsToSelector:@selector(inputView:willSubmitAfterCheckWithText:)]) {
+        [_delegate inputView:self willSubmitAfterCheckWithText:_textView.text];
     }
     
     [self hide];

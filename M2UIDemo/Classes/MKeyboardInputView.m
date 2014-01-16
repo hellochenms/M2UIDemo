@@ -7,11 +7,11 @@
 //
 
 #import "MKeyboardInputView.h"
-#import "M2InputView.h"
+#import "M2TextInputView.h"
 #import "M2Toast.h"
 
 @interface MKeyboardInputView()<M2InputViewDelegate>{
-    M2InputView *_inputView;
+    M2TextInputView *_inputView;
     UIButton    *_button;
 }
 @property (nonatomic) UIControl *coverView;
@@ -43,7 +43,7 @@
         [self addSubview:_coverView];
         
         //
-        _inputView = [[M2InputView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame), CGRectGetWidth(frame), 120)];
+        _inputView = [[M2TextInputView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame), CGRectGetWidth(frame), 120)];
         _inputView.delegate = self;
         [self addSubview:_inputView];
     }
@@ -59,7 +59,7 @@
 }
 
 #pragma mark - M2InputViewDelegate
-- (void)inputView:(M2InputView *)inputView willChangeStateWithWillShow:(BOOL)willShow{
+- (void)inputView:(M2TextInputView *)inputView willChangeStateWithIsWillShow:(BOOL)willShow{
     __weak MKeyboardInputView *weakSelf = self;
     if (willShow) {
         weakSelf.coverView.alpha = 0;
@@ -78,14 +78,14 @@
                          }];
     }
 }
-- (BOOL)inputView:(M2InputView *)inputView checkText:(NSString*)text{
+- (BOOL)inputView:(M2TextInputView *)inputView checkText:(NSString*)text{
     if (text.length <= 0) {
         [M2Toast showText:@"内容不能为空"];
         return NO;
     }
     return YES;
 }
-- (void)inputView:(M2InputView *)inputView submitWithText:(NSString*)text{
+- (void)inputView:(M2TextInputView *)inputView willSubmitAfterCheckWithText:(NSString*)text{
     NSLog(@"submit(%@)  @@%s", text, __func__);
 }
 
