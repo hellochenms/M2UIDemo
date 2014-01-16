@@ -10,7 +10,7 @@
 #import "M2TextInputView.h"
 #import "M2Toast.h"
 
-@interface MKeyboardInputView()<M2InputViewDelegate>{
+@interface MKeyboardInputView()<M2TextInputViewDelegate>{
     M2TextInputView *_inputView;
     UIButton    *_button;
 }
@@ -58,7 +58,7 @@
     [_inputView hide];
 }
 
-#pragma mark - M2InputViewDelegate
+#pragma mark - M2TextInputViewDelegate
 - (void)inputView:(M2TextInputView *)inputView willChangeStateWithIsWillShow:(BOOL)willShow{
     __weak MKeyboardInputView *weakSelf = self;
     if (willShow) {

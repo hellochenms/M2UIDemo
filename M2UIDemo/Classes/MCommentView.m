@@ -8,13 +8,14 @@
 
 #import "MCommentView.h"
 #import "M2CommentCell.h"
-#import "M2TextInputView.h"
+#import "M2CommentInputView.h"
 
-@interface MCommentView()<UITableViewDataSource, UITableViewDelegate, M2CommentCellDelegate>{
-    NSArray         *_comments;
-    UITableView     *_commentTableView;
-    M2TextInputView *_textInputView;
+@interface MCommentView()<UITableViewDataSource, UITableViewDelegate, M2CommentCellDelegate, M2CommentInputViewDelegate>{
+    NSArray             *_comments;
+    UITableView         *_commentTableView;
+    M2CommentInputView  *_textInputView;
 }
+@property (nonatomic) UIControl *coverView;
 @end
 
 @implementation MCommentView
@@ -47,8 +48,16 @@
         bottomView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
         [self addSubview:bottomView];
         
+        // 输入时遮罩
+        _coverView = [[UIControl alloc] initWithFrame: self.bounds];
+        _coverView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        [_coverView addTarget:self action:@selector(onTapCover) forControlEvents:UIControlEventTouchUpInside];
+        _coverView.hidden = YES;
+        [self addSubview:_coverView];
+        
         // 评论输入框
-        _textInputView = [[M2TextInputView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds), CGRectGetWidth(self.bounds), 150)];
+        _textInputView = [[M2CommentInputView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds), CGRectGetWidth(self.bounds), 150)];
+        _textInputView.delegate = self;
         [self addSubview:_textInputView];
     }
     return self;
@@ -87,12 +96,35 @@
 #pragma mark - M2CommentCellDelegate
 - (void)didTapReplyButtonOfCommentCell:(M2CommentCell *)cell{
     NSLog(@"cell.indexPath(%@)  @@%s", cell.indexPath, __func__);
-    [_textInputView show];
+    [_textInputView showWithReplyToUserName:[[_comments objectAtIndex:cell.indexPath.row] objectForKey:M2CC_Key_User]];
 }
 
 #pragma mark - comment event
 - (void)onTapCommentButton{
-    [_textInputView show];
+    [_textInputView showWithReplyToUserName:nil];
+}
+- (void)onTapCover{
+    [_textInputView hide];
 }
 
+#pragma mark - M2CommentInputViewDelegate
+- (void)inputView:(M2CommentInputView *)inputView willChangeStateWithIsWillShow:(BOOL)willShow{
+    __weak MCommentView *weakSelf = self;
+    if (willShow) {
+        weakSelf.coverView.alpha = 0;
+        weakSelf.coverView.hidden = NO;
+        [UIView animateWithDuration:0.25
+                         animations:^{
+                             weakSelf.coverView.alpha = 1;
+                         }];
+    }else{
+        [UIView animateWithDuration:0.25
+                         animations:^{
+                             weakSelf.coverView.alpha = 0;
+                         }
+                         completion:^(BOOL finished) {
+                             weakSelf.coverView.hidden = YES;
+                         }];
+    }
+}
 @end

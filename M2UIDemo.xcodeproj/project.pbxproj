@@ -19,6 +19,7 @@
 		99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC11887B2B600A3F20E /* MCommentViewController.m */; };
 		99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC41887B2CF00A3F20E /* MCommentView.m */; };
 		99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC71887B32E00A3F20E /* M2CommentCell.m */; };
+		99518FD51887DA6800A3F20E /* M2CommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FD41887DA6800A3F20E /* M2CommentInputView.m */; };
 		995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FAC1862ED9000A46778 /* TestTableViewController.m */; };
 		995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FB01862F48700A46778 /* TestCustomCell.m */; };
 		995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 995E3FB31862F8C100A46778 /* 163_icon@2x.png */; };
@@ -114,6 +115,8 @@
 		99518FC41887B2CF00A3F20E /* MCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCommentView.m; sourceTree = "<group>"; };
 		99518FC61887B32E00A3F20E /* M2CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2CommentCell.h; sourceTree = "<group>"; };
 		99518FC71887B32E00A3F20E /* M2CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2CommentCell.m; sourceTree = "<group>"; };
+		99518FD31887DA6800A3F20E /* M2CommentInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2CommentInputView.h; sourceTree = "<group>"; };
+		99518FD41887DA6800A3F20E /* M2CommentInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2CommentInputView.m; sourceTree = "<group>"; };
 		995E3FAB1862ED9000A46778 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
 		995E3FAC1862ED9000A46778 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		995E3FAF1862F48700A46778 /* TestCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomCell.h; sourceTree = "<group>"; };
@@ -353,6 +356,8 @@
 			children = (
 				9963DD49187D55BB00571748 /* M2TextInputView.h */,
 				9963DD4A187D55BB00571748 /* M2TextInputView.m */,
+				99518FD31887DA6800A3F20E /* M2CommentInputView.h */,
+				99518FD41887DA6800A3F20E /* M2CommentInputView.m */,
 			);
 			name = M2;
 			sourceTree = "<group>";
@@ -887,6 +892,7 @@
 				9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
+				99518FD51887DA6800A3F20E /* M2CommentInputView.m in Sources */,
 				9963DD64187E48ED00571748 /* MScrollableView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
