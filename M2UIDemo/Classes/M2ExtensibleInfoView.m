@@ -99,7 +99,7 @@
         }
     }
     if (_delegate && [_delegate respondsToSelector:@selector(extensibleInfoView:willExtendToFrame:animationDuration:)]) {
-        [_delegate extensibleInfoView:self willExtendToFrame:selfFrame animationDuration: M2SFIV_AnimationDuration];
+        [_delegate extensibleInfoView:self willExtendToFrame:selfFrame animationDuration: isUserTap ?M2SFIV_AnimationDuration : 0];
     }
     
     // 获得信息时不需要动画
