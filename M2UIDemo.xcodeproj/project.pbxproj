@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */; };
-		990C2617187AA0C500B3E45A /* M2ShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */; };
+		990C2617187AA0C500B3E45A /* M2ExtensibleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2616187AA0C500B3E45A /* M2ExtensibleInfoView.m */; };
 		990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2619187AA34000B3E45A /* MShowFullInfoView.m */; };
 		990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C261D187BACDC00B3E45A /* _tempTestViewController.m */; };
 		990C2621187BAD7600B3E45A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990C2620187BAD7600B3E45A /* icon@2x.png */; };
@@ -91,8 +91,8 @@
 /* Begin PBXFileReference section */
 		990C2612187AA0A900B3E45A /* MShowFullInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MShowFullInfoViewController.h; sourceTree = "<group>"; };
 		990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MShowFullInfoViewController.m; sourceTree = "<group>"; };
-		990C2615187AA0C500B3E45A /* M2ShowFullInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFullInfoView.h; sourceTree = "<group>"; };
-		990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFullInfoView.m; sourceTree = "<group>"; };
+		990C2615187AA0C500B3E45A /* M2ExtensibleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ExtensibleInfoView.h; sourceTree = "<group>"; };
+		990C2616187AA0C500B3E45A /* M2ExtensibleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ExtensibleInfoView.m; sourceTree = "<group>"; };
 		990C2618187AA34000B3E45A /* MShowFullInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MShowFullInfoView.h; sourceTree = "<group>"; };
 		990C2619187AA34000B3E45A /* MShowFullInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MShowFullInfoView.m; sourceTree = "<group>"; };
 		990C261C187BACDC00B3E45A /* _tempTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _tempTestViewController.h; sourceTree = "<group>"; };
@@ -238,12 +238,11 @@
 		990C2611187A9C8500B3E45A /* 可展开的详细信息 */ = {
 			isa = PBXGroup;
 			children = (
+				99518F96188785F700A3F20E /* M2 */,
 				990C2612187AA0A900B3E45A /* MShowFullInfoViewController.h */,
 				990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */,
 				990C2618187AA34000B3E45A /* MShowFullInfoView.h */,
 				990C2619187AA34000B3E45A /* MShowFullInfoView.m */,
-				990C2615187AA0C500B3E45A /* M2ShowFullInfoView.h */,
-				990C2616187AA0C500B3E45A /* M2ShowFullInfoView.m */,
 			);
 			name = "可展开的详细信息";
 			sourceTree = "<group>";
@@ -307,6 +306,15 @@
 				990C2620187BAD7600B3E45A /* icon@2x.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		99518F96188785F700A3F20E /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				990C2615187AA0C500B3E45A /* M2ExtensibleInfoView.h */,
+				990C2616187AA0C500B3E45A /* M2ExtensibleInfoView.m */,
+			);
+			name = M2;
 			sourceTree = "<group>";
 		};
 		995E3FAA1862ECF100A46778 /* UITableView */ = {
@@ -847,7 +855,7 @@
 				99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,
 				997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */,
-				990C2617187AA0C500B3E45A /* M2ShowFullInfoView.m in Sources */,
+				990C2617187AA0C500B3E45A /* M2ExtensibleInfoView.m in Sources */,
 				995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */,
 				99C12F2F1884E29500B92D1C /* MIGalleryViewCell_B.m in Sources */,
 				990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */,
