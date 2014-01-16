@@ -42,25 +42,30 @@
     NSArray *comments = @[@{
                               M2CC_Key_User: @"阿古斯防御者",
                               M2CC_Key_Comment : @"我是阿古斯之盾！",
+                              M2CC_Key_CommentDate : [NSDate date]
                               },
                           @{
                               M2CC_Key_User: @"蓝胖",
                               M2CC_Key_Comment : @"你为什么召唤我！",
+                              M2CC_Key_CommentDate : [NSDate dateWithTimeIntervalSinceNow:-60 * 10]
                               },
                           @{
                               M2CC_Key_User: @"战利品储藏者",
                               M2CC_Key_Comment : @"我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？",
+                              M2CC_Key_CommentDate : [NSDate dateWithTimeIntervalSinceNow:-60 * 60 * 2]
                               },
                           @{
                               M2CC_Key_User: @"大地震击",
                               M2CC_Key_Comment : @"！@#￥%……&＊（）——+！@#￥%……&！@#￥%……&＊（……&＊（！@#￥%……&＊（）！@#￥%……&＊&＊（%￥@！）——",
                               M2CC_Key_ReplyToUser: @"战利品储藏者",
-                              M2CC_Key_ReplyToComment: @"我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？"
+                              M2CC_Key_ReplyToComment: @"我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？我可以需求这装备吗？",
+                              M2CC_Key_CommentDate : [NSDate dateWithTimeIntervalSinceNow:-60 * 60 * 24]
                               },
                           @{
                               M2CC_Key_User: @"奥术飞弹",
                               M2CC_Key_Comment : @"！@#￥%……&！@#￥%……&！@#￥%……&！@#￥%……&",
-                              M2CC_Key_ReplyToComment: @"！@#￥%……&……"
+                              M2CC_Key_ReplyToComment: @"！@#￥%……&……",
+                              M2CC_Key_CommentDate : [NSDate dateWithTimeIntervalSinceNow:-60 * 60 * 24 * 2]
                               }
                           ];
     [_mainView reloadData:comments];

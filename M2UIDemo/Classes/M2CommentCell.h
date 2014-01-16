@@ -17,6 +17,7 @@
 // 但是，计算高度的逻辑是一样的，沿用即可；
 #define M2CC_Key_User           @"user"
 #define M2CC_Key_Comment        @"comment"
+#define M2CC_Key_CommentDate    @"date"
 #define M2CC_Key_ReplyToUser    @"replyToUser"
 #define M2CC_Key_ReplyToComment @"replyToComment"
 
