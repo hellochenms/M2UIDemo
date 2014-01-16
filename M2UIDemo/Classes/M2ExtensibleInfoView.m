@@ -72,22 +72,22 @@
 #pragma mark - public
 - (void)reloadData:(NSString*)text{
     _infoLabel.text = text;
-    [self adjustHeightsWithIsLimitToMaxHeight:YES];
+    [self adjustHeightsWithIsUserTap:NO];
 }
 
 #pragma mark - button event
 - (void)onTapExtend:(UITapGestureRecognizer *)tap{
     _extendTapView.hidden = YES;
-    [self adjustHeightsWithIsLimitToMaxHeight:NO];
+    [self adjustHeightsWithIsUserTap:YES];
 }
 
 #pragma adjust layout
-- (void)adjustHeightsWithIsLimitToMaxHeight:(BOOL)isLimitToMaxHeight{
+- (void)adjustHeightsWithIsUserTap:(BOOL)isUserTap{
     float infoLabelHeight = [self heightOfLabel:_infoLabel];
     CGRect infoLabelFrame = CGRectMake(CGRectGetMinX(_infoLabel.frame), CGRectGetMaxY(_titleLabel.frame), CGRectGetWidth(_infoLabel.frame), infoLabelHeight);
     CGRect selfFrame = CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), CGRectGetMaxY(infoLabelFrame));
     CGRect extendTapFrame = _extendTapView.frame;
-    if (isLimitToMaxHeight) {
+    if (!isUserTap) {
         int maxHeight = (int)[self heightOfLabel:_infoLabel withNumberOfLines:_maxNumberOfLinesWhenNotExtend];
         int more = (int)CGRectGetHeight(infoLabelFrame) - maxHeight;// 用int型和0比较，float直接和0比较可能有问题
         if (more > 0) {
@@ -101,17 +101,27 @@
     if (_delegate && [_delegate respondsToSelector:@selector(extensibleInfoView:willExtendToFrame:animationDuration:)]) {
         [_delegate extensibleInfoView:self willExtendToFrame:selfFrame animationDuration: M2SFIV_AnimationDuration];
     }
-    __weak M2ExtensibleInfoView *weakSelf = self;
-    _extendTapView.userInteractionEnabled = NO;
-    [UIView animateWithDuration:M2SFIV_AnimationDuration
-                     animations:^{
-                         weakSelf.frame = selfFrame;
-                         weakSelf.infoLabel.frame = infoLabelFrame;
-                         weakSelf.extendTapView.frame = extendTapFrame;
-                     }
-                     completion:^(BOOL finished) {
-                         weakSelf.extendTapView.userInteractionEnabled = YES;
-                     }];
+    
+    // 获得信息时不需要动画
+    if (!isUserTap) {
+        self.frame = selfFrame;
+        _infoLabel.frame = infoLabelFrame;
+        _extendTapView.frame = extendTapFrame;
+    }
+    // 用户点击时需要动画
+    else{
+        __weak M2ExtensibleInfoView *weakSelf = self;
+        _extendTapView.userInteractionEnabled = NO;
+        [UIView animateWithDuration:M2SFIV_AnimationDuration
+                         animations:^{
+                             weakSelf.frame = selfFrame;
+                             weakSelf.infoLabel.frame = infoLabelFrame;
+                             weakSelf.extendTapView.frame = extendTapFrame;
+                         }
+                         completion:^(BOOL finished) {
+                             weakSelf.extendTapView.userInteractionEnabled = YES;
+                         }];
+    }
 }
 
 #pragma mark - tools
