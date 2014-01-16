@@ -88,8 +88,8 @@
     CGRect selfFrame = CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), CGRectGetMaxY(infoLabelFrame));
     CGRect extendTapFrame = _extendTapView.frame;
     if (!isUserTap) {
-        int maxHeight = (int)[self heightOfLabel:_infoLabel withNumberOfLines:_maxNumberOfLinesWhenNotExtend];
-        int more = (int)CGRectGetHeight(infoLabelFrame) - maxHeight;// 用int型和0比较，float直接和0比较可能有问题
+        float maxHeight = [self heightOfLabel:_infoLabel withNumberOfLines:_maxNumberOfLinesWhenNotExtend];
+        float more = CGRectGetHeight(infoLabelFrame) - maxHeight;
         if (more > 0) {
             infoLabelFrame.size.height -= more;
             selfFrame.size.height -= more;
@@ -99,7 +99,7 @@
         }
     }
     if (_delegate && [_delegate respondsToSelector:@selector(extensibleInfoView:willExtendToFrame:animationDuration:)]) {
-        [_delegate extensibleInfoView:self willExtendToFrame:selfFrame animationDuration: isUserTap ?M2SFIV_AnimationDuration : 0];
+        [_delegate extensibleInfoView:self willExtendToFrame:selfFrame animationDuration: isUserTap ? M2SFIV_AnimationDuration : 0];
     }
     
     // 获得信息时不需要动画

@@ -29,7 +29,7 @@
         _mainView.showsVerticalScrollIndicator = NO;
         [self addSubview:_mainView];
         
-        _showFullInfoView = [[M2ExtensibleInfoView alloc] initWithFrame:CGRectMake(5, 5, CGRectGetWidth(frame) - 5 * 2, 0)];
+        _showFullInfoView = [[M2ExtensibleInfoView alloc] initWithFrame:CGRectMake(10, 5, CGRectGetWidth(frame) - 10 * 2, 0)];
         _showFullInfoView.backgroundColor = [UIColor grayColor];
         _showFullInfoView.maxNumberOfLinesWhenNotExtend = 5;
         _showFullInfoView.delegate = self;
