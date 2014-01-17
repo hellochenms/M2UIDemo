@@ -51,7 +51,8 @@
                       @[@"启动帮助", @"LaunchHelpViewController"]
                       ],
                   @[
-                      @[@"测试性能", @"TestTableViewController"]
+                      @[@"测试性能", @"TestTableViewController"],
+                      @[@"可展开的section", @"MExtensibleItemTableViewController"]
                       ],
                   @[
                       @[@"子ViewController", @"MTVCRootViewController"]

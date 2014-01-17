@@ -58,6 +58,10 @@
 		9963DD64187E48ED00571748 /* MScrollableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD63187E48ED00571748 /* MScrollableView.m */; };
 		9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD66187E502000571748 /* M2ScrollableViewObserver.m */; };
 		997119101888DC1600039D8A /* M2CommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9971190F1888DC1600039D8A /* M2CommentInputView.m */; };
+		9971193218890C1F00039D8A /* MExtensibleItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9971193118890C1F00039D8A /* MExtensibleItemTableViewController.m */; };
+		9971193518890C7B00039D8A /* MExtensibleItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9971193418890C7B00039D8A /* MExtensibleItemTableView.m */; };
+		99711938188917A700039D8A /* MSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99711937188917A700039D8A /* MSubViewController.m */; };
+		9971193B18891FB100039D8A /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9971193A18891FB100039D8A /* right_arrow@2x.png */; };
 		997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B40FE1856B99D00931A53 /* M2ViewController.m */; };
 		997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B41011856B9EB00931A53 /* M2NavigationController.m */; };
 		997B41801857234000931A53 /* M2Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B417F1857234000931A53 /* M2Toast.m */; };
@@ -177,6 +181,13 @@
 		9963DD66187E502000571748 /* M2ScrollableViewObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ScrollableViewObserver.m; sourceTree = "<group>"; };
 		9971190E1888DC1600039D8A /* M2CommentInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2CommentInputView.h; sourceTree = "<group>"; };
 		9971190F1888DC1600039D8A /* M2CommentInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2CommentInputView.m; sourceTree = "<group>"; };
+		9971193018890C1F00039D8A /* MExtensibleItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MExtensibleItemTableViewController.h; sourceTree = "<group>"; };
+		9971193118890C1F00039D8A /* MExtensibleItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MExtensibleItemTableViewController.m; sourceTree = "<group>"; };
+		9971193318890C7B00039D8A /* MExtensibleItemTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MExtensibleItemTableView.h; sourceTree = "<group>"; };
+		9971193418890C7B00039D8A /* MExtensibleItemTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MExtensibleItemTableView.m; sourceTree = "<group>"; };
+		99711936188917A700039D8A /* MSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSubViewController.h; sourceTree = "<group>"; };
+		99711937188917A700039D8A /* MSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSubViewController.m; sourceTree = "<group>"; };
+		9971193A18891FB100039D8A /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
 		997B40FD1856B99D00931A53 /* M2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ViewController.h; sourceTree = "<group>"; };
 		997B40FE1856B99D00931A53 /* M2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ViewController.m; sourceTree = "<group>"; };
 		997B41001856B9EB00931A53 /* M2NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2NavigationController.h; sourceTree = "<group>"; };
@@ -370,6 +381,7 @@
 		995E3FAA1862ECF100A46778 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				9971192F18890B0600039D8A /* 可展开的section */,
 				995E3FAE1862ED9400A46778 /* 测试性能 */,
 			);
 			name = UITableView;
@@ -471,6 +483,7 @@
 			children = (
 				990C261B187BACBF00B3E45A /* _临时测试 */,
 				997B40FC1856B95600931A53 /* M2CoreUIKit */,
+				99711939188917AE00039D8A /* Common */,
 				995F3ADB184C30F4005F349B /* 数据加载 */,
 				99B626E11856B6120081DF4D /* 提示框 */,
 				99BA1FFA1859DA2100EF5A74 /* 启动帮助 */,
@@ -595,6 +608,26 @@
 				9963DD66187E502000571748 /* M2ScrollableViewObserver.m */,
 			);
 			name = "上滑超过阈值时上推";
+			sourceTree = "<group>";
+		};
+		9971192F18890B0600039D8A /* 可展开的section */ = {
+			isa = PBXGroup;
+			children = (
+				9971193018890C1F00039D8A /* MExtensibleItemTableViewController.h */,
+				9971193118890C1F00039D8A /* MExtensibleItemTableViewController.m */,
+				9971193318890C7B00039D8A /* MExtensibleItemTableView.h */,
+				9971193418890C7B00039D8A /* MExtensibleItemTableView.m */,
+			);
+			name = "可展开的section";
+			sourceTree = "<group>";
+		};
+		99711939188917AE00039D8A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				99711936188917A700039D8A /* MSubViewController.h */,
+				99711937188917A700039D8A /* MSubViewController.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		997B40FC1856B95600931A53 /* M2CoreUIKit */ = {
@@ -749,6 +782,7 @@
 		99E06E77187A5E230037ED3D /* common */ = {
 			isa = PBXGroup;
 			children = (
+				9971193A18891FB100039D8A /* right_arrow@2x.png */,
 				99E06E78187A5E230037ED3D /* white_rect@2x.png */,
 			);
 			path = common;
@@ -831,6 +865,7 @@
 			files = (
 				995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */,
 				9963DD21187D031700571748 /* landscape_1.jpg in Resources */,
+				9971193B18891FB100039D8A /* right_arrow@2x.png in Resources */,
 				99BA20081859DE4B00EF5A74 /* help_phone2.jpg in Resources */,
 				99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */,
 				995F3AB1184C2D59005F349B /* InfoPlist.strings in Resources */,
@@ -874,6 +909,7 @@
 				99C12F221884D90200B92D1C /* MImageGalleryViewController_B.m in Sources */,
 				995F3AE2184C3350005F349B /* M2BaseRefreshView.m in Sources */,
 				997B41991857386000931A53 /* M2StatusBarToast.m in Sources */,
+				9971193518890C7B00039D8A /* MExtensibleItemTableView.m in Sources */,
 				9963DD61187E467100571748 /* MRearchThresholdView.m in Sources */,
 				9963DD12187CF75A00571748 /* M2ImageGalleryView_A.m in Sources */,
 				99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */,
@@ -904,6 +940,7 @@
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
 				99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */,
 				990C2626187BB11D00B3E45A /* MResizableImageViewController.m in Sources */,
+				99711938188917A700039D8A /* MSubViewController.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
 				99C12F251884D92000B92D1C /* MImageGalleryView_B.m in Sources */,
 				99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */,
@@ -912,6 +949,7 @@
 				990C2617187AA0C500B3E45A /* M2ExtensibleInfoView.m in Sources */,
 				995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */,
 				99C12F2F1884E29500B92D1C /* MIGalleryViewCell_B.m in Sources */,
+				9971193218890C1F00039D8A /* MExtensibleItemTableViewController.m in Sources */,
 				990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
