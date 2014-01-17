@@ -9,6 +9,7 @@
 #import "MCommentView.h"
 #import "M2CommentCell.h"
 #import "M2CommentInputView.h"
+#import "M2Toast.h"
 
 @interface MCommentView()<UITableViewDataSource, UITableViewDelegate, M2CommentCellDelegate, M2CommentInputViewDelegate>{
     NSArray             *_comments;
@@ -48,17 +49,9 @@
         bottomView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
         [self addSubview:bottomView];
         
-        // 输入时遮罩
-        _coverView = [[UIControl alloc] initWithFrame: self.bounds];
-        _coverView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
-        [_coverView addTarget:self action:@selector(onTapCover) forControlEvents:UIControlEventTouchUpInside];
-        _coverView.hidden = YES;
-        [self addSubview:_coverView];
-        
         // 评论输入框
-        _textInputView = [[M2CommentInputView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds), CGRectGetWidth(self.bounds), 150)];
+        _textInputView = [[M2CommentInputView alloc] initWithHeight:200];
         _textInputView.delegate = self;
-        [self addSubview:_textInputView];
     }
     return self;
 }
@@ -95,36 +88,22 @@
 
 #pragma mark - M2CommentCellDelegate
 - (void)didTapReplyButtonOfCommentCell:(M2CommentCell *)cell{
-    NSLog(@"cell.indexPath(%@)  @@%s", cell.indexPath, __func__);
     [_textInputView showWithReplyToUserName:[[_comments objectAtIndex:cell.indexPath.row] objectForKey:M2CC_Key_User]];
 }
 
 #pragma mark - comment event
 - (void)onTapCommentButton{
-    [_textInputView showWithReplyToUserName:nil];
-}
-- (void)onTapCover{
-    [_textInputView hide];
+    [_textInputView show];
 }
 
 #pragma mark - M2CommentInputViewDelegate
-- (void)inputView:(M2CommentInputView *)inputView willChangeStateWithIsWillShow:(BOOL)willShow{
-    __weak MCommentView *weakSelf = self;
-    if (willShow) {
-        weakSelf.coverView.alpha = 0;
-        weakSelf.coverView.hidden = NO;
-        [UIView animateWithDuration:0.25
-                         animations:^{
-                             weakSelf.coverView.alpha = 1;
-                         }];
-    }else{
-        [UIView animateWithDuration:0.25
-                         animations:^{
-                             weakSelf.coverView.alpha = 0;
-                         }
-                         completion:^(BOOL finished) {
-                             weakSelf.coverView.hidden = YES;
-                         }];
+- (BOOL)inputView:(M2CommentInputView *)inputView checkText:(NSString*)text{
+    if (text.length <= 0) {
+        [M2Toast showText:@"评论不能为空"];
+        return NO;
     }
+    
+    return YES;
 }
+
 @end

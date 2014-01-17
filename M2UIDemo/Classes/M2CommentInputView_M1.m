@@ -1,43 +1,34 @@
 //
-//  M2CommentInputViewB.m
+//  M2CommentInputView.m
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-1-17.
+//  Created by Chen Meisong on 14-1-16.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2CommentInputView.h"
+#import "M2CommentInputView_M1.h"
 
-#define M2CIV_DefaultHeight 150
-
-@interface M2CommentInputView()<UITextViewDelegate>{
-    UILabel     *_repleyToUserLabel;
-    UIButton    *_submitButton;
+@interface M2CommentInputView_M1()<UITextViewDelegate>{
+    UILabel *_repleyToUserLabel;
 }
 @property (nonatomic)       UITextView  *textView;
-@property (nonatomic)       float       originY;
-@property (nonatomic)       float       contentAreaHeight;
-@property (nonatomic)       UIControl   *coverView;
+@property (nonatomic)       float       baseY;
+@property (nonatomic)       float       baseHeight;
 @end
 
-@implementation M2CommentInputView
+@implementation M2CommentInputView_M1
 
-- (id)initWithFrame:(CGRect)frame{
-    return [self initWithHeight:M2CIV_DefaultHeight];
-}
-
-- (id)initWithHeight:(CGFloat)height{
-    _contentAreaHeight = height;
-    CGRect frame = CGRectMake(0, CGRectGetHeight([UIScreen mainScreen].bounds), CGRectGetWidth([UIScreen mainScreen].bounds), _contentAreaHeight + 200);// view在键盘正上方时，和键盘同样速度滑出时，会和键盘分开一小段时间，为避免此问题，将view实际高度增加一个值；
+- (id)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _originY = CGRectGetMinY(frame);
-        
-        // self
         self.backgroundColor = [UIColor lightGrayColor];
         self.layer.borderColor = [UIColor grayColor].CGColor;
         self.layer.borderWidth = 1;
+        
+        _baseY = CGRectGetMinY(frame);
+        _baseHeight = CGRectGetHeight(frame);
         
         // 回复目标
         _repleyToUserLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 200, 30)];
@@ -54,16 +45,10 @@
         [self addSubview:_submitButton];
         
         // text input
-        _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, CGRectGetMaxY(_submitButton.frame) + 5, CGRectGetWidth(frame) - 5 * 2, _contentAreaHeight - CGRectGetMaxY(_submitButton.frame) - 5 - 10)];
+        _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, CGRectGetMaxY(_submitButton.frame) + 5, CGRectGetWidth(frame) - 5 * 2, CGRectGetHeight(frame) - CGRectGetMaxY(_submitButton.frame) - 5 - 10)];
         _textView.backgroundColor = [UIColor grayColor];
         _textView.delegate = self;
         [self addSubview:_textView];
-        
-        // cover
-        _coverView = [[UIControl alloc] initWithFrame: [UIScreen mainScreen].bounds];
-        _coverView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
-        [_coverView addTarget:self action:@selector(onTapCover) forControlEvents:UIControlEventTouchUpInside];
-        _coverView.alpha = 0;
         
         // listen
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
@@ -74,9 +59,6 @@
 }
 
 #pragma mark - public
-- (void)show{
-    [self showWithReplyToUserName:nil];
-}
 - (void)showWithReplyToUserName:(NSString *)userName{
     if (userName.length <= 0) {
         _repleyToUserLabel.text = @"回复";
@@ -84,21 +66,15 @@
         _repleyToUserLabel.text = [NSString stringWithFormat:@"回复：%@", userName];
     }
     
-    UIView *view = [UIApplication sharedApplication].keyWindow.rootViewController.view;
-    [view addSubview:_coverView];
-    [view addSubview:self];
-    
+    if (_delegate && [_delegate respondsToSelector:@selector(inputView:willChangeStateWithIsWillShow:)]) {
+        [_delegate inputView:self willChangeStateWithIsWillShow:YES];
+    }
     [_textView becomeFirstResponder];
 }
-
-#pragma mark - tap cover
-- (void)onTapCover{
-    [self hide];
-    [self removeFromSuperview];
-    [_coverView removeFromSuperview];
-}
-
 - (void)hide{
+    if (_delegate && [_delegate respondsToSelector:@selector(inputView:willChangeStateWithIsWillShow:)]) {
+        [_delegate inputView:self willChangeStateWithIsWillShow:NO];
+    }
     [_textView resignFirstResponder];
 }
 
@@ -116,30 +92,40 @@
 #pragma mark -
 - (void)showWithKeyboradHeight:(float)keyboradHeight animationDuration:(float)animationDuration{
     CGRect frame = self.frame;
-    frame.origin.y = _originY - (_contentAreaHeight + keyboradHeight);
-    __weak M2CommentInputView *weakSelf = self;
-    _coverView.alpha = 0;
+    frame.size.height = _baseHeight + keyboradHeight;
+    self.frame = frame;
+    
+    frame.origin.y = _baseY - frame.size.height;
+    __weak M2CommentInputView_M1 *weakSelf = self;
     [UIView animateWithDuration:animationDuration
                      animations:^{
                          weakSelf.frame = frame;
-                         weakSelf.coverView.alpha = 1;
                      }];
 }
 - (void)hideWithAnimationDuration:(float)animationDuration{
     CGRect frame = self.frame;
-    frame.origin.y = _originY;
-    __weak M2CommentInputView *weakSelf = self;
+    frame.origin.y = _baseY;
+    __weak M2CommentInputView_M1 *weakSelf = self;
     [UIView animateWithDuration:animationDuration
                      animations:^{
                          weakSelf.frame = frame;
-                         weakSelf.coverView.alpha = 0;
                      } completion:^(BOOL finished) {
+                         CGRect frame = weakSelf.frame;
+                         frame.size.height = weakSelf.baseHeight;
+                         weakSelf.frame = frame;
+                         //
                          weakSelf.textView.text = nil;
                      }];
 }
 
 #pragma mark -
+- (void)onTapCancelButton{
+    [self hide];
+}
 - (void)onTapSubmitButton{
+    if (!_delegate){
+        return;
+    }
     if ([_delegate respondsToSelector:@selector(inputView:checkText:)]
         && ![_delegate inputView:self checkText:_textView.text]) {
         return;
