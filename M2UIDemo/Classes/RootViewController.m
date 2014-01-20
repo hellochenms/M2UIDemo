@@ -29,7 +29,8 @@
                       @"提示框",
                       @"启动帮助",
                       @"UITableView",
-                      @"Tabbar切换View",
+                      @"TabBar",
+                      @"TabBar切换View",
                       @"App详情页常用控件",
                       @"平铺拉伸图片",
                       @"瀑布流",
@@ -55,7 +56,11 @@
                       @[@"可展开的section", @"MExtensibleItemTableViewController"]
                       ],
                   @[
-                      @[@"子ViewController", @"MTVCRootViewController"]
+                      @[@"一行按钮带下划线", @"MButtonTabBarViewController"],
+                      @[@"多行按钮", @"MMultiRowTabViewController"]
+                      ],
+                  @[
+                      @[@"点击切换子ViewController", @"MTVCRootViewController"]
                       ],
                   @[
                       @[@"可展开的详细信息", @"MShowFullInfoViewController"],

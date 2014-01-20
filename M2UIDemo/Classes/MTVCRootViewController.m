@@ -8,9 +8,9 @@
 
 #import "MTVCRootViewController.h"
 #import "M2MultiRowTabBarView.h"
-#import "MRVCSubViewController.h"
+#import "MSubViewController.h"
 
-#define MTVCRVC_SubViewControllerCount 3
+#define MTVCRVC_SubViewControllerCount 5
 
 @interface MTVCRootViewController ()<M2MultiRowTabbarViewDelegate>{
     NSMutableArray *_subViewControllers;
@@ -42,9 +42,9 @@
     // tabbar
     _tabbarView = [[M2MultiRowTabBarView alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(frame), 100)
                                                                          titles:[self numberTitlesWithCount:MTVCRVC_SubViewControllerCount]
-                                                                 itemCountInRow:2];
+                                                                 itemCountInRow:3];
     _tabbarView.delegate = self;
-    _tabbarView.backgroundColor = [UIColor blueColor];
+    _tabbarView.backgroundColor = [UIColor lightGrayColor];
     _tabbarView.disableIndexs = @[@(1)];
     [self.view addSubview:_tabbarView];
     
@@ -55,11 +55,10 @@
     [self.view addSubview:containerView];
     
     // build sub viewControllers
-    MRVCSubViewController *subViewController = nil;
+    MSubViewController *subViewController = nil;
     for (int i = 0; i < MTVCRVC_SubViewControllerCount; i++) {
-        subViewController = [MRVCSubViewController new];
-        subViewController.subTitle = [NSString stringWithFormat:@"SubViewController(%d)", i];
-        subViewController.view.backgroundColor = randomColor;
+        subViewController = [MSubViewController new];
+        subViewController.someTitle = [NSString stringWithFormat:@"SubViewController(%d)", i];
         [_subViewControllers addObject:subViewController];
     }
     
@@ -87,8 +86,8 @@
         return;
     }
     _tabbarView.userInteractionEnabled = NO;
-    MRVCSubViewController *fromViewController = [_subViewControllers objectAtIndex:_lastIndex];
-    MRVCSubViewController *toViewController = [_subViewControllers objectAtIndex:index];
+    UIViewController *fromViewController = [_subViewControllers objectAtIndex:_lastIndex];
+    UIViewController *toViewController = [_subViewControllers objectAtIndex:index];
     [fromViewController willMoveToParentViewController:nil];
     [self addChildViewController:toViewController];
     

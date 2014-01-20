@@ -16,6 +16,10 @@
 		990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C264D187BDBC000B3E45A /* MWaterFallMeViewController.m */; };
 		990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2650187BDC2100B3E45A /* M2WaterFallView.m */; };
 		990C2655187BDE3400B3E45A /* chinadragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990C2654187BDE3400B3E45A /* chinadragon@2x.png */; };
+		990E45C8188D13F3004E2C98 /* MButtonTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45C7188D13F3004E2C98 /* MButtonTabBarViewController.m */; };
+		990E45CB188D140B004E2C98 /* MButtonTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45CA188D140B004E2C98 /* MButtonTabBarView.m */; };
+		990E45D0188D258A004E2C98 /* MMultiRowTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45CF188D258A004E2C98 /* MMultiRowTabViewController.m */; };
+		990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */; };
 		99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC11887B2B600A3F20E /* MCommentViewController.m */; };
 		99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC41887B2CF00A3F20E /* MCommentView.m */; };
 		99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC71887B32E00A3F20E /* M2CommentCell.m */; };
@@ -84,7 +88,7 @@
 		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
 		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */; };
 		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
-		99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E7D187A86660037ED3D /* MRVCSubViewController.m */; };
+		99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,14 @@
 		990C264F187BDC2100B3E45A /* M2WaterFallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2WaterFallView.h; sourceTree = "<group>"; };
 		990C2650187BDC2100B3E45A /* M2WaterFallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2WaterFallView.m; sourceTree = "<group>"; };
 		990C2654187BDE3400B3E45A /* chinadragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chinadragon@2x.png"; sourceTree = "<group>"; };
+		990E45C6188D13F3004E2C98 /* MButtonTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButtonTabBarViewController.h; sourceTree = "<group>"; };
+		990E45C7188D13F3004E2C98 /* MButtonTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MButtonTabBarViewController.m; sourceTree = "<group>"; };
+		990E45C9188D140B004E2C98 /* MButtonTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButtonTabBarView.h; sourceTree = "<group>"; };
+		990E45CA188D140B004E2C98 /* MButtonTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MButtonTabBarView.m; sourceTree = "<group>"; };
+		990E45CE188D258A004E2C98 /* MMultiRowTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMultiRowTabViewController.h; sourceTree = "<group>"; };
+		990E45CF188D258A004E2C98 /* MMultiRowTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMultiRowTabViewController.m; sourceTree = "<group>"; };
+		990E45D1188D25A6004E2C98 /* MMultiRowTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMultiRowTabView.h; sourceTree = "<group>"; };
+		990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMultiRowTabView.m; sourceTree = "<group>"; };
 		99518FC01887B2B600A3F20E /* MCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCommentViewController.h; sourceTree = "<group>"; };
 		99518FC11887B2B600A3F20E /* MCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCommentViewController.m; sourceTree = "<group>"; };
 		99518FC31887B2CF00A3F20E /* MCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCommentView.h; sourceTree = "<group>"; };
@@ -225,8 +237,8 @@
 		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView_Master.h; sourceTree = "<group>"; };
 		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView_Master.m; sourceTree = "<group>"; };
 		99E06E78187A5E230037ED3D /* white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_rect@2x.png"; sourceTree = "<group>"; };
-		99E06E7C187A86660037ED3D /* MRVCSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRVCSubViewController.h; sourceTree = "<group>"; };
-		99E06E7D187A86660037ED3D /* MRVCSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRVCSubViewController.m; sourceTree = "<group>"; };
+		99ED58AB188D0B7E001359F6 /* M2TabBarView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TabBarView_A.h; sourceTree = "<group>"; };
+		99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TabBarView_A.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +345,29 @@
 				990C2620187BAD7600B3E45A /* icon@2x.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		990E45CC188D251A004E2C98 /* 多行按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				990E45CD188D2552004E2C98 /* M2 */,
+				990E45CE188D258A004E2C98 /* MMultiRowTabViewController.h */,
+				990E45CF188D258A004E2C98 /* MMultiRowTabViewController.m */,
+				990E45D1188D25A6004E2C98 /* MMultiRowTabView.h */,
+				990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */,
+			);
+			name = "多行按钮";
+			sourceTree = "<group>";
+		};
+		990E45CD188D2552004E2C98 /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */,
+				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */,
+				9963320E1883BAD30038BCE3 /* M2MultiRowTabbarView.h */,
+				9963320F1883BAD30038BCE3 /* M2MultiRowTabbarView.m */,
+			);
+			name = M2;
 			sourceTree = "<group>";
 		};
 		99518F96188785F700A3F20E /* M2 */ = {
@@ -488,6 +523,7 @@
 				99B626E11856B6120081DF4D /* 提示框 */,
 				99BA1FFA1859DA2100EF5A74 /* 启动帮助 */,
 				995E3FAA1862ECF100A46778 /* UITableView */,
+				99ED58A2188D0AD4001359F6 /* Tabbar */,
 				99E06E6B187A4F540037ED3D /* Tabbar切换view */,
 				990C2610187A9C6400B3E45A /* App详情页常用控件 */,
 				990C2622187BB0BF00B3E45A /* 平铺拉伸图片 */,
@@ -574,17 +610,6 @@
 				9963DD32187D443A00571748 /* MKeyboardInputView.m */,
 			);
 			name = "键盘上方的输入框";
-			sourceTree = "<group>";
-		};
-		9963DD2D187D419D00571748 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */,
-				99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */,
-				9963320E1883BAD30038BCE3 /* M2MultiRowTabbarView.h */,
-				9963320F1883BAD30038BCE3 /* M2MultiRowTabbarView.m */,
-			);
-			name = Common;
 			sourceTree = "<group>";
 		};
 		9963DD5A187E458F00571748 /* 上滑scrollView上推其他View */ = {
@@ -762,21 +787,18 @@
 		99E06E6B187A4F540037ED3D /* Tabbar切换view */ = {
 			isa = PBXGroup;
 			children = (
-				9963DD2D187D419D00571748 /* Common */,
-				99E06E6C187A4F960037ED3D /* 子viewController */,
+				99E06E6C187A4F960037ED3D /* 点击切换子viewController */,
 			);
 			name = "Tabbar切换view";
 			sourceTree = "<group>";
 		};
-		99E06E6C187A4F960037ED3D /* 子viewController */ = {
+		99E06E6C187A4F960037ED3D /* 点击切换子viewController */ = {
 			isa = PBXGroup;
 			children = (
 				99E06E6D187A4FFB0037ED3D /* MTVCRootViewController.h */,
 				99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */,
-				99E06E7C187A86660037ED3D /* MRVCSubViewController.h */,
-				99E06E7D187A86660037ED3D /* MRVCSubViewController.m */,
 			);
-			name = "子viewController";
+			name = "点击切换子viewController";
 			sourceTree = "<group>";
 		};
 		99E06E77187A5E230037ED3D /* common */ = {
@@ -786,6 +808,36 @@
 				99E06E78187A5E230037ED3D /* white_rect@2x.png */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		99ED58A2188D0AD4001359F6 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				99ED58A3188D0ADF001359F6 /* 一行按钮带下划线 */,
+				990E45CC188D251A004E2C98 /* 多行按钮 */,
+			);
+			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		99ED58A3188D0ADF001359F6 /* 一行按钮带下划线 */ = {
+			isa = PBXGroup;
+			children = (
+				99ED58AA188D0B25001359F6 /* M2 */,
+				990E45C6188D13F3004E2C98 /* MButtonTabBarViewController.h */,
+				990E45C7188D13F3004E2C98 /* MButtonTabBarViewController.m */,
+				990E45C9188D140B004E2C98 /* MButtonTabBarView.h */,
+				990E45CA188D140B004E2C98 /* MButtonTabBarView.m */,
+			);
+			name = "一行按钮带下划线";
+			sourceTree = "<group>";
+		};
+		99ED58AA188D0B25001359F6 /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				99ED58AB188D0B7E001359F6 /* M2TabBarView_A.h */,
+				99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */,
+			);
+			name = M2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -917,13 +969,17 @@
 				9963DD5E187E465A00571748 /* MRearchThresholdViewController.m in Sources */,
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
+				990E45C8188D13F3004E2C98 /* MButtonTabBarViewController.m in Sources */,
 				996332101883BAD30038BCE3 /* M2MultiRowTabbarView.m in Sources */,
+				99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */,
 				9963DD2A187D2F5F00571748 /* MImageGalleryView_A.m in Sources */,
 				990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */,
 				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
+				990E45CB188D140B004E2C98 /* MButtonTabBarView.m in Sources */,
 				9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */,
 				99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */,
+				990E45D0188D258A004E2C98 /* MMultiRowTabViewController.m in Sources */,
 				99BA1FFD1859DA4200EF5A74 /* LaunchHelpViewController.m in Sources */,
 				99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */,
 				997119101888DC1600039D8A /* M2CommentInputView.m in Sources */,
@@ -938,9 +994,9 @@
 				9963DD64187E48ED00571748 /* MScrollableView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
-				99E06E7E187A86660037ED3D /* MRVCSubViewController.m in Sources */,
 				990C2626187BB11D00B3E45A /* MResizableImageViewController.m in Sources */,
 				99711938188917A700039D8A /* MSubViewController.m in Sources */,
+				990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
 				99C12F251884D92000B92D1C /* MImageGalleryView_B.m in Sources */,
 				99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */,
