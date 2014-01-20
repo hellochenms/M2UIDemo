@@ -8,9 +8,11 @@
 
 #import "M2ExtensibleInfoView.h"
 
-#define M2SFIV_TitleLabelHeight 30
-#define M2SFIV_Default_maxNumberOfLinesWhenNotOpenning 5
-#define M2SFIV_AnimationDuration 0.25
+#define M2EIV_TitleLabelHeight 30
+#define M2EIV_Default_maxNumberOfLinesWhenNotOpenning 5
+#define M2EIV_AnimationDuration 0.25
+
+#define M2EIV_ISIOS7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
 
 @interface M2ExtensibleInfoView()
 @property (nonatomic)       UIView      *extendTapView;
@@ -18,18 +20,17 @@
 
 @implementation M2ExtensibleInfoView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    frame.size.height = M2SFIV_TitleLabelHeight;
+- (id)initWithFrame:(CGRect)frame{
+    frame.size.height = M2EIV_TitleLabelHeight;
     
     self = [super initWithFrame:frame];
     if (self) {
-        _maxNumberOfLinesWhenNotExtend = M2SFIV_Default_maxNumberOfLinesWhenNotOpenning;
+        _maxNumberOfLinesWhenNotExtend = M2EIV_Default_maxNumberOfLinesWhenNotOpenning;
         self.clipsToBounds = YES;
         
         // Initialization code
         // 标题
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), M2SFIV_TitleLabelHeight)];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), M2EIV_TitleLabelHeight)];
         _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.font = [UIFont systemFontOfSize:16];
         _titleLabel.text = @"内容提要";
@@ -99,7 +100,7 @@
         }
     }
     if (_delegate && [_delegate respondsToSelector:@selector(extensibleInfoView:willExtendToFrame:animationDuration:)]) {
-        [_delegate extensibleInfoView:self willExtendToFrame:selfFrame animationDuration: isUserTap ? M2SFIV_AnimationDuration : 0];
+        [_delegate extensibleInfoView:self willExtendToFrame:selfFrame animationDuration: isUserTap ? M2EIV_AnimationDuration : 0];
     }
     
     // 获得信息时不需要动画
@@ -112,7 +113,7 @@
     else{
         __weak M2ExtensibleInfoView *weakSelf = self;
         _extendTapView.userInteractionEnabled = NO;
-        [UIView animateWithDuration:M2SFIV_AnimationDuration
+        [UIView animateWithDuration:M2EIV_AnimationDuration
                          animations:^{
                              weakSelf.frame = selfFrame;
                              weakSelf.infoLabel.frame = infoLabelFrame;
@@ -125,18 +126,34 @@
 }
 
 #pragma mark - tools
+#pragma mark - tools
 - (float)heightOfLabel:(UILabel *)label{
     if (label.text.length <= 0) {
         return CGRectGetHeight(label.bounds);
     }
-    return [label.text sizeWithFont:label.font constrainedToSize:CGSizeMake(CGRectGetWidth(label.bounds), MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
+    
+    return [self heightForText:label.text font:label.font limitWidth:CGRectGetWidth(label.bounds)];
 }
 - (float)heightOfLabel:(UILabel*)label withNumberOfLines:(int)numberOfLines{
-    NSMutableString *string = [NSMutableString stringWithString:@""];
+    NSMutableString *text = [NSMutableString stringWithString:@""];
     for (int i = 0; i < numberOfLines; i++) {
-        [string appendString:@"\n"];
+        [text appendString:@"\n"];
     }
-    CGSize size = [string sizeWithFont:label.font constrainedToSize:CGSizeMake(CGRectGetWidth(label.bounds), MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping];
+    return [self heightForText:text font:label.font limitWidth:CGRectGetWidth(label.bounds)];
+}
+
+- (float)heightForText:(NSString *)text font:(UIFont *)font limitWidth:(float)limitWidth{
+    CGSize size = CGSizeZero;
+    if(M2EIV_ISIOS7){
+        NSDictionary *attribute = @{NSFontAttributeName: font};
+        size = [text boundingRectWithSize:CGSizeMake(limitWidth, MAXFLOAT) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+    }
+    else{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        size =  [text sizeWithFont:font constrainedToSize:CGSizeMake(limitWidth, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+#pragma clang diagnostic pop
+    }
     
     return size.height;
 }

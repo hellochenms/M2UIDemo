@@ -28,7 +28,7 @@
         
         _textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 5.0, 200.0, 30.0)];
         _textLabel.backgroundColor = [UIColor clearColor];
-        _textLabel.textAlignment = UITextAlignmentCenter;
+        _textLabel.textAlignment = NSTextAlignmentCenter;
         _textLabel.font = M2T_Font;
         _textLabel.textColor = [UIColor whiteColor];
         _textLabel.center = CGPointMake(M2T_Width / 2.0, M2T_Height / 2.0);

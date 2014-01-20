@@ -191,7 +191,19 @@
 
 #pragma mark - tools
 + (float)heightOfText:(NSString *)text WithFont:(UIFont *)font limitToWidth:(float)width{
-    return [text sizeWithFont:font constrainedToSize:CGSizeMake(width, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
+    CGSize size = CGSizeZero;
+    if((floorf([[[UIDevice currentDevice] systemVersion] floatValue]) >= 7)){
+        NSDictionary *attribute = @{NSFontAttributeName:font};
+        size = [text boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+    }
+    else{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        size =  [text sizeWithFont:font constrainedToSize:CGSizeMake(width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+#pragma clang diagnostic pop
+    }
+    
+    return size.height;
 }
 
 + (NSString *)replyTargetStringFromReplyToUser:(NSString *)replyToUser replyToComment:(NSString *)replyToComment{
