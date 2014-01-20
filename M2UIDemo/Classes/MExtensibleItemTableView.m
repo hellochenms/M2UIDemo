@@ -30,7 +30,7 @@
         self.backgroundColor = [UIColor lightGrayColor];
         
         // tableView
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(frame) - 10 * 2, CGRectGetHeight(frame) - 10 * 2)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(frame) - 10 * 2, CGRectGetHeight(frame) - 100 - 10 * 2)];
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
@@ -79,27 +79,28 @@
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 60;
+    return 40 + 10;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 10;
-}
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIButton *sectionView = [UIButton buttonWithType:UIButtonTypeCustom];
-    sectionView.frame = CGRectMake(0, 0, 300, 60);
-    sectionView.tag = MEITV_SectionTagOffset + section;
-    sectionView.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.6];
+    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 40 + 10)];
+    sectionView.backgroundColor = [UIColor lightGrayColor];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 10, 300, 40);
+    button.tag = MEITV_SectionTagOffset + section;
+    button.backgroundColor = [UIColor blueColor];
     NSString *title = [[_dataArray objectAtIndex:section] objectForKey:MEITV_Key_Title];
-    [sectionView setTitle:title forState:UIControlStateNormal];
-    [sectionView addTarget:self action:@selector(onTapSection:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(onTapSection:) forControlEvents:UIControlEventTouchUpInside];
+    [sectionView addSubview:button];
     
     // 箭头
-    UIImageView *arrowImageView = [[UIImageView alloc] initWithFrame:CGRectMake(300 - 10 - 10, (60 - 14)/ 2.0, 10, 14)];
+    UIImageView *arrowImageView = [[UIImageView alloc] initWithFrame:CGRectMake(300 - 10 - 10, (40 - 14)/ 2.0, 10, 14)];
     arrowImageView.image = [UIImage imageNamed:@"right_arrow"];
-    [sectionView addSubview:arrowImageView];
+    [button addSubview:arrowImageView];
     int itemCount = [[[_dataArray objectAtIndex:section] objectForKey:MEITV_Key_Items] count];
     if (itemCount > 0) {
         NSString *key = [NSString stringWithFormat:@"%d", section];
@@ -112,9 +113,6 @@
     
     return sectionView;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return [UIView new];
-}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (_delegate && [_delegate respondsToSelector:@selector(didSelectRow:inSection:inView:)]) {
         [_delegate didSelectRow:indexPath.row inSection:indexPath.section inView:self];
@@ -126,17 +124,14 @@
     int section = sectionView.tag - MEITV_SectionTagOffset;
     int itemCount = [[[_dataArray objectAtIndex:section] objectForKey:MEITV_Key_Items] count];
     if (itemCount <= 0) {
-        NSLog(@"点击section(%d)进入子界面  @@%s", section, __func__);
         if (_delegate && [_delegate respondsToSelector:@selector(didSelectSection:inView:)]) {
             [_delegate didSelectSection:section inView:self];
         }
     }else{
         NSString *key = [NSString stringWithFormat:@"%d", section];
         if ([_extendSectionDictionary objectForKey:key]) {
-            NSLog(@"收起section(%d)  @@%s", section, __func__);
             [_extendSectionDictionary removeObjectForKey:key];
         }else{
-            NSLog(@"展开section(%d)  @@%s", section, __func__);
             [_extendSectionDictionary setObject:@"" forKey:key];
         }
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:section];
