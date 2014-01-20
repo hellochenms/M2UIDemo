@@ -35,17 +35,9 @@
         [_button addTarget:self action:@selector(onTapButton) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_button];
         
-        //
-        _coverView = [[UIControl alloc] initWithFrame: self.bounds];
-        _coverView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
-        [_coverView addTarget:self action:@selector(onTapCover) forControlEvents:UIControlEventTouchUpInside];
-        _coverView.hidden = YES;
-        [self addSubview:_coverView];
-        
-        //
-        _inputView = [[M2TextInputView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame), CGRectGetWidth(frame), 120)];
+        // 输入view
+        _inputView = [[M2TextInputView alloc] initWithHeight:120];
         _inputView.delegate = self;
-        [self addSubview:_inputView];
     }
     return self;
 }
@@ -54,39 +46,14 @@
 - (void)onTapButton{
     [_inputView show];
 }
-- (void)onTapCover{
-    [_inputView hide];
-}
 
 #pragma mark - M2TextInputViewDelegate
-- (void)inputView:(M2TextInputView *)inputView willChangeStateWithIsWillShow:(BOOL)willShow{
-    __weak MKeyboardInputView *weakSelf = self;
-    if (willShow) {
-        weakSelf.coverView.alpha = 0;
-        weakSelf.coverView.hidden = NO;
-        [UIView animateWithDuration:0.25
-                         animations:^{
-                             weakSelf.coverView.alpha = 1;
-                         }];
-    }else{
-        [UIView animateWithDuration:0.25
-                         animations:^{
-                             weakSelf.coverView.alpha = 0;
-                         }
-                         completion:^(BOOL finished) {
-                             weakSelf.coverView.hidden = YES;
-                         }];
-    }
-}
 - (BOOL)inputView:(M2TextInputView *)inputView checkText:(NSString*)text{
     if (text.length <= 0) {
         [M2Toast showText:@"内容不能为空"];
         return NO;
     }
     return YES;
-}
-- (void)inputView:(M2TextInputView *)inputView willSubmitAfterCheckWithText:(NSString*)text{
-    NSLog(@"submit(%@)  @@%s", text, __func__);
 }
 
 @end

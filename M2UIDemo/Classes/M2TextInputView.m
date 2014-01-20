@@ -8,25 +8,35 @@
 
 #import "M2TextInputView.h"
 
+#define M2TIV_DefaultHeight 150
+
 @interface M2TextInputView()<UITextViewDelegate>
-@property (nonatomic) UITextView   *textView;
-@property (nonatomic) float         baseY;
-@property (nonatomic) float         baseHeight;
+@property (nonatomic) UIButton      *cancelButton;
+@property (nonatomic) UIButton      *submitButton;
+@property (nonatomic) UITextView    *textView;
+@property (nonatomic) float         originY;
+@property (nonatomic) float         contentAreaHeight;
+@property (nonatomic) UIControl     *coverView;
 @end
 
 @implementation M2TextInputView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame{
+    return [self initWithHeight:M2TIV_DefaultHeight];
+}
+
+- (id)initWithHeight:(CGFloat)height{
+    _contentAreaHeight = height;
+    CGRect frame = CGRectMake(0, CGRectGetHeight([UIScreen mainScreen].bounds), CGRectGetWidth([UIScreen mainScreen].bounds), _contentAreaHeight + 200);// view在键盘正上方时，和键盘同样速度滑出时，会和键盘分开一小段时间，为避免此问题，将view实际高度增加一个值；
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        _originY = CGRectGetMinY(frame);
+        
+        // self
         self.backgroundColor = [UIColor lightGrayColor];
         self.layer.borderColor = [UIColor grayColor].CGColor;
         self.layer.borderWidth = 1;
-        
-        _baseY = CGRectGetMinY(frame);
-        _baseHeight = CGRectGetHeight(frame);
         
         // buttons
         _cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 70, 30)];
@@ -42,10 +52,16 @@
         [self addSubview:_submitButton];
       
         // text input
-        _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, CGRectGetMaxY(_cancelButton.frame) + 5, CGRectGetWidth(frame) - 5 * 2, CGRectGetHeight(frame) - CGRectGetMaxY(_cancelButton.frame) - 5)];
+        _textView = [[UITextView alloc] initWithFrame:CGRectMake(5, CGRectGetMaxY(_submitButton.frame) + 5, CGRectGetWidth(frame) - 5 * 2, _contentAreaHeight - CGRectGetMaxY(_submitButton.frame) - 5 - 10)];
         _textView.backgroundColor = [UIColor grayColor];
         _textView.delegate = self;
         [self addSubview:_textView];
+        
+        // cover
+        _coverView = [[UIControl alloc] initWithFrame: [UIScreen mainScreen].bounds];
+        _coverView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        [_coverView addTarget:self action:@selector(onTapCover) forControlEvents:UIControlEventTouchUpInside];
+        _coverView.alpha = 0;
         
         // listen
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
@@ -57,15 +73,21 @@
 
 #pragma mark - public
 - (void)show{
-    if (_delegate && [_delegate respondsToSelector:@selector(inputView:willChangeStateWithIsWillShow:)]) {
-        [_delegate inputView:self willChangeStateWithIsWillShow:YES];
-    }
+    UIView *view = [UIApplication sharedApplication].keyWindow.rootViewController.view;
+    [view addSubview:_coverView];
+    [view addSubview:self];
+    
     [_textView becomeFirstResponder];
 }
+
+#pragma mark - tap cover
+- (void)onTapCover{
+    [self hide];
+    [self removeFromSuperview];
+    [_coverView removeFromSuperview];
+}
+
 - (void)hide{
-    if (_delegate && [_delegate respondsToSelector:@selector(inputView:willChangeStateWithIsWillShow:)]) {
-        [_delegate inputView:self willChangeStateWithIsWillShow:NO];
-    }
     [_textView resignFirstResponder];
 }
 
@@ -80,46 +102,39 @@
     [self hideWithAnimationDuration:animationDuration];
 }
 
-#pragma mark - 
+#pragma mark -
 - (void)showWithKeyboradHeight:(float)keyboradHeight animationDuration:(float)animationDuration{
     CGRect frame = self.frame;
-    frame.size.height = _baseHeight + keyboradHeight;
-    self.frame = frame;
-    
-    frame.origin.y = _baseY - frame.size.height;
+    frame.origin.y = _originY - (_contentAreaHeight + keyboradHeight);
     __weak M2TextInputView *weakSelf = self;
+    _coverView.alpha = 0;
     [UIView animateWithDuration:animationDuration
                      animations:^{
                          weakSelf.frame = frame;
+                         weakSelf.coverView.alpha = 1;
                      }];
 }
 - (void)hideWithAnimationDuration:(float)animationDuration{
     CGRect frame = self.frame;
-    frame.origin.y = _baseY;
+    frame.origin.y = _originY;
     __weak M2TextInputView *weakSelf = self;
     [UIView animateWithDuration:animationDuration
                      animations:^{
                          weakSelf.frame = frame;
+                         weakSelf.coverView.alpha = 0;
                      } completion:^(BOOL finished) {
-                         CGRect frame = weakSelf.frame;
-                         frame.size.height = weakSelf.baseHeight;
-                         weakSelf.frame = frame;
-                         //
                          weakSelf.textView.text = nil;
                      }];
 }
 
-#pragma mark - 
+#pragma mark -
 - (void)onTapCancelButton{
     [self hide];
 }
 - (void)onTapSubmitButton{
-    if (!_delegate){
-        return;
-    }
     if ([_delegate respondsToSelector:@selector(inputView:checkText:)]
         && ![_delegate inputView:self checkText:_textView.text]) {
-            return;
+        return;
     }
     if ([_delegate respondsToSelector:@selector(inputView:willSubmitAfterCheckWithText:)]) {
         [_delegate inputView:self willSubmitAfterCheckWithText:_textView.text];
