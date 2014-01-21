@@ -60,7 +60,8 @@
                       @[@"多行按钮", @"MMultiRowTabViewController"]
                       ],
                   @[
-                      @[@"点击切换子ViewController", @"MTVCRootViewController"]
+                      @[@"点击切换子ViewController", @"MTVCRootViewController"],
+                      @[@"点击tab或滑动子view", @"MTabScrollViewViewController"]
                       ],
                   @[
                       @[@"可展开的详细信息", @"MShowFullInfoViewController"],

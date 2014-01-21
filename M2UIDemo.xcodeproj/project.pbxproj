@@ -88,6 +88,8 @@
 		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
 		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */; };
 		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
+		99EBBF7B188E1AE10093B9BB /* MTabScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7A188E1AE10093B9BB /* MTabScrollViewViewController.m */; };
+		99EBBF7E188E1B080093B9BB /* MTabScrollViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7D188E1B080093B9BB /* MTabScrollViewView.m */; };
 		99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +239,10 @@
 		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView_Master.h; sourceTree = "<group>"; };
 		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView_Master.m; sourceTree = "<group>"; };
 		99E06E78187A5E230037ED3D /* white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_rect@2x.png"; sourceTree = "<group>"; };
+		99EBBF79188E1AE10093B9BB /* MTabScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTabScrollViewViewController.h; sourceTree = "<group>"; };
+		99EBBF7A188E1AE10093B9BB /* MTabScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTabScrollViewViewController.m; sourceTree = "<group>"; };
+		99EBBF7C188E1B080093B9BB /* MTabScrollViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTabScrollViewView.h; sourceTree = "<group>"; };
+		99EBBF7D188E1B080093B9BB /* MTabScrollViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTabScrollViewView.m; sourceTree = "<group>"; };
 		99ED58AB188D0B7E001359F6 /* M2TabBarView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TabBarView_A.h; sourceTree = "<group>"; };
 		99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TabBarView_A.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -368,6 +374,17 @@
 				9963320F1883BAD30038BCE3 /* M2MultiRowTabbarView.m */,
 			);
 			name = M2;
+			sourceTree = "<group>";
+		};
+		990E45D4188D3630004E2C98 /* 点击tab或滑动子view */ = {
+			isa = PBXGroup;
+			children = (
+				99EBBF79188E1AE10093B9BB /* MTabScrollViewViewController.h */,
+				99EBBF7A188E1AE10093B9BB /* MTabScrollViewViewController.m */,
+				99EBBF7C188E1B080093B9BB /* MTabScrollViewView.h */,
+				99EBBF7D188E1B080093B9BB /* MTabScrollViewView.m */,
+			);
+			name = "点击tab或滑动子view";
 			sourceTree = "<group>";
 		};
 		99518F96188785F700A3F20E /* M2 */ = {
@@ -788,6 +805,7 @@
 			isa = PBXGroup;
 			children = (
 				99E06E6C187A4F960037ED3D /* 点击切换子viewController */,
+				990E45D4188D3630004E2C98 /* 点击tab或滑动子view */,
 			);
 			name = "Tabbar切换view";
 			sourceTree = "<group>";
@@ -970,6 +988,7 @@
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
 				990E45C8188D13F3004E2C98 /* MButtonTabBarViewController.m in Sources */,
+				99EBBF7B188E1AE10093B9BB /* MTabScrollViewViewController.m in Sources */,
 				996332101883BAD30038BCE3 /* M2MultiRowTabbarView.m in Sources */,
 				99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */,
 				9963DD2A187D2F5F00571748 /* MImageGalleryView_A.m in Sources */,
@@ -977,6 +996,7 @@
 				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
 				990E45CB188D140B004E2C98 /* MButtonTabBarView.m in Sources */,
+				99EBBF7E188E1B080093B9BB /* MTabScrollViewView.m in Sources */,
 				9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */,
 				99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */,
 				990E45D0188D258A004E2C98 /* MMultiRowTabViewController.m in Sources */,

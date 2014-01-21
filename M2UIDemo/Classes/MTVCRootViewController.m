@@ -58,7 +58,7 @@
     MSubViewController *subViewController = nil;
     for (int i = 0; i < MTVCRVC_SubViewControllerCount; i++) {
         subViewController = [MSubViewController new];
-        subViewController.someTitle = [NSString stringWithFormat:@"SubViewController(%d)", i];
+        subViewController.subTitle = [NSString stringWithFormat:@"SubViewController(%d)", i];
         [_subViewControllers addObject:subViewController];
     }
     

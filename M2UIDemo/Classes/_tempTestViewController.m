@@ -27,11 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    UIImage *image = [[UIImage imageNamed:@"_temp1"] resizableImageWithCapInsets:UIEdgeInsetsMake(14.5, 14.5, 14.5, 14.5)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 300, 100)];
-    imageView.image = image;
-    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning

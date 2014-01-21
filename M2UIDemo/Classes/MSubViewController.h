@@ -9,5 +9,5 @@
 #import "M2ViewController.h"
 
 @interface MSubViewController : M2ViewController
-@property (nonatomic, copy) NSString *someTitle;
+@property (nonatomic, copy) NSString *subTitle;
 @end

@@ -56,12 +56,12 @@
 #pragma mark - MExtensibleItemTableViewDelegate
 - (void)didSelectSection:(NSInteger)section inView:(MExtensibleItemTableView *)view{
     MSubViewController *subViewController = [MSubViewController new];
-    subViewController.someTitle = [NSString stringWithFormat:@"section(%d)", section];
+    subViewController.subTitle = [NSString stringWithFormat:@"section(%d)", section];
     [self.navigationController pushViewController:subViewController animated:YES];
 }
 - (void)didSelectRow:(NSInteger)row inSection:(NSInteger)section inView:(MExtensibleItemTableView *)view{
     MSubViewController *subViewController = [MSubViewController new];
-    subViewController.someTitle = [NSString stringWithFormat:@"section(%d) row(%d)", section, row];
+    subViewController.subTitle = [NSString stringWithFormat:@"section(%d) row(%d)", section, row];
     [self.navigationController pushViewController:subViewController animated:YES];
 }
 - (void)didReceiveMemoryWarning
