@@ -37,10 +37,10 @@
         
         // self
         _curSelectedIndex = NSNotFound;
-        _unSelectedTextColor = [UIColor whiteColor];
-        _selectedTextColor = [UIColor blueColor];
-        _seperatorLineViewColor = [UIColor blueColor];
-        _underLinerViewColor = [UIColor blueColor];
+        _unSelectedTextColor = [UIColor grayColor];
+        _selectedTextColor = [UIColor redColor];
+        _seperatorLineViewColor = [UIColor lightGrayColor];
+        _underLinerViewColor = [UIColor redColor];
         
         // items
         _items = [NSMutableArray arrayWithCapacity:count];
@@ -50,6 +50,7 @@
         for (NSInteger i = 0; i < count; i++) {
             button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(itemWidth * i, 0, itemWidth, itemHeight);
+            button.titleLabel.font = [UIFont systemFontOfSize:16];
             [button setTitleColor:_unSelectedTextColor forState:UIControlStateNormal];
             [button setTitle:[titles objectAtIndex:i] forState:UIControlStateNormal];
             button.tag = M2TV_ItemTagOffset + i;

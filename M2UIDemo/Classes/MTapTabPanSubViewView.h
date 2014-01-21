@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTabScrollViewView : UIView
+@interface MTapTabPanSubViewView : UIView
 @property (nonatomic) NSArray *contentViews;
 @end

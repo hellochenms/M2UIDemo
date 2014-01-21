@@ -56,12 +56,13 @@
                       @[@"可展开的section", @"MExtensibleItemTableViewController"]
                       ],
                   @[
-                      @[@"一行按钮带下划线", @"MButtonTabBarViewController"],
-                      @[@"多行按钮", @"MMultiRowTabViewController"]
+                      @[@"单行点击", @"MButtonTabBarViewController"],
+                      @[@"多行", @"MMultiRowTabViewController"]
                       ],
                   @[
                       @[@"点击切换子ViewController", @"MTVCRootViewController"],
-                      @[@"点击tab或滑动子view", @"MTabScrollViewViewController"]
+                      @[@"点击tab或滑动子view", @"MTapTabPanSubViewViewController"],
+                      @[@"滑动tab或滑动子view", @"MPanTabPanSubViewViewController"]
                       ],
                   @[
                       @[@"可展开的详细信息", @"MShowFullInfoViewController"],

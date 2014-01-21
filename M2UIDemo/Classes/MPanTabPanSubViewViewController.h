@@ -1,5 +1,5 @@
 //
-//  MTabScrollViewViewController.h
+//  MPanTabPanSubViewViewController.h
 //  M2UIDemo
 //
 //  Created by Chen Meisong on 14-1-21.
@@ -8,6 +8,6 @@
 
 #import "M2ViewController.h"
 
-@interface MTabScrollViewViewController : M2ViewController
+@interface MPanTabPanSubViewViewController : M2ViewController
 
 @end

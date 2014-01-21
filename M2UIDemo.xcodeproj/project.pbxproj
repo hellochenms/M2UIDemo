@@ -88,8 +88,12 @@
 		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
 		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */; };
 		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
-		99EBBF7B188E1AE10093B9BB /* MTabScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7A188E1AE10093B9BB /* MTabScrollViewViewController.m */; };
-		99EBBF7E188E1B080093B9BB /* MTabScrollViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7D188E1B080093B9BB /* MTabScrollViewView.m */; };
+		99EBBF7B188E1AE10093B9BB /* MTapTabPanSubViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7A188E1AE10093B9BB /* MTapTabPanSubViewViewController.m */; };
+		99EBBF7E188E1B080093B9BB /* MTapTabPanSubViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7D188E1B080093B9BB /* MTapTabPanSubViewView.m */; };
+		99EBBFA0188E48120093B9BB /* MPanTabPanSubViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF9F188E48120093B9BB /* MPanTabPanSubViewViewController.m */; };
+		99EBBFA3188E48780093B9BB /* MPanTabPanSubViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFA2188E48780093B9BB /* MPanTabPanSubViewView.m */; };
+		99EBBFA7188E4D460093B9BB /* M2TabBarView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFA6188E4D460093B9BB /* M2TabBarView_B.m */; };
+		99EBBFAE188E6E1F0093B9BB /* m2_72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EBBFAD188E6E1F0093B9BB /* m2_72@2x.png */; };
 		99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */; };
 /* End PBXBuildFile section */
 
@@ -239,10 +243,17 @@
 		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView_Master.h; sourceTree = "<group>"; };
 		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView_Master.m; sourceTree = "<group>"; };
 		99E06E78187A5E230037ED3D /* white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_rect@2x.png"; sourceTree = "<group>"; };
-		99EBBF79188E1AE10093B9BB /* MTabScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTabScrollViewViewController.h; sourceTree = "<group>"; };
-		99EBBF7A188E1AE10093B9BB /* MTabScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTabScrollViewViewController.m; sourceTree = "<group>"; };
-		99EBBF7C188E1B080093B9BB /* MTabScrollViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTabScrollViewView.h; sourceTree = "<group>"; };
-		99EBBF7D188E1B080093B9BB /* MTabScrollViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTabScrollViewView.m; sourceTree = "<group>"; };
+		99EBBF79188E1AE10093B9BB /* MTapTabPanSubViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTapTabPanSubViewViewController.h; sourceTree = "<group>"; };
+		99EBBF7A188E1AE10093B9BB /* MTapTabPanSubViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTapTabPanSubViewViewController.m; sourceTree = "<group>"; };
+		99EBBF7C188E1B080093B9BB /* MTapTabPanSubViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTapTabPanSubViewView.h; sourceTree = "<group>"; };
+		99EBBF7D188E1B080093B9BB /* MTapTabPanSubViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTapTabPanSubViewView.m; sourceTree = "<group>"; };
+		99EBBF9E188E48120093B9BB /* MPanTabPanSubViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPanTabPanSubViewViewController.h; sourceTree = "<group>"; };
+		99EBBF9F188E48120093B9BB /* MPanTabPanSubViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPanTabPanSubViewViewController.m; sourceTree = "<group>"; };
+		99EBBFA1188E48780093B9BB /* MPanTabPanSubViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPanTabPanSubViewView.h; sourceTree = "<group>"; };
+		99EBBFA2188E48780093B9BB /* MPanTabPanSubViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPanTabPanSubViewView.m; sourceTree = "<group>"; };
+		99EBBFA5188E4D460093B9BB /* M2TabBarView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TabBarView_B.h; sourceTree = "<group>"; };
+		99EBBFA6188E4D460093B9BB /* M2TabBarView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TabBarView_B.m; sourceTree = "<group>"; };
+		99EBBFAD188E6E1F0093B9BB /* m2_72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m2_72@2x.png"; sourceTree = "<group>"; };
 		99ED58AB188D0B7E001359F6 /* M2TabBarView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TabBarView_A.h; sourceTree = "<group>"; };
 		99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TabBarView_A.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -353,7 +364,7 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		990E45CC188D251A004E2C98 /* 多行按钮 */ = {
+		990E45CC188D251A004E2C98 /* 多行 */ = {
 			isa = PBXGroup;
 			children = (
 				990E45CD188D2552004E2C98 /* M2 */,
@@ -362,7 +373,7 @@
 				990E45D1188D25A6004E2C98 /* MMultiRowTabView.h */,
 				990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */,
 			);
-			name = "多行按钮";
+			name = "多行";
 			sourceTree = "<group>";
 		};
 		990E45CD188D2552004E2C98 /* M2 */ = {
@@ -379,10 +390,10 @@
 		990E45D4188D3630004E2C98 /* 点击tab或滑动子view */ = {
 			isa = PBXGroup;
 			children = (
-				99EBBF79188E1AE10093B9BB /* MTabScrollViewViewController.h */,
-				99EBBF7A188E1AE10093B9BB /* MTabScrollViewViewController.m */,
-				99EBBF7C188E1B080093B9BB /* MTabScrollViewView.h */,
-				99EBBF7D188E1B080093B9BB /* MTabScrollViewView.m */,
+				99EBBF79188E1AE10093B9BB /* MTapTabPanSubViewViewController.h */,
+				99EBBF7A188E1AE10093B9BB /* MTapTabPanSubViewViewController.m */,
+				99EBBF7C188E1B080093B9BB /* MTapTabPanSubViewView.h */,
+				99EBBF7D188E1B080093B9BB /* MTapTabPanSubViewView.m */,
 			);
 			name = "点击tab或滑动子view";
 			sourceTree = "<group>";
@@ -781,6 +792,7 @@
 		99D27C191855AE2000513BA9 /* iamges */ = {
 			isa = PBXGroup;
 			children = (
+				99EBBFAC188E6E1F0093B9BB /* icon */,
 				990C2653187BDC6C00B3E45A /* images */,
 				99E06E77187A5E230037ED3D /* common */,
 				99BA20011859DE4B00EF5A74 /* help */,
@@ -806,6 +818,7 @@
 			children = (
 				99E06E6C187A4F960037ED3D /* 点击切换子viewController */,
 				990E45D4188D3630004E2C98 /* 点击tab或滑动子view */,
+				99EBBF9D188E47BD0093B9BB /* 滑动tab或滑动子view */,
 			);
 			name = "Tabbar切换view";
 			sourceTree = "<group>";
@@ -828,16 +841,53 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		99EBBF9D188E47BD0093B9BB /* 滑动tab或滑动子view */ = {
+			isa = PBXGroup;
+			children = (
+				99EBBF9E188E48120093B9BB /* MPanTabPanSubViewViewController.h */,
+				99EBBF9F188E48120093B9BB /* MPanTabPanSubViewViewController.m */,
+				99EBBFA1188E48780093B9BB /* MPanTabPanSubViewView.h */,
+				99EBBFA2188E48780093B9BB /* MPanTabPanSubViewView.m */,
+			);
+			name = "滑动tab或滑动子view";
+			sourceTree = "<group>";
+		};
+		99EBBFA4188E48C40093B9BB /* 单行滑动 */ = {
+			isa = PBXGroup;
+			children = (
+				99EBBFA8188E4D4E0093B9BB /* M2 */,
+			);
+			name = "单行滑动";
+			sourceTree = "<group>";
+		};
+		99EBBFA8188E4D4E0093B9BB /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				99EBBFA5188E4D460093B9BB /* M2TabBarView_B.h */,
+				99EBBFA6188E4D460093B9BB /* M2TabBarView_B.m */,
+			);
+			name = M2;
+			sourceTree = "<group>";
+		};
+		99EBBFAC188E6E1F0093B9BB /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				99EBBFAD188E6E1F0093B9BB /* m2_72@2x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
 		99ED58A2188D0AD4001359F6 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				99ED58A3188D0ADF001359F6 /* 一行按钮带下划线 */,
-				990E45CC188D251A004E2C98 /* 多行按钮 */,
+				99ED58A3188D0ADF001359F6 /* 单行点击 */,
+				99EBBFA4188E48C40093B9BB /* 单行滑动 */,
+				990E45CC188D251A004E2C98 /* 多行 */,
 			);
 			name = Tabbar;
 			sourceTree = "<group>";
 		};
-		99ED58A3188D0ADF001359F6 /* 一行按钮带下划线 */ = {
+		99ED58A3188D0ADF001359F6 /* 单行点击 */ = {
 			isa = PBXGroup;
 			children = (
 				99ED58AA188D0B25001359F6 /* M2 */,
@@ -846,7 +896,7 @@
 				990E45C9188D140B004E2C98 /* MButtonTabBarView.h */,
 				990E45CA188D140B004E2C98 /* MButtonTabBarView.m */,
 			);
-			name = "一行按钮带下划线";
+			name = "单行点击";
 			sourceTree = "<group>";
 		};
 		99ED58AA188D0B25001359F6 /* M2 */ = {
@@ -947,6 +997,7 @@
 				99D27C1D1855AE8000513BA9 /* refresh_blue_arrow.png in Resources */,
 				9963DD23187D031700571748 /* landscape_3.jpg in Resources */,
 				9963DD27187D031700571748 /* portrait_3.jpg in Resources */,
+				99EBBFAE188E6E1F0093B9BB /* m2_72@2x.png in Resources */,
 				99D27C1E1855AE8000513BA9 /* refresh_blue_arrow@2x.png in Resources */,
 				9963DD26187D031700571748 /* portrait_2.jpg in Resources */,
 				995F3AB9184C2D59005F349B /* Images.xcassets in Resources */,
@@ -988,7 +1039,7 @@
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
 				990E45C8188D13F3004E2C98 /* MButtonTabBarViewController.m in Sources */,
-				99EBBF7B188E1AE10093B9BB /* MTabScrollViewViewController.m in Sources */,
+				99EBBF7B188E1AE10093B9BB /* MTapTabPanSubViewViewController.m in Sources */,
 				996332101883BAD30038BCE3 /* M2MultiRowTabbarView.m in Sources */,
 				99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */,
 				9963DD2A187D2F5F00571748 /* MImageGalleryView_A.m in Sources */,
@@ -996,7 +1047,7 @@
 				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
 				990E45CB188D140B004E2C98 /* MButtonTabBarView.m in Sources */,
-				99EBBF7E188E1B080093B9BB /* MTabScrollViewView.m in Sources */,
+				99EBBF7E188E1B080093B9BB /* MTapTabPanSubViewView.m in Sources */,
 				9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */,
 				99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */,
 				990E45D0188D258A004E2C98 /* MMultiRowTabViewController.m in Sources */,
@@ -1010,14 +1061,17 @@
 				9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
+				99EBBFA0188E48120093B9BB /* MPanTabPanSubViewViewController.m in Sources */,
 				99518FD51887DA6800A3F20E /* M2CommentInputView_M1.m in Sources */,
 				9963DD64187E48ED00571748 /* MScrollableView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
+				99EBBFA3188E48780093B9BB /* MPanTabPanSubViewView.m in Sources */,
 				990C2626187BB11D00B3E45A /* MResizableImageViewController.m in Sources */,
 				99711938188917A700039D8A /* MSubViewController.m in Sources */,
 				990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
+				99EBBFA7188E4D460093B9BB /* M2TabBarView_B.m in Sources */,
 				99C12F251884D92000B92D1C /* MImageGalleryView_B.m in Sources */,
 				99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,
@@ -1145,7 +1199,6 @@
 		995F3AD0184C2D59005F349B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "M2UIDemo/M2UIDemo-Prefix.pch";
@@ -1158,7 +1211,6 @@
 		995F3AD1184C2D59005F349B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "M2UIDemo/M2UIDemo-Prefix.pch";

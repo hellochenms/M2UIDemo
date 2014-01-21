@@ -6,16 +6,16 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "MTabScrollViewViewController.h"
-#import "MTabScrollViewView.h"
+#import "MTapTabPanSubViewViewController.h"
+#import "MTapTabPanSubViewView.h"
 #import "MSubViewController.h"
 
-@interface MTabScrollViewViewController (){
+@interface MTapTabPanSubViewViewController (){
     NSMutableArray *contentViewControllers;
 }
 @end
 
-@implementation MTabScrollViewViewController
+@implementation MTapTabPanSubViewViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,11 +33,11 @@
     
     // main view
     CGRect frame = [UIScreen mainScreen].bounds;
-    MTabScrollViewView *mainView = [[MTabScrollViewView alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(frame), CGRectGetHeight(frame) - 10 * 2)];
+    MTapTabPanSubViewView *mainView = [[MTapTabPanSubViewView alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(frame), CGRectGetHeight(frame) - 10 * 2)];
     [self.view addSubview:mainView];
     
     // subViewControllers
-    NSArray *titles = @[@"新闻", @"财经", @"科技", @"轻松一刻"];
+    NSArray *titles = @[@"评价", @"详情", @"其他"];
     int count = [titles count];
     contentViewControllers = [NSMutableArray arrayWithCapacity:count];
     NSMutableArray *contentViews = [NSMutableArray arrayWithCapacity:count];
