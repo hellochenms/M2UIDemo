@@ -132,7 +132,7 @@
     [self selectIndex:index needChangeContentOffset:NO];
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-//    NSLog(@"decelerate(%d)  @@%s", decelerate, __func__);
+    NSLog(@"decelerate(%d)  @@%s", decelerate, __func__);
     if (!decelerate) {
         [self modifyOffsetX:scrollView.contentOffset.x];
     }
@@ -149,6 +149,7 @@
     if (_delegate && [_delegate respondsToSelector:@selector(tabBarView:didSelectItemAtIndex:)]) {
         [_delegate tabBarView:self didSelectItemAtIndex:index];
     }
+    [self selectIndex:index];
 }
 
 - (NSInteger)indexWhenOffsetX:(float)offsetX{
@@ -160,6 +161,12 @@
         index = fullItemCount;
     }else{
         index = fullItemCount + 1;
+    }
+    
+    if (index < 0) {
+        index = 0;
+    }else if (index > [_titles count] -1){
+        index = [_titles count] - 1;
     }
     
     return index;
