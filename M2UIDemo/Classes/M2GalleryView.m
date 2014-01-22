@@ -62,8 +62,8 @@
     UIView *oldItemContainer = nil;
     for (oldItemContainer in _itemContainers) {
         [oldItemContainer removeFromSuperview];
-        [_itemContainers removeObject:oldItemContainer];
     }
+    [_itemContainers removeAllObjects];
     _mainView.contentSize = CGSizeMake(0, CGRectGetHeight(_mainView.frame));
     
     // check

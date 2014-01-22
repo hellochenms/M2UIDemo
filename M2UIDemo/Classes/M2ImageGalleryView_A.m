@@ -59,6 +59,7 @@
     for (oldContainer in _items) {
         [oldContainer removeFromSuperview];
     }
+    [_items removeAllObjects];
     _mainView.contentSize = CGSizeZero;
     
     // build new
