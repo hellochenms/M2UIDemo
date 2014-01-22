@@ -92,11 +92,11 @@
 		99EBBF7E188E1B080093B9BB /* MTapTabPanSubViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7D188E1B080093B9BB /* MTapTabPanSubViewView.m */; };
 		99EBBFA0188E48120093B9BB /* MPanTabPanSubViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF9F188E48120093B9BB /* MPanTabPanSubViewViewController.m */; };
 		99EBBFA3188E48780093B9BB /* MPanTabPanSubViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFA2188E48780093B9BB /* MPanTabPanSubViewView.m */; };
-		99EBBFA7188E4D460093B9BB /* M2TabBarView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFA6188E4D460093B9BB /* M2TabBarView_B.m */; };
+		99EBBFA7188E4D460093B9BB /* M2ScrollTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView.m */; };
 		99EBBFAE188E6E1F0093B9BB /* m2_72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EBBFAD188E6E1F0093B9BB /* m2_72@2x.png */; };
 		99EBBFB2188E7C530093B9BB /* MTabLike163ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFB1188E7C530093B9BB /* MTabLike163ViewController.m */; };
 		99EBBFB5188E7C600093B9BB /* MTabLike163View.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFB4188E7C600093B9BB /* MTabLike163View.m */; };
-		99EBBFBA188E7FE60093B9BB /* M2TabBarView_C.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFB9188E7FE60093B9BB /* M2TabBarView_C.m */; };
+		99EBBFBA188E7FE60093B9BB /* M2ScrollTabBarView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFB9188E7FE60093B9BB /* M2ScrollTabBarView_B.m */; };
 		99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */; };
 /* End PBXBuildFile section */
 
@@ -254,15 +254,15 @@
 		99EBBF9F188E48120093B9BB /* MPanTabPanSubViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPanTabPanSubViewViewController.m; sourceTree = "<group>"; };
 		99EBBFA1188E48780093B9BB /* MPanTabPanSubViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPanTabPanSubViewView.h; sourceTree = "<group>"; };
 		99EBBFA2188E48780093B9BB /* MPanTabPanSubViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPanTabPanSubViewView.m; sourceTree = "<group>"; };
-		99EBBFA5188E4D460093B9BB /* M2TabBarView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TabBarView_B.h; sourceTree = "<group>"; };
-		99EBBFA6188E4D460093B9BB /* M2TabBarView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TabBarView_B.m; sourceTree = "<group>"; };
+		99EBBFA5188E4D460093B9BB /* M2ScrollTabBarView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ScrollTabBarView_A.h; sourceTree = "<group>"; };
+		99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ScrollTabBarView.m; sourceTree = "<group>"; };
 		99EBBFAD188E6E1F0093B9BB /* m2_72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m2_72@2x.png"; sourceTree = "<group>"; };
 		99EBBFB0188E7C530093B9BB /* MTabLike163ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTabLike163ViewController.h; sourceTree = "<group>"; };
 		99EBBFB1188E7C530093B9BB /* MTabLike163ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTabLike163ViewController.m; sourceTree = "<group>"; };
 		99EBBFB3188E7C600093B9BB /* MTabLike163View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTabLike163View.h; sourceTree = "<group>"; };
 		99EBBFB4188E7C600093B9BB /* MTabLike163View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTabLike163View.m; sourceTree = "<group>"; };
-		99EBBFB8188E7FE60093B9BB /* M2TabBarView_C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TabBarView_C.h; sourceTree = "<group>"; };
-		99EBBFB9188E7FE60093B9BB /* M2TabBarView_C.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TabBarView_C.m; sourceTree = "<group>"; };
+		99EBBFB8188E7FE60093B9BB /* M2ScrollTabBarView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ScrollTabBarView_B.h; sourceTree = "<group>"; };
+		99EBBFB9188E7FE60093B9BB /* M2ScrollTabBarView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ScrollTabBarView_B.m; sourceTree = "<group>"; };
 		99ED58AB188D0B7E001359F6 /* M2TabBarView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TabBarView_A.h; sourceTree = "<group>"; };
 		99ED58AC188D0B7E001359F6 /* M2TabBarView_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TabBarView_A.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -873,8 +873,8 @@
 		99EBBFA8188E4D4E0093B9BB /* M2 */ = {
 			isa = PBXGroup;
 			children = (
-				99EBBFA5188E4D460093B9BB /* M2TabBarView_B.h */,
-				99EBBFA6188E4D460093B9BB /* M2TabBarView_B.m */,
+				99EBBFA5188E4D460093B9BB /* M2ScrollTabBarView_A.h */,
+				99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView.m */,
 			);
 			name = M2;
 			sourceTree = "<group>";
@@ -909,8 +909,8 @@
 		99EBBFB7188E7CAF0093B9BB /* M2 */ = {
 			isa = PBXGroup;
 			children = (
-				99EBBFB8188E7FE60093B9BB /* M2TabBarView_C.h */,
-				99EBBFB9188E7FE60093B9BB /* M2TabBarView_C.m */,
+				99EBBFB8188E7FE60093B9BB /* M2ScrollTabBarView_B.h */,
+				99EBBFB9188E7FE60093B9BB /* M2ScrollTabBarView_B.m */,
 			);
 			name = M2;
 			sourceTree = "<group>";
@@ -1098,7 +1098,7 @@
 				99BA20001859DA4F00EF5A74 /* M2HelpView.m in Sources */,
 				990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */,
 				9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */,
-				99EBBFBA188E7FE60093B9BB /* M2TabBarView_C.m in Sources */,
+				99EBBFBA188E7FE60093B9BB /* M2ScrollTabBarView_B.m in Sources */,
 				9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
 				99EBBFB5188E7C600093B9BB /* MTabLike163View.m in Sources */,
@@ -1113,7 +1113,7 @@
 				99711938188917A700039D8A /* MSubViewController.m in Sources */,
 				990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
-				99EBBFA7188E4D460093B9BB /* M2TabBarView_B.m in Sources */,
+				99EBBFA7188E4D460093B9BB /* M2ScrollTabBarView.m in Sources */,
 				99C12F251884D92000B92D1C /* MImageGalleryView_B.m in Sources */,
 				99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,

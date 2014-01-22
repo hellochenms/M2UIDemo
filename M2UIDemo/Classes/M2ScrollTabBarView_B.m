@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2TabBarView_C.h"
+#import "M2ScrollTabBarView_B.h"
 
 #define M2TBVC_Default_ItemsCountInPage 5
 
-@implementation M2TabBarView_C
+@implementation M2ScrollTabBarView_B
 
 - (id)initWithFrame:(CGRect)frame{
     return [self initWithFrame:frame itemsCountInPage:M2TBVC_Default_ItemsCountInPage];

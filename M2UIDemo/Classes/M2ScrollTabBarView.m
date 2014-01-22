@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#define M2TBVB_Default_ItemsCountInPage 5
-#define M2TBVB_ItemTagOffset 6000
+#define M2STBVA_Default_ItemsCountInPage 5
+#define M2STBVA_ItemTagOffset 6000
 
-#import "M2TabBarView_B.h"
+#import "M2ScrollTabBarView.h"
 
-@interface M2TabBarView_B()<UIScrollViewDelegate>{
+@interface M2ScrollTabBarView()<UIScrollViewDelegate>{
     UIScrollView    *_mainView;
     NSMutableArray  *_items;
     NSInteger       _itemsCountInPage;
@@ -24,10 +24,10 @@
 @property (nonatomic) UIFont    *selectedFont;
 @end
 
-@implementation M2TabBarView_B
+@implementation M2ScrollTabBarView
 
 - (id)initWithFrame:(CGRect)frame{
-    return [self initWithFrame:frame itemsCountInPage:M2TBVB_Default_ItemsCountInPage];
+    return [self initWithFrame:frame itemsCountInPage:M2STBVA_Default_ItemsCountInPage];
 }
 
 - (id)initWithFrame:(CGRect)frame itemsCountInPage:(NSInteger)itemsCountInPage{
@@ -120,7 +120,7 @@
     [button setTitleColor:_unSelectedTextColor forState:UIControlStateNormal];
     button.titleLabel.font = _unSelectedFont;
     [button setTitle:[_titles objectAtIndex:index] forState:UIControlStateNormal];
-    button.tag = M2TBVB_ItemTagOffset + index;
+    button.tag = index + M2STBVA_ItemTagOffset;
     [button addTarget:self action:@selector(onTapItem:) forControlEvents:UIControlEventTouchUpInside];
     
     return button;
@@ -132,18 +132,18 @@
     [self selectIndex:index needChangeContentOffset:NO];
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    NSLog(@"decelerate(%d)  @@%s", decelerate, __func__);
+    //    NSLog(@"decelerate(%d)  @@%s", decelerate, __func__);
     if (!decelerate) {
         [self modifyOffsetX:scrollView.contentOffset.x];
     }
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-//    NSLog(@"  @@%s", __func__);
+    //    NSLog(@"  @@%s", __func__);
     [self modifyOffsetX:scrollView.contentOffset.x];
 }
 #pragma mark -
 - (void)modifyOffsetX:(float)offsetX{
-//    NSLog(@"offsetX(%f)  @@%s", offsetX, __func__);
+    //    NSLog(@"offsetX(%f)  @@%s", offsetX, __func__);
     NSInteger index = [self indexWhenOffsetX:offsetX];
     // delegate
     if (_delegate && [_delegate respondsToSelector:@selector(tabBarView:didSelectItemAtIndex:)]) {
@@ -174,7 +174,7 @@
 
 #pragma mark - tap item
 - (void)onTapItem:(UIView *)sender{
-    NSInteger index = sender.tag - M2TBVB_ItemTagOffset;
+    NSInteger index = sender.tag - M2STBVA_ItemTagOffset;
     [self selectIndex:index];
     // delegate
     if (_delegate && [_delegate respondsToSelector:@selector(tabBarView:didSelectItemAtIndex:)]) {

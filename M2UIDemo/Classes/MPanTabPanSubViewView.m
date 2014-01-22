@@ -7,10 +7,10 @@
 //
 
 #import "MPanTabPanSubViewView.h"
-#import "M2TabBarView_B.h"
+#import "M2ScrollTabBarView_A.h"
 
 @interface MPanTabPanSubViewView()<M2TabBarViewDelegate, UIScrollViewDelegate>{
-    M2TabBarView_B  *_tabBarView;
+    M2ScrollTabBarView_A  *_tabBarView;
     UIScrollView    *_contentContainerView;
     NSArray         *_contentViews;
     NSArray         *_titles;
@@ -24,7 +24,7 @@
     if (self) {
         // Initialization code
         // tab
-        _tabBarView = [[M2TabBarView_B alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 50) itemsCountInPage: 5];
+        _tabBarView = [[M2ScrollTabBarView_A alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 50) itemsCountInPage: 5];
         _tabBarView.delegate = self;
         _tabBarView.backgroundColor = [UIColor whiteColor];
         [self addSubview:_tabBarView];
@@ -82,7 +82,7 @@
 }
 
 #pragma mark - M2TabBarViewDelegate
-- (void)tabBarView:(M2TabBarView_B *)tabBarView didSelectItemAtIndex:(NSInteger)index{
+- (void)tabBarView:(M2ScrollTabBarView_A *)tabBarView didSelectItemAtIndex:(NSInteger)index{
     float itemWidth = CGRectGetWidth(_contentContainerView.bounds);
     [_contentContainerView setContentOffset:CGPointMake(itemWidth * index, 0) animated:NO];
 }
