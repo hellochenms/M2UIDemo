@@ -17,6 +17,7 @@
 @interface M2SimpleGalleryView : UIView
 - (id)initWithFrame:(CGRect)frame itemWidth:(float)itemWidth;
 @property (nonatomic, weak)     id<M2SimpleGalleryViewDataSource> dataSource;
+- (void)reloadData;
 @end
 
 @protocol M2SimpleGalleryViewDataSource <NSObject>
