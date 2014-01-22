@@ -88,6 +88,11 @@
 		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
 		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */; };
 		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
+		99E8AF35188F9D0A0061F2EF /* M2SimpleGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8AF34188F9D0A0061F2EF /* M2SimpleGalleryView.m */; };
+		99E8AF39188F9D220061F2EF /* M2SimpleGalleryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8AF38188F9D220061F2EF /* M2SimpleGalleryViewCell.m */; };
+		99E8AF3C188FA2AC0061F2EF /* MSimpleGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8AF3B188FA2AC0061F2EF /* MSimpleGalleryViewController.m */; };
+		99E8AF3F188FA2C80061F2EF /* MSimpleGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8AF3E188FA2C80061F2EF /* MSimpleGalleryView.m */; };
+		99E8AF42188FA2E80061F2EF /* MSimpleGalleryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8AF41188FA2E80061F2EF /* MSimpleGalleryViewCell.m */; };
 		99EBBF7B188E1AE10093B9BB /* MTapTabPanSubViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7A188E1AE10093B9BB /* MTapTabPanSubViewViewController.m */; };
 		99EBBF7E188E1B080093B9BB /* MTapTabPanSubViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7D188E1B080093B9BB /* MTapTabPanSubViewView.m */; };
 		99EBBFA0188E48120093B9BB /* MPanTabPanSubViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF9F188E48120093B9BB /* MPanTabPanSubViewViewController.m */; };
@@ -246,6 +251,16 @@
 		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView_Master.h; sourceTree = "<group>"; };
 		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView_Master.m; sourceTree = "<group>"; };
 		99E06E78187A5E230037ED3D /* white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_rect@2x.png"; sourceTree = "<group>"; };
+		99E8AF33188F9D0A0061F2EF /* M2SimpleGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleGalleryView.h; sourceTree = "<group>"; };
+		99E8AF34188F9D0A0061F2EF /* M2SimpleGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SimpleGalleryView.m; sourceTree = "<group>"; };
+		99E8AF37188F9D220061F2EF /* M2SimpleGalleryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleGalleryViewCell.h; sourceTree = "<group>"; };
+		99E8AF38188F9D220061F2EF /* M2SimpleGalleryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SimpleGalleryViewCell.m; sourceTree = "<group>"; };
+		99E8AF3A188FA2AC0061F2EF /* MSimpleGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSimpleGalleryViewController.h; sourceTree = "<group>"; };
+		99E8AF3B188FA2AC0061F2EF /* MSimpleGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSimpleGalleryViewController.m; sourceTree = "<group>"; };
+		99E8AF3D188FA2C80061F2EF /* MSimpleGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSimpleGalleryView.h; sourceTree = "<group>"; };
+		99E8AF3E188FA2C80061F2EF /* MSimpleGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSimpleGalleryView.m; sourceTree = "<group>"; };
+		99E8AF40188FA2E80061F2EF /* MSimpleGalleryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSimpleGalleryViewCell.h; sourceTree = "<group>"; };
+		99E8AF41188FA2E80061F2EF /* MSimpleGalleryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSimpleGalleryViewCell.m; sourceTree = "<group>"; };
 		99EBBF79188E1AE10093B9BB /* MTapTabPanSubViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTapTabPanSubViewViewController.h; sourceTree = "<group>"; };
 		99EBBF7A188E1AE10093B9BB /* MTapTabPanSubViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTapTabPanSubViewViewController.m; sourceTree = "<group>"; };
 		99EBBF7C188E1B080093B9BB /* MTapTabPanSubViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTapTabPanSubViewView.h; sourceTree = "<group>"; };
@@ -598,6 +613,7 @@
 			children = (
 				9963DD0F187CF5C100571748 /* 图片浏览点击全屏A */,
 				99C12F1C1884D88800B92D1C /* 图片浏览点击全屏B */,
+				99E8AF32188F9C4E0061F2EF /* 图片浏览横屏图片旋转 */,
 			);
 			name = "多图联播";
 			sourceTree = "<group>";
@@ -851,6 +867,31 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		99E8AF32188F9C4E0061F2EF /* 图片浏览横屏图片旋转 */ = {
+			isa = PBXGroup;
+			children = (
+				99E8AF36188F9D0D0061F2EF /* M2 */,
+				99E8AF3A188FA2AC0061F2EF /* MSimpleGalleryViewController.h */,
+				99E8AF3B188FA2AC0061F2EF /* MSimpleGalleryViewController.m */,
+				99E8AF3D188FA2C80061F2EF /* MSimpleGalleryView.h */,
+				99E8AF3E188FA2C80061F2EF /* MSimpleGalleryView.m */,
+				99E8AF40188FA2E80061F2EF /* MSimpleGalleryViewCell.h */,
+				99E8AF41188FA2E80061F2EF /* MSimpleGalleryViewCell.m */,
+			);
+			name = "图片浏览横屏图片旋转";
+			sourceTree = "<group>";
+		};
+		99E8AF36188F9D0D0061F2EF /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				99E8AF33188F9D0A0061F2EF /* M2SimpleGalleryView.h */,
+				99E8AF34188F9D0A0061F2EF /* M2SimpleGalleryView.m */,
+				99E8AF37188F9D220061F2EF /* M2SimpleGalleryViewCell.h */,
+				99E8AF38188F9D220061F2EF /* M2SimpleGalleryViewCell.m */,
+			);
+			name = M2;
+			sourceTree = "<group>";
+		};
 		99EBBF9D188E47BD0093B9BB /* 滑动tab或滑动子view */ = {
 			isa = PBXGroup;
 			children = (
@@ -1069,7 +1110,9 @@
 				99C12F221884D90200B92D1C /* MImageGalleryViewController_B.m in Sources */,
 				995F3AE2184C3350005F349B /* M2BaseRefreshView.m in Sources */,
 				99EBBFB2188E7C530093B9BB /* MTabLike163ViewController.m in Sources */,
+				99E8AF42188FA2E80061F2EF /* MSimpleGalleryViewCell.m in Sources */,
 				997B41991857386000931A53 /* M2StatusBarToast.m in Sources */,
+				99E8AF39188F9D220061F2EF /* M2SimpleGalleryViewCell.m in Sources */,
 				9971193518890C7B00039D8A /* MExtensibleItemTableView.m in Sources */,
 				9963DD61187E467100571748 /* MRearchThresholdView.m in Sources */,
 				9963DD12187CF75A00571748 /* M2ImageGalleryView_A.m in Sources */,
@@ -1098,8 +1141,10 @@
 				99BA20001859DA4F00EF5A74 /* M2HelpView.m in Sources */,
 				990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */,
 				9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */,
+				99E8AF35188F9D0A0061F2EF /* M2SimpleGalleryView.m in Sources */,
 				99EBBFBA188E7FE60093B9BB /* M2ScrollTabBarView_B.m in Sources */,
 				9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */,
+				99E8AF3F188FA2C80061F2EF /* MSimpleGalleryView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
 				99EBBFB5188E7C600093B9BB /* MTabLike163View.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
@@ -1123,6 +1168,7 @@
 				99C12F2F1884E29500B92D1C /* MIGalleryViewCell_B.m in Sources */,
 				9971193218890C1F00039D8A /* MExtensibleItemTableViewController.m in Sources */,
 				990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */,
+				99E8AF3C188FA2AC0061F2EF /* MSimpleGalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

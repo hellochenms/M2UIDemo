@@ -77,7 +77,8 @@
                       ],
                   @[
                       @[@"图片浏览点击全屏A", @"MImageGalleryViewController_A"],
-                      @[@"图片浏览点击全屏B", @"MImageGalleryViewController_B"]
+                      @[@"图片浏览点击全屏B", @"MImageGalleryViewController_B"],
+                      @[@"图片浏览横屏图片旋转", @"MSimpleGalleryViewController"]
                       ],
                   @[
                       @[@"键盘上方的输入框", @"MKeyboardInputViewController"]

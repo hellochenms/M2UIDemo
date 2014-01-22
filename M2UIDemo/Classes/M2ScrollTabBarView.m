@@ -9,9 +9,9 @@
 #define M2STBVA_Default_ItemsCountInPage 5
 #define M2STBVA_ItemTagOffset 6000
 
-#import "M2ScrollTabBarView.h"
+#import "M2ScrollTabBarView_A.h"
 
-@interface M2ScrollTabBarView()<UIScrollViewDelegate>{
+@interface M2ScrollTabBarView_A()<UIScrollViewDelegate>{
     UIScrollView    *_mainView;
     NSMutableArray  *_items;
     NSInteger       _itemsCountInPage;
@@ -24,7 +24,7 @@
 @property (nonatomic) UIFont    *selectedFont;
 @end
 
-@implementation M2ScrollTabBarView
+@implementation M2ScrollTabBarView_A
 
 - (id)initWithFrame:(CGRect)frame{
     return [self initWithFrame:frame itemsCountInPage:M2STBVA_Default_ItemsCountInPage];
