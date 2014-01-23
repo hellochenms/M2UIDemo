@@ -24,10 +24,12 @@
     if (self) {
         // Initialization code
         self.clipsToBounds = YES;
+       
         
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 5, CGRectGetWidth(frame), CGRectGetHeight(frame) - 5 * 2)];
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.showsVerticalScrollIndicator = NO;
+        _scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         _scrollView.delegate = self;
         
         UIView *item = nil;
@@ -56,25 +58,25 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
 //    NSLog(@"开始Drag  @@%s", __func__);
-    if (_observerDelegate && [_observerDelegate respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
-        [_observerDelegate scrollViewWillBeginDragging:scrollView];
+    if (_observer && [_observer respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
+        [_observer scrollViewWillBeginDragging:scrollView];
     }
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
 //    NSLog(@"结束Drag  @@%s", __func__);
-    if (_observerDelegate && [_observerDelegate respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
-        [_observerDelegate scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+    if (_observer && [_observer respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
+        [_observer scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
     }
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
 //    NSLog(@"scrollView.contentOffset.y(%f)  @@%s", scrollView.contentOffset.y, __func__);
-    if (_observerDelegate && [_observerDelegate respondsToSelector:@selector(scrollViewDidScroll:)]) {
-        [_observerDelegate scrollViewDidScroll:scrollView];
+    if (_observer && [_observer respondsToSelector:@selector(scrollViewDidScroll:)]) {
+        [_observer scrollViewDidScroll:scrollView];
     }
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    if (_observerDelegate && [_observerDelegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
-        [_observerDelegate scrollViewDidEndDecelerating:scrollView];
+    if (_observer && [_observer respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
+        [_observer scrollViewDidEndDecelerating:scrollView];
     }
 }
 

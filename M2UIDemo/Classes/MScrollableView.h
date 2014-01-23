@@ -10,6 +10,6 @@
 #import "M2ScrollableViewObserver.h"
 
 @interface MScrollableView : UIView
-@property (nonatomic, weak) id<M2ScrollableViewObserverObserveDelegate> observerDelegate;
+@property (nonatomic, weak) id<M2ScrollableViewObserverObserveDelegate> observer;
 - (void)changeFrameByDeltaHeight:(float)deltaHeight;
 @end
