@@ -9,7 +9,7 @@
 #import "MPanTabPanSubViewView.h"
 #import "M2ScrollTabBarView_A.h"
 
-@interface MPanTabPanSubViewView()<M2TabBarViewDelegate, UIScrollViewDelegate>{
+@interface MPanTabPanSubViewView()<M2ScrollTabBarViewDelegate, UIScrollViewDelegate>{
     M2ScrollTabBarView_A  *_tabBarView;
     UIScrollView    *_contentContainerView;
     NSArray         *_contentViews;

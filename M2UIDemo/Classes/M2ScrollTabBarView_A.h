@@ -12,17 +12,17 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol M2TabBarViewDelegate;
+@protocol M2ScrollTabBarViewDelegate;
 
 @interface M2ScrollTabBarView_A : UIView
 @property (nonatomic) NSArray   *titles;
 // 为了保持选中行在正中央，变量itemsCountInPage应赋奇数值，如果是偶数，会被修改为接近的奇数；
 - (id)initWithFrame:(CGRect)frame itemsCountInPage:(NSInteger)itemsCountInPage;
 - (void)selectIndex:(NSInteger)index;
-@property (nonatomic, weak) id<M2TabBarViewDelegate> delegate;
+@property (nonatomic, weak) id<M2ScrollTabBarViewDelegate> delegate;
 @end
 
-@protocol M2TabBarViewDelegate <NSObject>
+@protocol M2ScrollTabBarViewDelegate <NSObject>
 // tabBar内部产生的事件会触发didSelectItemAtIndex通知（如点击item，或滑动tabBar），而外界事件（如通过selectIndex:方法设置index）不会触发；
 - (void)tabBarView:(M2ScrollTabBarView_A *)tabBarView didSelectItemAtIndex:(NSInteger)index;
 @end

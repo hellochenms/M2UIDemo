@@ -23,7 +23,8 @@
     if (self) {
         // Initialization code
         // tab
-        _tabBarView = [[M2TabBarView_A alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 50) titles:@[@"详情", @"评价", @"其他"]];
+        _tabBarView = [[M2TabBarView_A alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 50)];
+        _tabBarView.titles = @[@"详情", @"评价", @"其他"];
         _tabBarView.delegate = self;
         _tabBarView.backgroundColor = [UIColor whiteColor];
         [self addSubview:_tabBarView];

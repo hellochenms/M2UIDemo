@@ -38,6 +38,9 @@
             return self;
         }
         
+        //
+        _items = [NSMutableArray array];
+        
         // self
         _curSelectedIndex = NSNotFound;
         _unSelectedTextColor = [UIColor grayColor];
@@ -71,7 +74,7 @@
     for (oldItem in _items) {
         [oldItem removeFromSuperview];
     }
-    _items = nil;
+    [_items removeAllObjects];
     _mainView.contentSize = CGSizeMake(0, CGRectGetHeight(_mainView.bounds));
     
     // build new
@@ -92,7 +95,6 @@
         [_mainView addSubview:item];
     }
     // 目标items
-    _items = [NSMutableArray arrayWithCapacity:count];
     float offset = paddingCount ;
     for (NSInteger i = 0; i < count; i++) {
         item = [self itemWithIndex:i];

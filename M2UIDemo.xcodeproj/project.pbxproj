@@ -97,7 +97,7 @@
 		99EBBF7E188E1B080093B9BB /* MTapTabPanSubViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF7D188E1B080093B9BB /* MTapTabPanSubViewView.m */; };
 		99EBBFA0188E48120093B9BB /* MPanTabPanSubViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBF9F188E48120093B9BB /* MPanTabPanSubViewViewController.m */; };
 		99EBBFA3188E48780093B9BB /* MPanTabPanSubViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFA2188E48780093B9BB /* MPanTabPanSubViewView.m */; };
-		99EBBFA7188E4D460093B9BB /* M2ScrollTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView.m */; };
+		99EBBFA7188E4D460093B9BB /* M2ScrollTabBarView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView_A.m */; };
 		99EBBFAE188E6E1F0093B9BB /* m2_72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EBBFAD188E6E1F0093B9BB /* m2_72@2x.png */; };
 		99EBBFB2188E7C530093B9BB /* MTabLike163ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFB1188E7C530093B9BB /* MTabLike163ViewController.m */; };
 		99EBBFB5188E7C600093B9BB /* MTabLike163View.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EBBFB4188E7C600093B9BB /* MTabLike163View.m */; };
@@ -270,7 +270,7 @@
 		99EBBFA1188E48780093B9BB /* MPanTabPanSubViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPanTabPanSubViewView.h; sourceTree = "<group>"; };
 		99EBBFA2188E48780093B9BB /* MPanTabPanSubViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPanTabPanSubViewView.m; sourceTree = "<group>"; };
 		99EBBFA5188E4D460093B9BB /* M2ScrollTabBarView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ScrollTabBarView_A.h; sourceTree = "<group>"; };
-		99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ScrollTabBarView.m; sourceTree = "<group>"; };
+		99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ScrollTabBarView_A.m; sourceTree = "<group>"; };
 		99EBBFAD188E6E1F0093B9BB /* m2_72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m2_72@2x.png"; sourceTree = "<group>"; };
 		99EBBFB0188E7C530093B9BB /* MTabLike163ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTabLike163ViewController.h; sourceTree = "<group>"; };
 		99EBBFB1188E7C530093B9BB /* MTabLike163ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTabLike163ViewController.m; sourceTree = "<group>"; };
@@ -676,14 +676,13 @@
 		9963DD5B187E45AE00571748 /* 上滑超过阈值时上推 */ = {
 			isa = PBXGroup;
 			children = (
+				99D231841890BEB8006EC825 /* M2 */,
 				9963DD5C187E465A00571748 /* MRearchThresholdViewController.h */,
 				9963DD5D187E465A00571748 /* MRearchThresholdViewController.m */,
 				9963DD5F187E467100571748 /* MRearchThresholdView.h */,
 				9963DD60187E467100571748 /* MRearchThresholdView.m */,
 				9963DD62187E48ED00571748 /* MScrollableView.h */,
 				9963DD63187E48ED00571748 /* MScrollableView.m */,
-				9963DD65187E502000571748 /* M2ScrollableViewObserver.h */,
-				9963DD66187E502000571748 /* M2ScrollableViewObserver.m */,
 			);
 			name = "上滑超过阈值时上推";
 			sourceTree = "<group>";
@@ -806,6 +805,15 @@
 			name = M2;
 			sourceTree = "<group>";
 		};
+		99D231841890BEB8006EC825 /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				9963DD65187E502000571748 /* M2ScrollableViewObserver.h */,
+				9963DD66187E502000571748 /* M2ScrollableViewObserver.m */,
+			);
+			name = M2;
+			sourceTree = "<group>";
+		};
 		99D27C181855AE2000513BA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,7 +923,7 @@
 			isa = PBXGroup;
 			children = (
 				99EBBFA5188E4D460093B9BB /* M2ScrollTabBarView_A.h */,
-				99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView.m */,
+				99EBBFA6188E4D460093B9BB /* M2ScrollTabBarView_A.m */,
 			);
 			name = M2;
 			sourceTree = "<group>";
@@ -1158,7 +1166,7 @@
 				99711938188917A700039D8A /* MSubViewController.m in Sources */,
 				990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
-				99EBBFA7188E4D460093B9BB /* M2ScrollTabBarView.m in Sources */,
+				99EBBFA7188E4D460093B9BB /* M2ScrollTabBarView_A.m in Sources */,
 				99C12F251884D92000B92D1C /* MImageGalleryView_B.m in Sources */,
 				99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,

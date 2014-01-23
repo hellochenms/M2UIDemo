@@ -22,65 +22,79 @@
 @implementation M2TabBarView_A
 
 - (id)initWithFrame:(CGRect)frame{
-    return [self initWithFrame:frame titles:nil];
-}
-
-- (id)initWithFrame:(CGRect)frame titles:(NSArray *)titles{
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        // check
-        NSUInteger count = [titles count];
-        if (titles.count <= 0) {
-            return self;
-        }
-        
-        // self
+        _items = [NSMutableArray array];
         _curSelectedIndex = NSNotFound;
+        
+        // 默认
         _unSelectedTextColor = [UIColor grayColor];
-        _selectedTextColor = [UIColor redColor];
+        _selectedTextColor = [UIColor blueColor];
         _seperatorLineViewColor = [UIColor lightGrayColor];
-        _underLinerViewColor = [UIColor redColor];
-        
-        // items
-        _items = [NSMutableArray arrayWithCapacity:count];
-        float itemWidth = CGRectGetWidth(frame) / count;
-        float itemHeight = CGRectGetHeight(frame);
-        UIButton *button = nil;
-        for (NSInteger i = 0; i < count; i++) {
-            button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame = CGRectMake(itemWidth * i, 0, itemWidth, itemHeight);
-            button.titleLabel.font = [UIFont systemFontOfSize:16];
-            [button setTitleColor:_unSelectedTextColor forState:UIControlStateNormal];
-            [button setTitle:[titles objectAtIndex:i] forState:UIControlStateNormal];
-            button.tag = M2TV_ItemTagOffset + i;
-            [button addTarget:self action:@selector(onTapItem:) forControlEvents:UIControlEventTouchUpInside];
-            [self addSubview:button];
-            [_items addObject:button];
-        }
-        
-        // 分隔线
-        UIView *seperatorLineView = nil;
-        NSInteger seperatorCount = count - 1;
-        float seperatorWidth = 1;
-        float seperatorHeight = itemHeight - 10;
-        for (int i = 0; i < seperatorCount; i++) {
-            seperatorLineView = [[UIView alloc] initWithFrame:CGRectMake(itemWidth * (i + 1) - seperatorWidth / 2.0, (itemHeight - seperatorHeight) / 2, seperatorWidth , seperatorHeight)];
-            seperatorLineView.backgroundColor = _seperatorLineViewColor;
-            [self addSubview:seperatorLineView];
-            [_seperators addObject:seperatorLineView];
-        }
-        
-        // 下划线
-        _underLineView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame) - 2, itemWidth, 2)];
-        _underLineView.backgroundColor = _underLinerViewColor;
-        [self addSubview:_underLineView];
-        
-        // init
-        [self selectIndex:0 animated:NO];
+        _underLinerViewColor = [UIColor blueColor];
     }
     
     return self;
+}
+
+#pragma mark - setter
+- (void)setTitles:(NSArray *)titles{
+    _titles = titles;
+    
+    // clear old
+    UIView *view = nil;
+    for (view in _items) {
+        [view removeFromSuperview];
+    }
+    [_items removeAllObjects];
+    for (view in _seperators) {
+        [view removeFromSuperview];
+    }
+    [_seperators removeAllObjects];
+    [_underLineView removeFromSuperview];
+    
+    if ([_titles count] <= 0) {
+        return;
+    }
+    
+    // items
+    NSUInteger count = [_titles count];
+    float itemWidth = CGRectGetWidth(self.bounds) / count;
+    float itemHeight = CGRectGetHeight(self.bounds);
+    UIButton *button = nil;
+    for (NSInteger i = 0; i < count; i++) {
+        button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(itemWidth * i, 0, itemWidth, itemHeight);
+        button.titleLabel.font = _itemFont;
+        [button setTitleColor:_unSelectedTextColor forState:UIControlStateNormal];
+        [button setTitle:[titles objectAtIndex:i] forState:UIControlStateNormal];
+        button.tag = M2TV_ItemTagOffset + i;
+        [button addTarget:self action:@selector(onTapItem:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:button];
+        [_items addObject:button];
+    }
+    
+    // 分隔线
+    UIView *seperatorLineView = nil;
+    NSInteger seperatorCount = count - 1;
+    float seperatorWidth = 1;
+    float seperatorHeight = itemHeight - 10;
+    for (int i = 0; i < seperatorCount; i++) {
+        seperatorLineView = [[UIView alloc] initWithFrame:CGRectMake(itemWidth * (i + 1) - seperatorWidth / 2.0, (itemHeight - seperatorHeight) / 2, seperatorWidth , seperatorHeight)];
+        seperatorLineView.backgroundColor = _seperatorLineViewColor;
+        seperatorLineView.hidden = _seperarorLineViewHidden;
+        [self addSubview:seperatorLineView];
+        [_seperators addObject:seperatorLineView];
+    }
+    
+    // 下划线
+    _underLineView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds) - 2, itemWidth, 2)];
+    _underLineView.backgroundColor = _underLinerViewColor;
+    [self addSubview:_underLineView];
+    
+    // init
+    [self selectIndex:0 animated:NO];
 }
 
 #pragma mark - tap event
@@ -92,7 +106,7 @@
     }
 }
 
-#pragma mark - select
+#pragma mark - public
 - (void)selectIndex:(NSInteger)index animated:(BOOL)animated{
     if (index == _curSelectedIndex) {
         return;
@@ -144,6 +158,7 @@
 }
 
 - (void)setItemFont:(UIFont *)itemFont{
+    _itemFont = itemFont;
     UIButton *item = nil;
     for (item in _items) {
         item.titleLabel.font = itemFont;
@@ -151,10 +166,24 @@
 }
 
 - (void)setSeperarorLineViewHidden:(BOOL)seperarorLineViewHidden{
+    _seperarorLineViewHidden = seperarorLineViewHidden;
     UIView *seperator = nil;
     for (seperator in _seperators) {
         seperator.hidden = seperarorLineViewHidden;
     }
+}
+
+- (void)setSeperatorLineViewColor:(UIColor *)seperatorLineViewColor{
+    _seperatorLineViewColor = seperatorLineViewColor;
+    UIView *seperator = nil;
+    for (seperator in _seperators) {
+        seperator.backgroundColor = _seperatorLineViewColor;
+    }
+}
+
+- (void)setUnderLinerViewColor:(UIColor *)underLinerViewColor{
+    _underLinerViewColor = underLinerViewColor;
+    _underLineView.backgroundColor = _underLinerViewColor;
 }
 
 @end

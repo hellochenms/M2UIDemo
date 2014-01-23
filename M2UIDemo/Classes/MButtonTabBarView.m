@@ -20,10 +20,8 @@
     self = [super initWithFrame:frame];
     if (self) {
 //        // Initialization code
-        _tabBarViewA = [[M2TabBarView_A alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 50) titles:@[@"新闻", @"财经", @"科技", @"轻松一刻"]];
-        _tabBarViewA.backgroundColor = [UIColor lightGrayColor];
-        _tabBarViewA.unSelectedTextColor = [UIColor whiteColor];
-        _tabBarViewA.selectedTextColor = [UIColor blueColor];
+        _tabBarViewA = [[M2TabBarView_A alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), 50)];
+        _tabBarViewA.titles = @[@"新闻", @"财经", @"科技", @"轻松一刻"];
         _tabBarViewA.seperarorLineViewHidden = YES;
         _tabBarViewA.delegate = self;
         [self addSubview:_tabBarViewA];
