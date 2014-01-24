@@ -24,6 +24,9 @@
 		99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC41887B2CF00A3F20E /* MCommentView.m */; };
 		99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC71887B32E00A3F20E /* M2CommentCell.m */; };
 		99518FD51887DA6800A3F20E /* M2CommentInputView_M1.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FD41887DA6800A3F20E /* M2CommentInputView_M1.m */; };
+		9959642918924E6D00DEE21C /* MCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959642818924E6D00DEE21C /* MCoverView.m */; };
+		9959642C18924EE400DEE21C /* MCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959642B18924EE400DEE21C /* MCoverViewController.m */; };
+		9959642F1892502900DEE21C /* M2ShowFromBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959642E1892502900DEE21C /* M2ShowFromBottomView.m */; };
 		995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FAC1862ED9000A46778 /* TestTableViewController.m */; };
 		995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FB01862F48700A46778 /* TestCustomCell.m */; };
 		995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 995E3FB31862F8C100A46778 /* 163_icon@2x.png */; };
@@ -153,6 +156,12 @@
 		99518FC71887B32E00A3F20E /* M2CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2CommentCell.m; sourceTree = "<group>"; };
 		99518FD31887DA6800A3F20E /* M2CommentInputView_M1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2CommentInputView_M1.h; sourceTree = "<group>"; };
 		99518FD41887DA6800A3F20E /* M2CommentInputView_M1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2CommentInputView_M1.m; sourceTree = "<group>"; };
+		9959642718924E6D00DEE21C /* MCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCoverView.h; sourceTree = "<group>"; };
+		9959642818924E6D00DEE21C /* MCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCoverView.m; sourceTree = "<group>"; };
+		9959642A18924EE400DEE21C /* MCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCoverViewController.h; sourceTree = "<group>"; };
+		9959642B18924EE400DEE21C /* MCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCoverViewController.m; sourceTree = "<group>"; };
+		9959642D1892502900DEE21C /* M2ShowFromBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFromBottomView.h; sourceTree = "<group>"; };
+		9959642E1892502900DEE21C /* M2ShowFromBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFromBottomView.m; sourceTree = "<group>"; };
 		995E3FAB1862ED9000A46778 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
 		995E3FAC1862ED9000A46778 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		995E3FAF1862F48700A46778 /* TestCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomCell.h; sourceTree = "<group>"; };
@@ -481,6 +490,27 @@
 			name = M2;
 			sourceTree = "<group>";
 		};
+		9959642218924E2600DEE21C /* 展示时遮罩点击收起的View */ = {
+			isa = PBXGroup;
+			children = (
+				9959642618924E5300DEE21C /* M2 */,
+				9959642A18924EE400DEE21C /* MCoverViewController.h */,
+				9959642B18924EE400DEE21C /* MCoverViewController.m */,
+				9959642718924E6D00DEE21C /* MCoverView.h */,
+				9959642818924E6D00DEE21C /* MCoverView.m */,
+			);
+			name = "展示时遮罩点击收起的View";
+			sourceTree = "<group>";
+		};
+		9959642618924E5300DEE21C /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				9959642D1892502900DEE21C /* M2ShowFromBottomView.h */,
+				9959642E1892502900DEE21C /* M2ShowFromBottomView.m */,
+			);
+			name = M2;
+			sourceTree = "<group>";
+		};
 		995E3FAA1862ECF100A46778 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,6 +629,7 @@
 				9963DD0D187CF59300571748 /* 图片浏览 */,
 				9963DD2B187D40FC00571748 /* 键盘相关 */,
 				9963DD5A187E458F00571748 /* 上滑scrollView上推其他View */,
+				9959642218924E2600DEE21C /* 展示时遮罩点击收起的View */,
 				995F3AD8184C2DC2005F349B /* RootViewController.h */,
 				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 			);
@@ -1150,6 +1181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9959642918924E6D00DEE21C /* MCoverView.m in Sources */,
 				99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */,
 				99C12F2B1884E1C200B92D1C /* M2GalleryViewCell.m in Sources */,
 				99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */,
@@ -1162,6 +1194,7 @@
 				99E8AF39188F9D220061F2EF /* M2SimpleGalleryViewCell.m in Sources */,
 				9971193518890C7B00039D8A /* MExtensibleItemTableView.m in Sources */,
 				9963DD61187E467100571748 /* MRearchThresholdView.m in Sources */,
+				9959642F1892502900DEE21C /* M2ShowFromBottomView.m in Sources */,
 				9963DD12187CF75A00571748 /* M2ImageGalleryView_A.m in Sources */,
 				99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */,
 				990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */,
@@ -1218,6 +1251,7 @@
 				99C12F2F1884E29500B92D1C /* MIGalleryViewCell_B.m in Sources */,
 				9971193218890C1F00039D8A /* MExtensibleItemTableViewController.m in Sources */,
 				990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */,
+				9959642C18924EE400DEE21C /* MCoverViewController.m in Sources */,
 				99E8AF3C188FA2AC0061F2EF /* MSimpleGalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

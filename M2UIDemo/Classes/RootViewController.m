@@ -36,7 +36,8 @@
                       @"瀑布流",
                       @"图片浏览",
                       @"键盘相关",
-                      @"上滑scrollView上推其他View"];
+                      @"上滑scrollView上推其他View",
+                      @"展示时遮罩点击收起的View"];
         _rows = @[
                   @[
                       @[@"_临时测试", @"_tempTestViewController"]
@@ -86,6 +87,9 @@
                       ],
                   @[
                       @[@"上滑超过阈值时上推", @"MRearchThresholdViewController"]
+                      ],
+                  @[
+                      @[@"展示时遮罩点击收起的View", @"MCoverViewController"]
                       ]
                   ];
     }
