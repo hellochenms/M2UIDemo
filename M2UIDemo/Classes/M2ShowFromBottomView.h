@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 
 @interface M2ShowFromBottomView : UIView
-@property (nonatomic) float     containerHeight;
 @property (nonatomic) UIView    *contentView;
 - (void)show;
+- (void)hide;
 @end

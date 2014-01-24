@@ -11,7 +11,9 @@
 #define MSFBV_DefaultContainerHeight    200
 #define MSFBV_AnimationDuration         0.25
 
-@interface M2ShowFromBottomView()
+@interface M2ShowFromBottomView(){
+    float _containerHeight;
+}
 @property (nonatomic) UIControl *coverView;
 @property (nonatomic) UIView    *containerView;
 @end
@@ -39,15 +41,6 @@
 }
 
 #pragma mark - setter
-- (void)setContainerHeight:(float)containerHeight{
-    _containerHeight = containerHeight;
-    
-    CGRect frame = _containerView.frame;
-    frame.size.height = containerHeight;
-    _containerView.frame = frame;
-}
-
-#pragma mark - public
 - (void)setContentView:(UIView *)contentView{
     if ([contentView superview]) {
         return;
@@ -55,7 +48,15 @@
     if (_contentView) {
         [_contentView removeFromSuperview];
     }
+    
     _contentView = contentView;
+    
+    // 调整container
+    _containerHeight = CGRectGetHeight(_contentView.bounds);
+    CGRect frame = _containerView.frame;
+    frame.size.height = _containerHeight;
+    _containerView.frame = frame;
+    
     [_containerView addSubview:_contentView];
 }
 - (void)show{
@@ -72,9 +73,7 @@
                          weakSelf.containerView.frame = frame;
                      }];
 }
-
-#pragma mark - tap cover
-- (void)onTapCover{
+- (void)hide{
     CGRect frame = _containerView.frame;
     frame.origin.y = CGRectGetHeight(self.bounds);
     
@@ -88,6 +87,11 @@
                          [self removeFromSuperview];
                      }
      ];
+}
+
+#pragma mark - tap cover
+- (void)onTapCover{
+    [self hide];
 }
 
 @end

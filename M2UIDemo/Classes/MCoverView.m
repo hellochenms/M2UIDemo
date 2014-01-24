@@ -29,11 +29,9 @@
         [showCoverView addTarget:self action:@selector(OnTapShowCoverButton) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:showCoverView];
         
-        _showView = [M2ShowFromBottomView new];
-        _showView.containerHeight = 300;
-        
-        UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 300, 300 - 10 * 2)];
+        UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, 300, 400)];
         contentView.backgroundColor = [UIColor lightGrayColor];
+        _showView = [M2ShowFromBottomView new];
         _showView.contentView = contentView;
         
         UIButton *sinaButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -52,6 +50,14 @@
         weixinButton.tag = MCV_ButtonTagOffset + 1;
         [contentView addSubview:weixinButton];
         
+        UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        cancelButton.frame = CGRectMake(10, CGRectGetMaxY(weixinButton.frame) + 10, CGRectGetWidth(contentView.bounds)- 10 * 2, 50);
+        cancelButton.backgroundColor = [UIColor grayColor];
+        [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+        [cancelButton addTarget:self action:@selector(onTapButton:) forControlEvents:UIControlEventTouchUpInside];
+        cancelButton.tag = MCV_ButtonTagOffset + 2;
+        [contentView addSubview:cancelButton];
+        
     }
     
     return self;
@@ -65,7 +71,11 @@
 #pragma mark - 
 - (void)onTapButton:(UIButton *)sender{
     NSInteger index = sender.tag - MCV_ButtonTagOffset;
-    NSLog(@"分享到%@  @@%s", (index == 0 ? @"新浪微博" : @"微信"), __func__);
+    if (index == 2) {
+        [_showView hide];
+    }else{
+        NSLog(@"分享到%@  @@%s", (index == 0 ? @"新浪微博" : @"微信"), __func__);
+    }
 }
 
 @end
