@@ -35,7 +35,7 @@
 - (id)initWithFrame:(CGRect)frame
     normalImageName:(NSString*)normalImageName
   selectedImageName:(NSString*)selectedImageName
-          itemCount:(int)itemCount
+          itemCount:(NSInteger)itemCount
     horizontalSpace:(float)horizontalSpace{
     self = [super initWithFrame:frame];
     if (self) {
@@ -102,8 +102,8 @@
     }
     
     UIImageView *imgView = nil;
-    int selectTailIndex = _grade - 1;
-    for (int i = 0; i < _count; i++) {
+    NSInteger selectTailIndex = _grade - 1;
+    for (NSInteger i = 0; i < _count; i++) {
         imgView = [_items objectAtIndex:i];
         imgView.image = (i <= selectTailIndex ? _selectedImage : _normalImage);
     }

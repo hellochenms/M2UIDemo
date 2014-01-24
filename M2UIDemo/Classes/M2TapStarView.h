@@ -22,7 +22,7 @@
 - (id)initWithFrame:(CGRect)frame
     normalImageName:(NSString*)normalImageName
   selectedImageName:(NSString*)selectedImageName
-          itemCount:(int)itemCount
+          itemCount:(NSInteger)itemCount
     horizontalSpace:(float)horizontalSpace;
 @property (nonatomic) NSInteger grade;
 @end
