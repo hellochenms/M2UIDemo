@@ -67,7 +67,8 @@
                       ],
                   @[
                       @[@"可展开的详细信息", @"MShowFullInfoViewController"],
-                      @[@"评论Cell", @"MCommentViewController"]
+                      @[@"评论Cell", @"MCommentViewController"],
+                      @[@"星级评分", @"MStarViewController"]
                       ],
                   @[
                       @[@"平铺拉伸图片", @"MResizableImageViewController"]

@@ -70,6 +70,11 @@
 		997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B41011856B9EB00931A53 /* M2NavigationController.m */; };
 		997B41801857234000931A53 /* M2Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B417F1857234000931A53 /* M2Toast.m */; };
 		997B41991857386000931A53 /* M2StatusBarToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B41981857386000931A53 /* M2StatusBarToast.m */; };
+		9993F856189205CD00C94532 /* MStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9993F855189205CD00C94532 /* MStarViewController.m */; };
+		9993F85A189205DB00C94532 /* M2TapStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9993F859189205DB00C94532 /* M2TapStarView.m */; };
+		9993F85D1892063500C94532 /* MStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9993F85C1892063500C94532 /* MStarView.m */; };
+		9993F860189215B200C94532 /* _temp_star_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9993F85E189215B200C94532 /* _temp_star_normal.png */; };
+		9993F861189215B200C94532 /* _temp_star_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9993F85F189215B200C94532 /* _temp_star_selected.png */; };
 		99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B627091856B82B0081DF4D /* CenterToastViewController.m */; };
 		99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA1FF81859D71D00EF5A74 /* StatusToastViewController.m */; };
 		99BA1FFD1859DA4200EF5A74 /* LaunchHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA1FFC1859DA4200EF5A74 /* LaunchHelpViewController.m */; };
@@ -222,6 +227,14 @@
 		997B417F1857234000931A53 /* M2Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Toast.m; sourceTree = "<group>"; };
 		997B41971857386000931A53 /* M2StatusBarToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2StatusBarToast.h; sourceTree = "<group>"; };
 		997B41981857386000931A53 /* M2StatusBarToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2StatusBarToast.m; sourceTree = "<group>"; };
+		9993F854189205CD00C94532 /* MStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MStarViewController.h; sourceTree = "<group>"; };
+		9993F855189205CD00C94532 /* MStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MStarViewController.m; sourceTree = "<group>"; };
+		9993F858189205DB00C94532 /* M2TapStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TapStarView.h; sourceTree = "<group>"; };
+		9993F859189205DB00C94532 /* M2TapStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TapStarView.m; sourceTree = "<group>"; };
+		9993F85B1892063500C94532 /* MStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MStarView.h; sourceTree = "<group>"; };
+		9993F85C1892063500C94532 /* MStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MStarView.m; sourceTree = "<group>"; };
+		9993F85E189215B200C94532 /* _temp_star_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _temp_star_normal.png; sourceTree = "<group>"; };
+		9993F85F189215B200C94532 /* _temp_star_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _temp_star_selected.png; sourceTree = "<group>"; };
 		99B627081856B82B0081DF4D /* CenterToastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterToastViewController.h; sourceTree = "<group>"; };
 		99B627091856B82B0081DF4D /* CenterToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterToastViewController.m; sourceTree = "<group>"; };
 		99BA1FF71859D71D00EF5A74 /* StatusToastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusToastViewController.h; sourceTree = "<group>"; };
@@ -311,6 +324,7 @@
 			children = (
 				990C2611187A9C8500B3E45A /* 可展开的详细信息 */,
 				99518FBF1887B28600A3F20E /* 评论Cell */,
+				9993F8531892059A00C94532 /* 星级评分 */,
 			);
 			name = "App详情页常用控件";
 			sourceTree = "<group>";
@@ -339,6 +353,8 @@
 		990C261F187BAD7600B3E45A /* _temp */ = {
 			isa = PBXGroup;
 			children = (
+				9993F85E189215B200C94532 /* _temp_star_normal.png */,
+				9993F85F189215B200C94532 /* _temp_star_selected.png */,
 			);
 			path = _temp;
 			sourceTree = "<group>";
@@ -718,6 +734,27 @@
 			name = M2CoreUIKit;
 			sourceTree = "<group>";
 		};
+		9993F8531892059A00C94532 /* 星级评分 */ = {
+			isa = PBXGroup;
+			children = (
+				9993F857189205D300C94532 /* M2 */,
+				9993F854189205CD00C94532 /* MStarViewController.h */,
+				9993F855189205CD00C94532 /* MStarViewController.m */,
+				9993F85B1892063500C94532 /* MStarView.h */,
+				9993F85C1892063500C94532 /* MStarView.m */,
+			);
+			name = "星级评分";
+			sourceTree = "<group>";
+		};
+		9993F857189205D300C94532 /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				9993F858189205DB00C94532 /* M2TapStarView.h */,
+				9993F859189205DB00C94532 /* M2TapStarView.m */,
+			);
+			name = M2;
+			sourceTree = "<group>";
+		};
 		99B626E11856B6120081DF4D /* 提示框 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1076,6 +1113,7 @@
 				9971193B18891FB100039D8A /* right_arrow@2x.png in Resources */,
 				99BA20081859DE4B00EF5A74 /* help_phone2.jpg in Resources */,
 				99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */,
+				9993F860189215B200C94532 /* _temp_star_normal.png in Resources */,
 				995F3AB1184C2D59005F349B /* InfoPlist.strings in Resources */,
 				99BA20061859DE4B00EF5A74 /* help_phone0.jpg in Resources */,
 				9963DD22187D031700571748 /* landscape_2.jpg in Resources */,
@@ -1086,6 +1124,7 @@
 				9963DD23187D031700571748 /* landscape_3.jpg in Resources */,
 				9963DD27187D031700571748 /* portrait_3.jpg in Resources */,
 				99EBBFAE188E6E1F0093B9BB /* m2_72@2x.png in Resources */,
+				9993F861189215B200C94532 /* _temp_star_selected.png in Resources */,
 				99D27C1E1855AE8000513BA9 /* refresh_blue_arrow@2x.png in Resources */,
 				9963DD26187D031700571748 /* portrait_2.jpg in Resources */,
 				995F3AB9184C2D59005F349B /* Images.xcassets in Resources */,
@@ -1126,8 +1165,10 @@
 				9963DD12187CF75A00571748 /* M2ImageGalleryView_A.m in Sources */,
 				99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */,
 				990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */,
+				9993F85D1892063500C94532 /* MStarView.m in Sources */,
 				9963DD5E187E465A00571748 /* MRearchThresholdViewController.m in Sources */,
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
+				9993F85A189205DB00C94532 /* M2TapStarView.m in Sources */,
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
 				990E45C8188D13F3004E2C98 /* MButtonTabBarViewController.m in Sources */,
 				99EBBF7B188E1AE10093B9BB /* MTapTabPanSubViewViewController.m in Sources */,
@@ -1171,6 +1212,7 @@
 				99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */,
 				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,
 				997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */,
+				9993F856189205CD00C94532 /* MStarViewController.m in Sources */,
 				990C2617187AA0C500B3E45A /* M2ExtensibleInfoView.m in Sources */,
 				995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */,
 				99C12F2F1884E29500B92D1C /* MIGalleryViewCell_B.m in Sources */,
