@@ -7,6 +7,7 @@
 //
 
 #import "_tempTestViewController.h"
+//#import "UIButton+A.h"
 
 @interface _tempTestViewController ()
 
@@ -19,6 +20,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        UIButton *button = [[UIButton alloc] init];
+        button.frame = CGRectMake(10, 10, 200, 50);
+        button.backgroundColor = [UIColor blueColor];
+        [button setTitle:@"A" forState:UIControlStateNormal];
+        [self.view addSubview:button];
     }
     return self;
 }
