@@ -6,19 +6,19 @@
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2ShowFromBottomView.h"
+#import "M2ShowFromBottomView_B.h"
 
 #define MSFBV_DefaultContainerHeight    200
 #define MSFBV_AnimationDuration         0.25
 
-@interface M2ShowFromBottomView(){
+@interface M2ShowFromBottomView_B(){
     float _containerHeight;
 }
 @property (nonatomic) UIControl *coverView;
 @property (nonatomic) UIView    *containerView;
 @end
 
-@implementation M2ShowFromBottomView
+@implementation M2ShowFromBottomView_B
 
 - (id)initWithFrame:(CGRect)frame{
     frame = [UIScreen mainScreen].bounds;
@@ -60,15 +60,16 @@
     [_containerView addSubview:_contentView];
 }
 - (void)show{
-    if (_delegate && [_delegate respondsToSelector:@selector(willShowView:)]) {
-        [_delegate willShowView:self];
-    }
+#warning TODO
+//    if (_delegate && [_delegate respondsToSelector:@selector(willShowView:)]) {
+//        [_delegate willShowView:self];
+//    }
     
     UIView *view = [UIApplication sharedApplication].keyWindow.rootViewController.view;
     [view addSubview:self];
     CGRect frame = _containerView.frame;
     frame.origin.y = CGRectGetHeight(self.bounds) - CGRectGetHeight(_containerView.bounds);
-    __weak M2ShowFromBottomView *weakSelf = self;
+    __weak M2ShowFromBottomView_B *weakSelf = self;
     [UIView animateWithDuration:MSFBV_AnimationDuration
                      animations:^{
                          weakSelf.coverView.alpha = 1;
@@ -76,13 +77,13 @@
                      }];
 }
 - (void)hide{
-    if (_delegate && [_delegate respondsToSelector:@selector(willHideView:)]) {
-        [_delegate willHideView:self];
-    }
+//    if (_delegate && [_delegate respondsToSelector:@selector(willHideView:)]) {
+//        [_delegate willHideView:self];
+//    }
     
     CGRect frame = _containerView.frame;
     frame.origin.y = CGRectGetHeight(self.bounds);
-    __weak M2ShowFromBottomView *weakSelf = self;
+    __weak M2ShowFromBottomView_B *weakSelf = self;
     [UIView animateWithDuration:MSFBV_AnimationDuration
                      animations:^{
                          weakSelf.containerView.frame = frame;

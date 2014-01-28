@@ -203,7 +203,7 @@
 #pragma clang diagnostic pop
     }
     
-    return size.height;
+    return ceil(size.height);
 }
 
 + (NSString *)replyTargetStringFromReplyToUser:(NSString *)replyToUser replyToComment:(NSString *)replyToComment{

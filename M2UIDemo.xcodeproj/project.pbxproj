@@ -20,7 +20,6 @@
 		990E45CB188D140B004E2C98 /* MButtonTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45CA188D140B004E2C98 /* MButtonTabBarView.m */; };
 		990E45D0188D258A004E2C98 /* MMultiRowTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45CF188D258A004E2C98 /* MMultiRowTabViewController.m */; };
 		990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */; };
-		9931BB0F1894F64400AFA667 /* UIButton+A.m in Sources */ = {isa = PBXBuildFile; fileRef = 9931BB0E1894F64400AFA667 /* UIButton+A.m */; };
 		9931BB121895022C00AFA667 /* M2ShowFromBottomView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */; };
 		99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC11887B2B600A3F20E /* MCommentViewController.m */; };
 		99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC41887B2CF00A3F20E /* MCommentView.m */; };
@@ -150,8 +149,6 @@
 		990E45CF188D258A004E2C98 /* MMultiRowTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMultiRowTabViewController.m; sourceTree = "<group>"; };
 		990E45D1188D25A6004E2C98 /* MMultiRowTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMultiRowTabView.h; sourceTree = "<group>"; };
 		990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMultiRowTabView.m; sourceTree = "<group>"; };
-		9931BB0D1894F64400AFA667 /* UIButton+A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+A.h"; sourceTree = "<group>"; };
-		9931BB0E1894F64400AFA667 /* UIButton+A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+A.m"; sourceTree = "<group>"; };
 		9931BB101895022C00AFA667 /* M2ShowFromBottomView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFromBottomView_B.h; sourceTree = "<group>"; };
 		9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFromBottomView_B.m; sourceTree = "<group>"; };
 		99518FC01887B2B600A3F20E /* MCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCommentViewController.h; sourceTree = "<group>"; };
@@ -361,8 +358,6 @@
 			children = (
 				990C261C187BACDC00B3E45A /* _tempTestViewController.h */,
 				990C261D187BACDC00B3E45A /* _tempTestViewController.m */,
-				9931BB0D1894F64400AFA667 /* UIButton+A.h */,
-				9931BB0E1894F64400AFA667 /* UIButton+A.m */,
 			);
 			name = "_临时测试";
 			sourceTree = "<group>";
@@ -1194,7 +1189,6 @@
 				9959642918924E6D00DEE21C /* MCoverView.m in Sources */,
 				99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */,
 				99C12F2B1884E1C200B92D1C /* M2GalleryViewCell.m in Sources */,
-				9931BB0F1894F64400AFA667 /* UIButton+A.m in Sources */,
 				99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */,
 				99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */,
 				99C12F221884D90200B92D1C /* MImageGalleryViewController_B.m in Sources */,

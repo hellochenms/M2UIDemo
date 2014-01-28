@@ -155,7 +155,7 @@
 #pragma clang diagnostic pop
     }
     
-    return size.height;
+    return ceil(size.height);
 }
 
 @end

@@ -13,7 +13,7 @@
 
 @protocol M2ShowFromBottomViewDelegate;
 
-@interface M2ShowFromBottomView : UIView
+@interface M2ShowFromBottomView_B : UIView
 @property (nonatomic)       UIView *contentView;
 @property (nonatomic, weak) id<M2ShowFromBottomViewDelegate> delegate;
 - (void)show;
@@ -21,6 +21,6 @@
 @end
 
 @protocol M2ShowFromBottomViewDelegate <NSObject>
-- (void)willShowView:(M2ShowFromBottomView *)view;
-- (void)willHideView:(M2ShowFromBottomView *)view;
+- (void)willShowView:(M2ShowFromBottomView_B *)view;
+- (void)willHideView:(M2ShowFromBottomView_B *)view;
 @end
