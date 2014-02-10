@@ -186,7 +186,7 @@
     CGAffineTransform transform = item.transform;
     if (isFullScreen) {
         transform = CGAffineTransformTranslate(transform, 0, centerYModifier);
-        transform = CGAffineTransformRotate(transform, M_PI_2);
+        transform = CGAffineTransformRotate(transform, -M_PI_2);
     }else{
         transform = CGAffineTransformIdentity;
     }

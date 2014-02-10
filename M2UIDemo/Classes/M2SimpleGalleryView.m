@@ -88,6 +88,7 @@
         item.tag = M2SGVA_ItemTag;
         // 调整item frame
         [self modifyFrameOfItem:item];
+        [self tryTransformOfItem:item];
         [newItemContainer addSubview:item];
     }
     
@@ -143,7 +144,7 @@
     float centerYModifier = (itemWidth - itemHeight) / 2;
     CGAffineTransform transform = item.transform;
     transform = CGAffineTransformTranslate(transform, 0, centerYModifier);
-    transform = CGAffineTransformRotate(transform, M_PI_2);
+    transform = CGAffineTransformRotate(transform, -M_PI_2);
     item.transform = transform;
 }
 
