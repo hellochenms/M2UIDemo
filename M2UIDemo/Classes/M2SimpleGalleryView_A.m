@@ -2,26 +2,25 @@
 //  M2SimpleGalleryView.m
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-2-11.
+//  Created by Chen Meisong on 14-1-22.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2SimpleGalleryView.h"
+#import "M2SimpleGalleryView_A.h"
 #import "M2SimpleGalleryViewCell.h"
 
-#define M2SGVB_ContainerTag       6000
-#define M2SGVB_ItemTag            7000
-#define M2SGVB_AnimationDuration  0.25
+#define M2SGVA_ContainerTag       6000
+#define M2SGVA_ItemTag            7000
+#define M2SGVA_AnimationDuration  0.25
 
-@interface M2SimpleGalleryView()<M2GalleryViewCellDelegate, UIScrollViewDelegate>{
+@interface M2SimpleGalleryView_A()<M2GalleryViewCellDelegate, UIScrollViewDelegate>{
     float           _itemWidth;
     NSMutableArray  *_itemContainers;
     UIScrollView    *_mainView;
-    CGPoint         _velocity;
 }
 @end
 
-@implementation M2SimpleGalleryView
+@implementation M2SimpleGalleryView_A
 
 - (id)initWithFrame:(CGRect)frame{
     return [self initWithFrame:frame itemWidth:CGRectGetWidth(frame)];
@@ -84,13 +83,13 @@
         // container
         newItemContainer = [[UIView alloc] initWithFrame: CGRectMake(containerWidth * i, 0, containerWidth, containerHeight)];
         newItemContainer.clipsToBounds = YES;
-        newItemContainer.tag = M2SGVB_ContainerTag + i;
+        newItemContainer.tag = M2SGVA_ContainerTag + i;
         [_mainView addSubview:newItemContainer];
         [_itemContainers addObject:newItemContainer];
         // item
         item = [_dataSource galleryView:self itemAtIndex:i];
         item.delegate = self;
-        item.tag = M2SGVB_ItemTag;
+        item.tag = M2SGVA_ItemTag;
         // 调整item frame
         [self modifyFrameOfItem:item];
         [self tryTransformOfItem:item];
@@ -106,7 +105,7 @@
     UIView *container = nil;
     M2SimpleGalleryViewCell *item = nil;
     for (container in _itemContainers) {
-        item = (M2SimpleGalleryViewCell *)[container viewWithTag:M2SGVB_ItemTag];
+        item = (M2SimpleGalleryViewCell *)[container viewWithTag:M2SGVA_ItemTag];
         if (item == cell) {
             item.transform = CGAffineTransformIdentity;
             [self modifyFrameOfItem:item];
@@ -119,7 +118,7 @@
 #pragma mark - item frame transform 的调整
 // 根据图片宽高比调整item frame
 - (void)modifyFrameOfItem:(M2SimpleGalleryViewCell *)item{
-    //    NSLog(@"%@  @@%s", NSStringFromCGSize(item.image.size), __func__);
+//    NSLog(@"%@  @@%s", NSStringFromCGSize(item.image.size), __func__);
     float widthHeightFactor = 1;
     if (item.image.size.width <= 0 || item.image.size.height <= 0) {
         widthHeightFactor = 1;
@@ -152,28 +151,6 @@
     transform = CGAffineTransformTranslate(transform, 0, centerYModifier);
     transform = CGAffineTransformRotate(transform, -M_PI_2);
     item.transform = transform;
-}
-
-#pragma mark - UIScrollViewDelegate
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset NS_AVAILABLE_IOS(5_0){
-    float offsetX = scrollView.contentOffset.x + velocity.x * 0.25 * 1000;
-    float maxOffsetX = (scrollView.contentSize.width - CGRectGetWidth(scrollView.bounds));
-    CGPoint offset = CGPointZero;
-
-    if (offsetX > maxOffsetX){
-        offset = CGPointMake(maxOffsetX, 0);
-    }else if (offsetX < 0){
-        offset = CGPointZero;
-    }else{
-        NSInteger offsetCount = (NSInteger)floor(offsetX / _itemWidth);
-        float offsetRemainder = offsetX / _itemWidth - offsetCount;
-        if (offsetRemainder >= 0.5) {
-            offsetCount += 1;
-        }
-        offset = CGPointMake(_itemWidth * offsetCount, 0);
-    }
-
-    *targetContentOffset = offset;
 }
 
 #pragma mark - tap event

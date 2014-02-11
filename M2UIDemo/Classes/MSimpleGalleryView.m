@@ -7,12 +7,12 @@
 //
 
 #import "MSimpleGalleryView.h"
-#import "M2SimpleGalleryView.h"
+#import "M2SimpleGalleryView_A.h"
 #import "MSimpleGalleryViewCell.h"
 
 @interface MSimpleGalleryView()<M2SimpleGalleryViewDataSource>{
     NSArray             *_imageNames;
-    M2SimpleGalleryView *_galleryView;
+    M2SimpleGalleryView_A *_galleryView;
 }
 @end
 
@@ -29,7 +29,7 @@
         self.clipsToBounds = YES;
         
         // gallery
-        _galleryView = [[M2SimpleGalleryView alloc] initWithFrame:CGRectMake(0, 0, 320, 200) itemWidth:130];
+        _galleryView = [[M2SimpleGalleryView_A alloc] initWithFrame:CGRectMake(0, 0, 320, 200) itemWidth:130];
         _galleryView.backgroundColor = [UIColor blackColor];
         _galleryView.dataSource = self;
         [self addSubview:_galleryView];
@@ -38,10 +38,10 @@
 }
 
 #pragma mark - M2SimpleGalleryViewDataSource
-- (NSInteger)numberOfItemsInGalleryView:(M2SimpleGalleryView *)galleryView{
+- (NSInteger)numberOfItemsInGalleryView:(M2SimpleGalleryView_A *)galleryView{
     return [_imageNames count];
 }
-- (M2SimpleGalleryViewCell *)galleryView:(M2SimpleGalleryView *)galleryView itemAtIndex:(NSInteger)index{
+- (M2SimpleGalleryViewCell *)galleryView:(M2SimpleGalleryView_A *)galleryView itemAtIndex:(NSInteger)index{
     MSimpleGalleryViewCell *view = [MSimpleGalleryViewCell new];
     view.imageName = [_imageNames objectAtIndex:index];
     

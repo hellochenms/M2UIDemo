@@ -143,6 +143,7 @@
     for (container in _itemContainers) {
         item = (M2GalleryViewCell *)[container viewWithTag:M2GV_ItemTag];
         if (item == cell) {
+            item.transform = CGAffineTransformIdentity;
             [self modifyFrameOfItem:item];
             [self tryTransformOfItem:item byIsFullScreen:_isFullScreen animated:NO];
             break;
