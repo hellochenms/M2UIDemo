@@ -8,8 +8,9 @@
 
 #import "_tempTestViewController.h"
 #import <objc/runtime.h>
-@interface _tempTestViewController ()
-
+@interface _tempTestViewController (){
+    UIButton *_button;
+}
 @end
 
 @implementation _tempTestViewController
@@ -18,22 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-        UIButton *button = [[UIButton alloc] init];
-        button.frame = CGRectMake(10, 10, 200, 50);
-        button.backgroundColor = [UIColor blueColor];
-        [button setTitle:@"A" forState:UIControlStateNormal];
-        [self.view addSubview:button];
-        
-        UIButton *button2 = [[UIButton alloc] init];
-        button2.frame = CGRectMake(10, 70, 200, 50);
-        button2.backgroundColor = [UIColor blueColor];
-        [button2 setTitle:@"B" forState:UIControlStateNormal];
-        [self.view addSubview:button2];
-        
-        Method m1 = class_getInstanceMethod([button class], @selector(setBackgroundColor:));
-        Method m2 = class_getInstanceMethod([button class], @selector(setBackgroundColor:));
-        NSLog(@"m1(%p) m2(%p)  @@%s", m1, m2, __func__);
+
     }
     return self;
 }
@@ -41,8 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    _button = [UIButton buttonWithType:UIButtonTypeCustom];
+    _button.frame = CGRectMake(0, 0, 50, 50);
+    _button.backgroundColor = [UIColor blueColor];
+    [_button addTarget:self action:@selector(onTapButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_button];
 }
+
+- (void)onTapButton{
+    [self.view addSubview:_button];
+    NSLog(@"  @@%s", __func__);
+}
+
 
 - (void)didReceiveMemoryWarning
 {

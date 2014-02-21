@@ -64,7 +64,7 @@
                       @[@"点击切换子ViewController", @"MTVCRootViewController"],
                       @[@"点击tab或滑动子view", @"MTapTabPanSubViewViewController"],
                       @[@"滑动tab或滑动子view", @"MPanTabPanSubViewViewController"],
-                      @[@"仿网易新闻", @"MTabLike163ViewController"]
+                      @[@"循环tab", @"MCycleTabBarViewController"]
                       ],
                   @[
                       @[@"可展开的详细信息", @"MShowFullInfoViewController"],

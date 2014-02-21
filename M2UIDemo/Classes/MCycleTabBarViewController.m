@@ -1,18 +1,20 @@
 //
-//  MTabLike163ViewController.m
+//  MCycleTabBarViewController.m
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-1-21.
+//  Created by Chen Meisong on 14-2-21.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "MTabLike163ViewController.h"
+#import "MCycleTabBarViewController.h"
+#import "MCycleTabBarView.h"
 
-@interface MTabLike163ViewController ()
-
+@interface MCycleTabBarViewController (){
+    MCycleTabBarView *_mainView;
+}
 @end
 
-@implementation MTabLike163ViewController
+@implementation MCycleTabBarViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +29,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    CGRect frame = [UIScreen mainScreen].bounds;
+    _mainView = [[MCycleTabBarView alloc] initWithFrame:CGRectMake(0, 10, CGRectGetWidth(frame), CGRectGetHeight(frame) - 64 - 10 * 2)];
+    [self.view addSubview:_mainView];
 }
 
 - (void)didReceiveMemoryWarning
