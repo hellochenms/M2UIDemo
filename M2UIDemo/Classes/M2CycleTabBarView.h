@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol M2CycleTabBarViewDelegate;
 
 @interface M2CycleTabBarView : UIView
-- (id)initWithFrame:(CGRect)frame itemsCountInPage:(NSInteger)itemsCountInPage titles:(NSArray *)titles;
+@property (nonatomic, weak) id<M2CycleTabBarViewDelegate> delegate;
+- (id)initWithFrame:(CGRect)frame itemsCountPerPage:(NSInteger)itemsCountPerPage;
+- (void)selectPreItem;
+- (void)selectNextItem;
+@property (nonatomic) NSArray *titles;
+@end
+
+@protocol M2CycleTabBarViewDelegate <NSObject>
+- (void)tabBarView:(M2CycleTabBarView *)tabBarView didSelectedAtIndex:(NSInteger)index;
 @end

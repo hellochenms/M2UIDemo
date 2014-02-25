@@ -23,7 +23,7 @@
 @protocol M2AutoRotateImageViewProtocol <NSObject>
 @property (nonatomic) UIImage *image;
 @optional
-@property (nonatomic) id<M2AutoRotateImageViewDelegate> delegate;
+@property (nonatomic, weak) id<M2AutoRotateImageViewDelegate> delegate;
 - (void)didChangedViewFrameFromView:(M2AutoRotateImageView *)view;
 @end
 

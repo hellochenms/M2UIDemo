@@ -11,6 +11,6 @@
 
 @interface MAdapterView : UIView<M2AutoRotateImageViewProtocol>
 @property (nonatomic) UIImage *image;
-@property (nonatomic) id<M2AutoRotateImageViewDelegate> delegate;
+@property (nonatomic, weak) id<M2AutoRotateImageViewDelegate> delegate;
 - (void)loadImage;
 @end

@@ -15,7 +15,7 @@
 
 @interface M2TapStarView : UIView
 
-@property (nonatomic, assign) id<M2TapStarViewDelegate> delegate;
+@property (nonatomic, weak) id<M2TapStarViewDelegate> delegate;
 - (id)initWithFrame:(CGRect)frame
     normalImageName:(NSString*)normalImageName
   selectedImageName:(NSString*)selectedImageName;
