@@ -2,19 +2,19 @@
 //  M2CycleTabBarView.h
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-2-21.
+//  Created by Chen Meisong on 14-2-26.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "M2CycleScrollSynchronizeProtocol.h"
 @protocol M2CycleTabBarViewDelegate;
 
-@interface M2CycleTabBarView : UIView
-@property (nonatomic, weak) id<M2CycleTabBarViewDelegate> delegate;
+@interface M2CycleTabBarView : UIView<M2CycleScrollSynchronizeProtocol>
 - (id)initWithFrame:(CGRect)frame itemsCountPerPage:(NSInteger)itemsCountPerPage;
-- (void)selectPreItem;
-- (void)selectNextItem;
 @property (nonatomic) NSArray *titles;
+@property (nonatomic, weak) id<M2CycleTabBarViewDelegate> delegate;
+@property (nonatomic, weak) id<M2CycleScrollSynchronizeProtocol> synchronizeObserver;
 @end
 
 @protocol M2CycleTabBarViewDelegate <NSObject>

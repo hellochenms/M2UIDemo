@@ -2,27 +2,34 @@
 //  M2CycleScrollView.m
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-2-24.
+//  Created by Chen Meisong on 14-2-26.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
 #import "M2CycleScrollView.h"
 @interface M2CycleScrollView()<UIScrollViewDelegate>{
     UIScrollView    *_scrollView;
-    NSInteger       _curPhysicalIndex;
-    float           _lastOffsetX;
+    float           _itemWidth;
+    NSInteger       _itemsCountInPage;
+    NSInteger       _logicCount;
+    NSInteger       _physicalCount;
+    NSInteger       _selectedPhysicalIndex;
+    BOOL            _isScrollFromSynchronizeMsg;
 }
 @end
 
 @implementation M2CycleScrollView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        _itemsCountInPage = 1;
+
         _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         _scrollView.pagingEnabled = YES;
+//        _scrollView.showsHorizontalScrollIndicator = NO;
+//        _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.delegate = self;
         [self addSubview:_scrollView];
     }
@@ -40,24 +47,72 @@
     _scrollView.contentSize = CGSizeZero;
     _scrollView.contentOffset = CGPointZero;
     
-    // build
+    // 初始化items
     _contentViews = contentViews;
-    NSInteger itemCount = [contentViews count];
-    if (itemCount <= 0) {
+    _logicCount = [contentViews count];
+    if (_logicCount <= 0) {
         return;
     }
-    // 队首队尾各扩展一个item位置
-    NSInteger physicalCount = itemCount + 2;
-    float itemWidth = CGRectGetWidth(_scrollView.bounds);
-    _scrollView.contentSize = CGSizeMake(itemWidth * physicalCount, CGRectGetHeight(_scrollView.bounds));
-    // 初始时，选中逻辑上首个item（扩展后其index==1）
-    _curPhysicalIndex = 1;//TODO
-    _lastOffsetX = itemWidth;
-    _scrollView.contentOffset = CGPointMake(itemWidth, 0);
-    [self prepareItemsAtPhysicalIndex:_curPhysicalIndex];
+    _physicalCount = _logicCount * 3;
+    _itemWidth = CGRectGetWidth(_scrollView.bounds);
+    _scrollView.contentSize = CGSizeMake(_itemWidth * _physicalCount, CGRectGetHeight(_scrollView.bounds));
+    // 选中的第一个逻辑item
+    _selectedPhysicalIndex = _logicCount;
+    _scrollView.contentOffset = CGPointMake(_itemWidth * _selectedPhysicalIndex, 0);
+    [self prepareItemsAtPhysicalIndex:_selectedPhysicalIndex];
 }
 
-#pragma mark -
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (!_isScrollFromSynchronizeMsg && _synchronizeObserver && [_synchronizeObserver respondsToSelector:@selector(view:didScrollOffsetX:itemWidth:itemsCountPerPage:)]) {
+        [_synchronizeObserver view:self didScrollOffsetX:scrollView.contentOffset.x itemWidth:_itemWidth itemsCountPerPage:1];
+    }
+    _isScrollFromSynchronizeMsg = NO;
+    
+    NSInteger curPhysicalIndex = [self physicalIndexWhenOffsetX:scrollView.contentOffset.x];
+    if (curPhysicalIndex == _selectedPhysicalIndex) {
+        return;
+    }
+//    NSLog(@"~~physicalIndex从(%d)变为(%d)  @@%s", _selectedPhysicalIndex, curPhysicalIndex, __func__);
+    
+    //
+    float offsetX = scrollView.contentOffset.x;
+    BOOL isNeedModifyOffset = NO;
+//    if (curPhysicalIndex == 0) {
+    if (curPhysicalIndex - ((_itemsCountInPage - 1) / 2) == 0) {
+        NSLog(@"( 到达左边缘  @@%s", __func__);
+        curPhysicalIndex += _logicCount;
+        offsetX += _itemWidth * _logicCount;
+        isNeedModifyOffset = YES;
+//    }else if (curPhysicalIndex == _physicalCount - 1){
+    }else if (curPhysicalIndex + ((_itemsCountInPage - 1) / 2) == _physicalCount){
+        NSLog(@") 到达右边缘  @@%s", __func__);
+        curPhysicalIndex -= _logicCount;
+        offsetX -= _itemWidth * _logicCount;
+        isNeedModifyOffset = YES;
+    }
+    [self prepareItemsAtPhysicalIndex:curPhysicalIndex];
+    _selectedPhysicalIndex = curPhysicalIndex;
+    if (isNeedModifyOffset) {
+        [_scrollView setContentOffset:CGPointMake(offsetX, 0)];
+    }
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (decelerate) {
+        return;
+    }
+    if (_delegate && [_delegate respondsToSelector:@selector(cycleScrollView:didSelectedAtIndex:)]) {
+        [_delegate cycleScrollView:self didSelectedAtIndex:[self logicIndexByPhysicalIndex:_selectedPhysicalIndex]];
+    }
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if (_delegate && [_delegate respondsToSelector:@selector(cycleScrollView:didSelectedAtIndex:)]) {
+        [_delegate cycleScrollView:self didSelectedAtIndex:[self logicIndexByPhysicalIndex:_selectedPhysicalIndex]];
+    }
+}
+
+
+#pragma mark - 准备目标view及左、右view
 - (void)prepareItemsAtPhysicalIndex:(NSInteger)physicalIndex{
     NSInteger curLogicIndex = [self logicIndexByPhysicalIndex:physicalIndex];
     UIView *curItem = [_contentViews objectAtIndex:curLogicIndex];
@@ -79,85 +134,31 @@
     [_scrollView addSubview:nextItem];
 }
 
-#pragma mark - UIScrollViewDelegate
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    NSLog(@"~开始拖动 scrollView.contentOffset.x(%f) @@%s", scrollView.contentOffset.x, __func__);
-    _lastOffsetX = scrollView.contentOffset.x;
-}
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSInteger curPhysicalIndex = [self physicalIndexWhenOffsetX:scrollView.contentOffset.x];
-    if (curPhysicalIndex == _curPhysicalIndex) {
-        return;
-    }
-    
-    float offsetX = scrollView.contentOffset.x;
-    NSInteger logicCount = [_contentViews count];
-    NSInteger physicalCount = logicCount + 2;
-    float itemWidth = CGRectGetWidth(_scrollView.bounds);
-    if (curPhysicalIndex == 0 && curPhysicalIndex - _curPhysicalIndex < 0) {
-        curPhysicalIndex += logicCount;
-        offsetX += itemWidth * logicCount;
-    }else if (curPhysicalIndex == physicalCount - 1 && curPhysicalIndex - _curPhysicalIndex > 0){
-        curPhysicalIndex -= logicCount;
-        offsetX -= itemWidth * logicCount;
-    }
-    
-//    NSLog(@"physicalIndex从(%d)变为(%d)  @@%s", _curPhysicalIndex, curPhysicalIndex, __func__);
-    _curPhysicalIndex = curPhysicalIndex;
-    
-    BOOL isSwipeToLeft = NO;
-    float delta = offsetX - _lastOffsetX;
-//    NSLog(@"_lastOffsetX(%f) cur(%f)  @@%s", _lastOffsetX, offsetX, __func__);
-    float absDeleta = fabs(delta);
-    float threshold = itemWidth * 1.5;
-    if ((delta > 0 && absDeleta < threshold)
-        || (delta < 0 && absDeleta > threshold)) {
-        isSwipeToLeft = YES;
-    }else{
-        isSwipeToLeft = NO;
-    }
-    NSLog(@"%@  @@%s", (isSwipeToLeft ? @"向左滑" : @"向右滑"), __func__);
-    
-    if (_delegate && [_delegate respondsToSelector:@selector(cycleScrollView:changedCurIndexWithIsToNext:)]) {
-        [_delegate cycleScrollView:self changedCurIndexWithIsToNext:isSwipeToLeft];
-    }
-    
-    
-    [_scrollView setContentOffset:CGPointMake(offsetX, 0)];
-    [self prepareItemsAtPhysicalIndex:_curPhysicalIndex];
-    _lastOffsetX = scrollView.contentOffset.x;
+#pragma mark - index换算
+- (NSInteger)logicIndexByPhysicalIndex:(NSInteger)physicalIndex{
+    NSInteger logicIndex = physicalIndex % ([_contentViews count]);
+    return logicIndex;
 }
 
-#pragma mark - setter/getter
-- (NSInteger)curLogicIndex{
-    return [self logicIndexByPhysicalIndex:_curPhysicalIndex];
-}
-- (void)setCurLogicIndex:(NSInteger)curIndex{
-    // 外界设置的curIndex是面向_contentViews的，面向scrollView时要映射一下；
-    // 外界设置值时我们会定位到非扩展item（即[1, realCount - 2]这个范围），故映射时index加1即可；
-    _curPhysicalIndex = curIndex + 1;
-    float offsetX = CGRectGetWidth(_scrollView.bounds) * _curPhysicalIndex;
-    _lastOffsetX = offsetX;
-    [_scrollView setContentOffset:CGPointMake(offsetX, 0)];
-    [self prepareItemsAtPhysicalIndex:_curPhysicalIndex];
-}
-
-#pragma mark -
-- (NSInteger)logicIndexByPhysicalIndex:(NSInteger)index{
-    NSInteger logicCount = [_contentViews count];
-    
-    return ((index - 1) + logicCount) % logicCount;
-}
+#pragma mark - 计算index
 - (NSInteger)physicalIndexWhenOffsetX:(float)offsetX{
-    float itemWidth = CGRectGetWidth(_scrollView.bounds);
-    float quotient = offsetX / itemWidth;
+    float quotient = offsetX / _itemWidth;
     NSInteger index = (NSInteger)quotient;
-    float remainder = offsetX - itemWidth * index;
-    if (remainder / itemWidth >= 0.5) {
+    float remainder = offsetX - _itemWidth * index;
+    if (remainder / _itemWidth >= 0.5) {
         index++;
     }
-    
     return index;
 }
+
+#pragma mark - M2CycleScrollSynchronizeProtocol
+- (void)view:(UIView *)view didScrollOffsetX:(float)offsetX itemWidth:(float)itemWidth itemsCountPerPage:(NSInteger)itemsCountPerPage{
+//    NSLog(@")))scrollView接到同步通知offsetX(%f)  @@%s", offsetX, __func__);
+    _isScrollFromSynchronizeMsg = YES;
+    NSInteger deltaCount = ((_itemsCountInPage - 1) / 2) - ((itemsCountPerPage - 1) / 2);
+    float myOffsetX = offsetX * (_itemWidth / itemWidth) - (_itemWidth * deltaCount);
+    [_scrollView setContentOffset:CGPointMake(myOffsetX, 0)];
+}
+
 
 @end

@@ -37,6 +37,7 @@
         [self addSubview:_tabBarView];
         
         _contentView = [[M2CycleScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_tabBarView.frame), CGRectGetWidth(frame), CGRectGetHeight(frame) - CGRectGetHeight(_tabBarView.bounds))];
+        _contentView.backgroundColor = [UIColor lightGrayColor];
         _contentView.delegate = self;
         [self addSubview:_contentView];
         
@@ -59,31 +60,21 @@
         _sub3.subTitle = [titles objectAtIndex:3];
         [contentViews addObject:_sub3.view];
         _contentView.contentViews = contentViews;
+        
+        // 双向同步
+        _contentView.synchronizeObserver = _tabBarView;
+        _tabBarView.synchronizeObserver = _contentView;
     }
     return self;
 }
 
 #pragma mark - M2CycleTabBarViewDelegate
 - (void)tabBarView:(M2CycleTabBarView *)tabBarView didSelectedAtIndex:(NSInteger)index{
-//    NSLog(@"~从tabBar选中index(%d)  @@%s", index, __func__);
-    _contentView.curLogicIndex = index;
+    NSLog(@"tabBarView选择index(%d)  @@%s", index, __func__);
 }
 #pragma mark - M2CycleScrollViewDelegate
-//- (void)cycleScrollView:(M2CycleScrollView *)cycleScrollView didSelectedAtIndex:(NSInteger)index isSwipeToLeft:(BOOL)isSwipeToLeft{
-//    NSLog(@"~从scrollView选中index(%d) %@ @@%s", index, (isSwipeToLeft ? @"向左滑" : @"向右滑"), __func__);
-//    if (isSwipeToLeft) {
-//        [_tabBarView selectNextItem];
-//    }else{
-//        [_tabBarView selectPreItem];
-//    }
-//}
-
-- (void)cycleScrollView:(M2CycleScrollView *)cycleScrollView changedCurIndexWithIsToNext:(BOOL)isToNext{
-    if (isToNext) {
-        [_tabBarView selectNextItem];
-    }else{
-        [_tabBarView selectPreItem];
-    }
+- (void)cycleScrollView:(M2CycleScrollView *)cycleScrollView didSelectedAtIndex:(NSInteger)index{
+    NSLog(@"scrollView选择index(%d)  @@%s", index, __func__);
 }
 
 @end
