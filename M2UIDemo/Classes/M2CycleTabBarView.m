@@ -69,10 +69,6 @@
     for (oldItem in _physicalItems) {
         [oldItem removeFromSuperview];
     }
-    _titles = nil;
-    _physicalItems = nil;
-    _scrollView.contentSize = CGSizeZero;
-    _scrollView.contentOffset = CGPointZero;
     
     // 初始化items
     _titles = titles;

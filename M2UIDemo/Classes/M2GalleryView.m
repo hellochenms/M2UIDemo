@@ -80,6 +80,7 @@
     // pageControl
     if (_pageControl) {
         _pageControl.numberOfPages = count;
+        _pageControl.currentPage = 0;
     }
     
     // build new

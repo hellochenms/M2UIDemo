@@ -43,9 +43,6 @@
     for (oldItem in _contentViews) {
         [oldItem removeFromSuperview];
     }
-    _contentViews = nil;
-    _scrollView.contentSize = CGSizeZero;
-    _scrollView.contentOffset = CGPointZero;
     
     // 初始化items
     _contentViews = contentViews;
