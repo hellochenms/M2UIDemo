@@ -56,15 +56,15 @@
         
         //
         _count = (itemCount > 0 ? itemCount : M2TSV_DefaultItemCount);
-        horizontalSpace = (horizontalSpace > 0 ? horizontalSpace : M2TSV_DefaultHorizontalSpace);
+        _horizontalSpace = (horizontalSpace > 0 ? horizontalSpace : M2TSV_DefaultHorizontalSpace);
         
         // items
-        _items = [NSMutableArray arrayWithCapacity:itemCount];
-        float itemWidth = (CGRectGetWidth(frame) - horizontalSpace * (itemCount - 1)) / itemCount;
+        _items = [NSMutableArray arrayWithCapacity:_count];
+        float itemWidth = (CGRectGetWidth(frame) - _horizontalSpace * (_count - 1)) / _count;
         float itemHeight = self.bounds.size.height;
         UIImageView *imgView = nil;
-        for (int i = 0; i < itemCount; i++) {
-            imgView = [[UIImageView alloc] initWithFrame:CGRectMake((itemWidth + horizontalSpace) * i, 0, itemWidth, itemHeight)];
+        for (int i = 0; i < _count; i++) {
+            imgView = [[UIImageView alloc] initWithFrame:CGRectMake((itemWidth + _horizontalSpace) * i, 0, itemWidth, itemHeight)];
             imgView.image = _normalImage;
             [self addSubview:imgView];
             [_items addObject:imgView];

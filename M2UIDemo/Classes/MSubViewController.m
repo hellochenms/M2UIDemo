@@ -34,13 +34,13 @@
     _label.textAlignment = NSTextAlignmentCenter;
     _label.textColor = [UIColor whiteColor];
     [self.view addSubview:_label];
-    _label.text = [NSString stringWithFormat:@"子界面子界面子界面子界面：%@", _subTitle];
+    _label.text = [NSString stringWithFormat:@"子界面：%@", _subTitle];
 }
 
 #pragma mark - setter
 - (void)setSubTitle:(NSString *)subTitle{
     _subTitle = [subTitle copy];
-    _label.text = [NSString stringWithFormat:@"子界面子界面子界面子界面：%@", _subTitle];
+    _label.text = [NSString stringWithFormat:@"子界面：%@", _subTitle];
 }
 
 - (void)didReceiveMemoryWarning
