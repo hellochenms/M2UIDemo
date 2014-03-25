@@ -32,6 +32,14 @@
     _button.backgroundColor = [UIColor blueColor];
     [_button addTarget:self action:@selector(onTapButton) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_button];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:swipe];
+    
+    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.view addGestureRecognizer:swipeDown];
 }
 
 - (void)onTapButton{
@@ -39,11 +47,8 @@
     NSLog(@"  @@%s", __func__);
 }
 
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)onSwipe:(UISwipeGestureRecognizer *)swipe{
+    NSLog(@"%d  @@%s", swipe.direction, __func__);
 }
 
 @end

@@ -43,7 +43,8 @@
                       @[@"_临时测试", @"_tempTestViewController"]
                       ],
                   @[
-                      @[@"下拉刷新", @"PullDownRefreshViewController"]
+                      @[@"下拉刷新", @"PullDownRefreshViewController"],
+                      @[@"遮罩", @"MLoadingCoverViewController"]
                       ],
                   @[
                       @[@"屏幕中央", @"CenterToastViewController"],
