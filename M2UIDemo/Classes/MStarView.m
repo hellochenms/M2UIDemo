@@ -33,8 +33,8 @@
                                                              leftSelectedImageName:@"common_star_left_selected"
                                                               rightNormalImageName:@"common_star_right_normal"
                                                             rightSelectedImageName:@"common_star_right_selected"
-                                                                         itemCount:4];
-        halfStarView.grade = 2.5 * 2;
+                                                                         starCount:4];
+        halfStarView.grade = 2.5;
         halfStarView.delegate = self;
         [self addSubview:halfStarView];
     }
@@ -47,7 +47,7 @@
 }
 
 #pragma mark - M2TapHalfStarViewDelegate
-- (void)halfStarView:(M2TapHalfStarView*)halfStarView didSelectedForGrade:(NSInteger)grade{
-    NSLog(@"half: grade(%d)  @@%s", grade, __func__);
+- (void)halfStarView:(M2TapHalfStarView*)halfStarView didSelectedForGrade:(float)grade{
+    NSLog(@"half: grade(%.1f)  @@%s", grade, __func__);
 }
 @end

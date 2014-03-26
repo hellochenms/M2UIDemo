@@ -7,7 +7,7 @@
 //
 //  分支：A
 //  版本：1.0
-//  特点：1、只支持点击设置星级；2、grade为整型，例如星级为3.5时，grade应设置为7（3.5 * 2）
+//  特点：1、只支持点击设置星级；
 
 #import <UIKit/UIKit.h>
 
@@ -20,10 +20,10 @@
         leftSelectedImageName:(NSString*)leftSelectedImageName
         rightNormalImageName:(NSString*)rightNormalImageName
         rightSelectedImageName:(NSString*)rightSelectedImageName
-        itemCount:(NSInteger)itemCount;
-@property (nonatomic) NSInteger grade;
+        starCount:(NSInteger)starCount;
+@property (nonatomic) float grade;
 @end
 
 @protocol M2TapHalfStarViewDelegate <NSObject>
-- (void)halfStarView:(M2TapHalfStarView*)halfStarView didSelectedForGrade:(NSInteger)grade;
+- (void)halfStarView:(M2TapHalfStarView*)halfStarView didSelectedForGrade:(float)grade;
 @end
