@@ -1,14 +1,14 @@
 //
-//  M2TapHalfStarView.m
+//  M2TapHalfStarView_A.m
 //  M2UIDemo
 //
 //  Created by Chen Meisong on 14-3-26.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2TapHalfStarView.h"
+#import "M2TapHalfStarView_A.h"
 
-@interface M2TapHalfStarView()
+@interface M2TapHalfStarView_A()
 @property (nonatomic) UIImage           *leftNormalImage;
 @property (nonatomic) UIImage           *leftSelectedImage;
 @property (nonatomic) UIImage           *rightNormalImage;
@@ -17,85 +17,59 @@
 @property (nonatomic) NSMutableArray    *items;
 @end
 
-@implementation M2TapHalfStarView
-- (id)initWithFrame:(CGRect)frame{
-    return [self initWithStarCount:M2THSV_DefaultStarCount];
-}
-
-- (id)initWithStarCount:(NSInteger)starCount{
-    self = [super initWithFrame:CGRectZero];
-    if (self) {
-        if (starCount <= 0) {
-            starCount = M2THSV_DefaultStarCount;
-        }
-        //
-        _physicalCount = starCount * 2;
-        
-        // items
-        _items = [NSMutableArray arrayWithCapacity:_physicalCount];
-        UIImageView *imgView = nil;
-        for (int i = 0; i < _physicalCount; i++) {
-            imgView = [UIImageView new];
-            if (i % 2 == 0) {
-                imgView.contentMode = UIViewContentModeRight;
-            }else{
-                imgView.contentMode = UIViewContentModeLeft;
-            }
-            [self addSubview:imgView];
-            [_items addObject:imgView];
-        }
-        
-        // tap event
-        UITapGestureRecognizer *tapRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
-        [self addGestureRecognizer:tapRec];
-    }
-    
-    return self;
-}
-
+@implementation M2TapHalfStarView_A
 - (id)initWithFrame:(CGRect)frame
 leftNormalImageName:(NSString*)leftNormalImageName
 leftSelectedImageName:(NSString*)leftSelectedImageName
 rightNormalImageName:(NSString*)rightNormalImageName
 rightSelectedImageName:(NSString*)rightSelectedImageName
           starCount:(NSInteger)starCount{
-    self = [self initWithStarCount:starCount];
+    self = [super initWithFrame:frame];
     if (self) {
-        [self setupWithFrame:frame
-         LeftNormalImageName:leftNormalImageName
-       leftSelectedImageName:leftSelectedImageName
-        rightNormalImageName:rightNormalImageName
-      rightSelectedImageName:rightSelectedImageName];
+        // 参数检查
+        if ([leftNormalImageName length] <= 0
+            || [leftSelectedImageName length] <= 0
+            || [rightNormalImageName length] <= 0
+            || [rightSelectedImageName length] <= 0){
+            NSLog(@"参数非法  @@%s", __func__);
+            return self;
+        }
+        _leftNormalImage = [UIImage imageNamed:leftNormalImageName];
+        _leftSelectedImage = [UIImage imageNamed:leftSelectedImageName];
+        _rightNormalImage = [UIImage imageNamed:rightNormalImageName];
+        _rightSelectedImage = [UIImage imageNamed:rightSelectedImageName];
+        if (!_leftNormalImage || !_leftSelectedImage || !_rightNormalImage || !_rightSelectedImage || starCount <= 0) {
+            NSLog(@"参数非法  @@%s", __func__);
+            return self;
+        }
+        
+        //
+        _physicalCount = starCount * 2;
+        
+        // items
+        _items = [NSMutableArray arrayWithCapacity:_physicalCount];
+        float itemWidth = CGRectGetWidth(frame) / _physicalCount;
+        float itemHeight = self.bounds.size.height;
+        UIImageView *imgView = nil;
+        for (int i = 0; i < _physicalCount; i++) {
+            imgView = [[UIImageView alloc] initWithFrame:CGRectMake(itemWidth * i, 0, itemWidth, itemHeight)];
+            if (i % 2 == 0) {
+                imgView.contentMode = UIViewContentModeRight;
+                imgView.image = _leftNormalImage;
+            }else{
+                imgView.contentMode = UIViewContentModeLeft;
+                imgView.image = _rightNormalImage;
+            }
+            [self addSubview:imgView];
+            [_items addObject:imgView];
+        }
+        
+        // tap
+        UITapGestureRecognizer *tapRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
+        [self addGestureRecognizer:tapRec];
     }
     
     return self;
-}
-
-#pragma mark - public
-- (void)setupWithFrame:(CGRect)frame
-   LeftNormalImageName:(NSString*)leftNormalImageName
- leftSelectedImageName:(NSString*)leftSelectedImageName
-  rightNormalImageName:(NSString*)rightNormalImageName
-rightSelectedImageName:(NSString*)rightSelectedImageName{
-    self.frame = frame;
-    //
-    _leftNormalImage = [UIImage imageNamed:leftNormalImageName];
-    _leftSelectedImage = [UIImage imageNamed:leftSelectedImageName];
-    _rightNormalImage = [UIImage imageNamed:rightNormalImageName];
-    _rightSelectedImage = [UIImage imageNamed:rightSelectedImageName];
-    //
-    float itemWidth = CGRectGetWidth(frame) / _physicalCount;
-    float itemHeight = self.bounds.size.height;
-    UIImageView *imageView = nil;
-    for (NSInteger i = 0; i < _physicalCount; i++) {
-        imageView = [_items objectAtIndex:i];
-        imageView.frame = CGRectMake(itemWidth * i, 0, itemWidth, itemHeight);
-        if (i % 2 == 0) {
-            imageView.image = _leftNormalImage;
-        }else{
-            imageView.image = _rightNormalImage;
-        }
-    }
 }
 
 #pragma mark - tap event

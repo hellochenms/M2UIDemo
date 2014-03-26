@@ -12,6 +12,7 @@
 		990A25DC18E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25D818E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png */; };
 		990A25DD18E2A1FE000CF4EA /* common_star_right_normal@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25D918E2A1FE000CF4EA /* common_star_right_normal@2x~iphone.png */; };
 		990A25DE18E2A1FE000CF4EA /* common_star_right_selected@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25DA18E2A1FE000CF4EA /* common_star_right_selected@2x~iphone.png */; };
+		990A261018E2B2E7000CF4EA /* M2TapHalfStarView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 990A260F18E2B2E7000CF4EA /* M2TapHalfStarView_A.m */; };
 		990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */; };
 		990C2617187AA0C500B3E45A /* M2ExtensibleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2616187AA0C500B3E45A /* M2ExtensibleInfoView.m */; };
 		990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2619187AA34000B3E45A /* MShowFullInfoView.m */; };
@@ -150,6 +151,8 @@
 		990A25D818E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_star_left_selected@2x~iphone.png"; sourceTree = "<group>"; };
 		990A25D918E2A1FE000CF4EA /* common_star_right_normal@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_star_right_normal@2x~iphone.png"; sourceTree = "<group>"; };
 		990A25DA18E2A1FE000CF4EA /* common_star_right_selected@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_star_right_selected@2x~iphone.png"; sourceTree = "<group>"; };
+		990A260E18E2B2E7000CF4EA /* M2TapHalfStarView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TapHalfStarView_A.h; sourceTree = "<group>"; };
+		990A260F18E2B2E7000CF4EA /* M2TapHalfStarView_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TapHalfStarView_A.m; sourceTree = "<group>"; };
 		990C2612187AA0A900B3E45A /* MShowFullInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MShowFullInfoViewController.h; sourceTree = "<group>"; };
 		990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MShowFullInfoViewController.m; sourceTree = "<group>"; };
 		990C2615187AA0C500B3E45A /* M2ExtensibleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ExtensibleInfoView.h; sourceTree = "<group>"; };
@@ -912,6 +915,8 @@
 			children = (
 				9993F858189205DB00C94532 /* M2TapStarView.h */,
 				9993F859189205DB00C94532 /* M2TapStarView.m */,
+				990A260E18E2B2E7000CF4EA /* M2TapHalfStarView_A.h */,
+				990A260F18E2B2E7000CF4EA /* M2TapHalfStarView_A.m */,
 				990A25D218E286B4000CF4EA /* M2TapHalfStarView.h */,
 				990A25D318E286B4000CF4EA /* M2TapHalfStarView.m */,
 			);
@@ -1364,6 +1369,7 @@
 				99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */,
 				9963DD2A187D2F5F00571748 /* MImageGalleryView_A.m in Sources */,
 				990C261E187BACDC00B3E45A /* _tempTestViewController.m in Sources */,
+				990A261018E2B2E7000CF4EA /* M2TapHalfStarView_A.m in Sources */,
 				9944DB1418E158FE00D21225 /* M2LoadingCoverView.m in Sources */,
 				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				99C2C15418C47628009AE0B9 /* M2IconTabBarView.m in Sources */,

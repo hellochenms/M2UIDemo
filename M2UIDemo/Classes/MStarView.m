@@ -28,13 +28,14 @@
         starView.delegate = self;
         [self addSubview:starView];
         
-        M2TapHalfStarView *halfStarView = [[M2TapHalfStarView alloc] initWithFrame:CGRectMake(10, 60, 300, 20)
-                                                               leftNormalImageName:@"common_star_left_normal"
-                                                             leftSelectedImageName:@"common_star_left_selected"
-                                                              rightNormalImageName:@"common_star_right_normal"
-                                                            rightSelectedImageName:@"common_star_right_selected"
-                                                                         starCount:4];
-        halfStarView.grade = 2.5;
+        M2TapHalfStarView *halfStarView = [[M2TapHalfStarView alloc] initWithStarCount:6];
+        [halfStarView setupWithFrame:CGRectMake(10, 60, 300, 20)
+                 LeftNormalImageName:@"common_star_left_normal"
+               leftSelectedImageName:@"common_star_left_selected"
+                rightNormalImageName:@"common_star_right_normal"
+              rightSelectedImageName:@"common_star_right_selected"];
+        
+        halfStarView.grade = 3.5;
         halfStarView.delegate = self;
         [self addSubview:halfStarView];
     }
