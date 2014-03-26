@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990A25D418E286B4000CF4EA /* M2TapHalfStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990A25D318E286B4000CF4EA /* M2TapHalfStarView.m */; };
+		990A25DB18E2A1FE000CF4EA /* common_star_left_normal@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25D718E2A1FE000CF4EA /* common_star_left_normal@2x~iphone.png */; };
+		990A25DC18E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25D818E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png */; };
+		990A25DD18E2A1FE000CF4EA /* common_star_right_normal@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25D918E2A1FE000CF4EA /* common_star_right_normal@2x~iphone.png */; };
+		990A25DE18E2A1FE000CF4EA /* common_star_right_selected@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25DA18E2A1FE000CF4EA /* common_star_right_selected@2x~iphone.png */; };
 		990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */; };
 		990C2617187AA0C500B3E45A /* M2ExtensibleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2616187AA0C500B3E45A /* M2ExtensibleInfoView.m */; };
 		990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2619187AA34000B3E45A /* MShowFullInfoView.m */; };
@@ -139,6 +144,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		990A25D218E286B4000CF4EA /* M2TapHalfStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TapHalfStarView.h; sourceTree = "<group>"; };
+		990A25D318E286B4000CF4EA /* M2TapHalfStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TapHalfStarView.m; sourceTree = "<group>"; };
+		990A25D718E2A1FE000CF4EA /* common_star_left_normal@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_star_left_normal@2x~iphone.png"; sourceTree = "<group>"; };
+		990A25D818E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_star_left_selected@2x~iphone.png"; sourceTree = "<group>"; };
+		990A25D918E2A1FE000CF4EA /* common_star_right_normal@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_star_right_normal@2x~iphone.png"; sourceTree = "<group>"; };
+		990A25DA18E2A1FE000CF4EA /* common_star_right_selected@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_star_right_selected@2x~iphone.png"; sourceTree = "<group>"; };
 		990C2612187AA0A900B3E45A /* MShowFullInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MShowFullInfoViewController.h; sourceTree = "<group>"; };
 		990C2613187AA0A900B3E45A /* MShowFullInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MShowFullInfoViewController.m; sourceTree = "<group>"; };
 		990C2615187AA0C500B3E45A /* M2ExtensibleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ExtensibleInfoView.h; sourceTree = "<group>"; };
@@ -374,6 +385,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		990A25D618E2A1FE000CF4EA /* star */ = {
+			isa = PBXGroup;
+			children = (
+				990A25D718E2A1FE000CF4EA /* common_star_left_normal@2x~iphone.png */,
+				990A25D818E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png */,
+				990A25D918E2A1FE000CF4EA /* common_star_right_normal@2x~iphone.png */,
+				990A25DA18E2A1FE000CF4EA /* common_star_right_selected@2x~iphone.png */,
+			);
+			path = star;
+			sourceTree = "<group>";
+		};
 		990C2610187A9C6400B3E45A /* App详情页常用控件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,6 +912,8 @@
 			children = (
 				9993F858189205DB00C94532 /* M2TapStarView.h */,
 				9993F859189205DB00C94532 /* M2TapStarView.m */,
+				990A25D218E286B4000CF4EA /* M2TapHalfStarView.h */,
+				990A25D318E286B4000CF4EA /* M2TapHalfStarView.m */,
 			);
 			name = M2;
 			sourceTree = "<group>";
@@ -1013,6 +1037,7 @@
 		99D27C191855AE2000513BA9 /* iamges */ = {
 			isa = PBXGroup;
 			children = (
+				990A25D618E2A1FE000CF4EA /* star */,
 				99EBBFAC188E6E1F0093B9BB /* icon */,
 				990C2653187BDC6C00B3E45A /* images */,
 				99E06E77187A5E230037ED3D /* common */,
@@ -1264,11 +1289,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990A25DD18E2A1FE000CF4EA /* common_star_right_normal@2x~iphone.png in Resources */,
+				990A25DE18E2A1FE000CF4EA /* common_star_right_selected@2x~iphone.png in Resources */,
 				995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */,
 				9963DD21187D031700571748 /* landscape_1.jpg in Resources */,
 				9971193B18891FB100039D8A /* right_arrow@2x.png in Resources */,
 				99BA20081859DE4B00EF5A74 /* help_phone2.jpg in Resources */,
 				99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */,
+				990A25DC18E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png in Resources */,
 				9993F860189215B200C94532 /* _temp_star_normal.png in Resources */,
 				995F3AB1184C2D59005F349B /* InfoPlist.strings in Resources */,
 				99BA20061859DE4B00EF5A74 /* help_phone0.jpg in Resources */,
@@ -1276,6 +1304,7 @@
 				990C2655187BDE3400B3E45A /* chinadragon@2x.png in Resources */,
 				99BA20091859DE4B00EF5A74 /* help_phone3.jpg in Resources */,
 				9963DD20187D031700571748 /* landscape_0.jpg in Resources */,
+				990A25DB18E2A1FE000CF4EA /* common_star_left_normal@2x~iphone.png in Resources */,
 				99D27C1D1855AE8000513BA9 /* refresh_blue_arrow.png in Resources */,
 				9963DD23187D031700571748 /* landscape_3.jpg in Resources */,
 				9963DD27187D031700571748 /* portrait_3.jpg in Resources */,
@@ -1356,6 +1385,7 @@
 				990C261A187AA34000B3E45A /* MShowFullInfoView.m in Sources */,
 				9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */,
 				99E8AF35188F9D0A0061F2EF /* M2SimpleGalleryView_A.m in Sources */,
+				990A25D418E286B4000CF4EA /* M2TapHalfStarView.m in Sources */,
 				9935F31618A9C4160016470A /* M2SimpleGalleryView.m in Sources */,
 				9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */,
 				9944DB1118E158E200D21225 /* MLoadingCoverViewController.m in Sources */,

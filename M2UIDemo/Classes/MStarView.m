@@ -8,8 +8,9 @@
 
 #import "MStarView.h"
 #import "M2TapStarView.h"
+#import "M2TapHalfStarView.h"
 
-@interface MStarView()<M2TapStarViewDelegate>
+@interface MStarView()<M2TapStarViewDelegate, M2TapHalfStarViewDelegate>
 @end
 
 @implementation MStarView
@@ -26,6 +27,16 @@
                                                        horizontalSpace:10];
         starView.delegate = self;
         [self addSubview:starView];
+        
+        M2TapHalfStarView *halfStarView = [[M2TapHalfStarView alloc] initWithFrame:CGRectMake(10, 60, 300, 20)
+                                                               leftNormalImageName:@"common_star_left_normal"
+                                                             leftSelectedImageName:@"common_star_left_selected"
+                                                              rightNormalImageName:@"common_star_right_normal"
+                                                            rightSelectedImageName:@"common_star_right_selected"
+                                                                         itemCount:4];
+        halfStarView.grade = 2.5 * 2;
+        halfStarView.delegate = self;
+        [self addSubview:halfStarView];
     }
     return self;
 }
@@ -35,4 +46,8 @@
     NSLog(@"grade(%d)  @@%s", grade, __func__);
 }
 
+#pragma mark - M2TapHalfStarViewDelegate
+- (void)halfStarView:(M2TapHalfStarView*)halfStarView didSelectedForGrade:(NSInteger)grade{
+    NSLog(@"half: grade(%d)  @@%s", grade, __func__);
+}
 @end
