@@ -10,7 +10,8 @@
 #import "M2LoadingCoverView.h"
 
 @interface MLoadingCoverViewController ()
-@property (nonatomic) M2LoadingCoverView *loadingCoverView;
+@property (nonatomic) M2LoadingCoverView    *loadingCoverView;
+@property (nonatomic) UIButton              *cancelButton;
 @end
 
 @implementation MLoadingCoverViewController
@@ -34,9 +35,16 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(10, 10, CGRectGetWidth(frame) - 10 * 2, 50);
     button.backgroundColor = [UIColor blueColor];
-    [button setTitle:@"加载数据" forState:UIControlStateNormal];
+    [button setTitle:@"加载" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(onTapButton) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    _cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _cancelButton.frame = CGRectMake(10, 70, CGRectGetWidth(frame) - 10 * 2, 50);
+    _cancelButton.backgroundColor = [UIColor blueColor];
+    [_cancelButton setTitle:@"只有点这个按钮才取消" forState:UIControlStateNormal];
+    [_cancelButton addTarget:self action:@selector(onTapCancelButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_cancelButton];
     
 }
 
@@ -50,11 +58,13 @@
     if (!_loadingCoverView) {
         _loadingCoverView = [M2LoadingCoverView new];
     }
-    [_loadingCoverView show];
-    [self performSelector:@selector(loadFinish) withObject:nil afterDelay:2];
+    
+    CGRect cancelFrame = _cancelButton.frame;
+    cancelFrame.origin.y += (20 + 44);
+    [_loadingCoverView showWithCancelFrame:cancelFrame];
 }
 
-- (void)loadFinish{
+- (void)onTapCancelButton{
     [_loadingCoverView hide];
 }
 

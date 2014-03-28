@@ -27,28 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _button = [UIButton buttonWithType:UIButtonTypeCustom];
-    _button.frame = CGRectMake(0, 0, 50, 50);
-    _button.backgroundColor = [UIColor blueColor];
-    [_button addTarget:self action:@selector(onTapButton) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_button];
+//    _button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    _button.frame = CGRectMake(0, 0, 50, 50);
+//    _button.backgroundColor = [UIColor blueColor];
+//    [_button addTarget:self action:@selector(onTapButton) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:_button];
+    self.view.backgroundColor = [UIColor blackColor];
     
-    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
-    swipe.direction = UISwipeGestureRecognizerDirectionUp;
-    [self.view addGestureRecognizer:swipe];
-    
-    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
-    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
-    [self.view addGestureRecognizer:swipeDown];
+    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityView.frame = CGRectMake(50,50, 20, 20);
+    [self.view addSubview:activityView];
+    [activityView startAnimating];
 }
 
-- (void)onTapButton{
-    [self.view addSubview:_button];
-    NSLog(@"  @@%s", __func__);
-}
-
-- (void)onSwipe:(UISwipeGestureRecognizer *)swipe{
-    NSLog(@"%d  @@%s", swipe.direction, __func__);
-}
 
 @end

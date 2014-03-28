@@ -1,25 +1,25 @@
 //
-//  M2LoadingCoverView.m
+//  M2LoadingCoverView_B.m
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-3-25.
+//  Created by Chen Meisong on 14-3-28.
 //  Copyright (c) 2014年 Chen Meisong. All rights reserved.
 //
 
-#import "M2LoadingCoverView.h"
+#import "M2LoadingCoverView_B.h"
 
-@interface M2LoadingCoverView()
+@interface M2LoadingCoverView_B()
 @property (nonatomic) UIActivityIndicatorView   *indicatorView;
 @property (nonatomic) CGRect                    cancelFrame;
 @end
 
-@implementation M2LoadingCoverView
+@implementation M2LoadingCoverView_B
 
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+        self.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.8];
         
         CGFloat indicatorSideLength = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 40 : 20);
         _indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, indicatorSideLength, indicatorSideLength)];
@@ -36,9 +36,14 @@
 }
 
 #pragma mark - public
-- (void)showWithCancelFrame:(CGRect)cancelFrame{
-    _cancelFrame = cancelFrame;
+- (void)show{
     [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:self];
+    [_indicatorView startAnimating];
+}
+
+- (void)showInSuperView:(UIView *)superView cancelFrame:(CGRect)cancelFrame{
+    _cancelFrame = cancelFrame;
+    [superView addSubview:self];
     [_indicatorView startAnimating];
 }
 
@@ -50,12 +55,13 @@
 #pragma mark - override
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
     if (CGRectContainsPoint(_cancelFrame, point)) {
+//        NSLog(@"loadingCover：点击cancel区  @@%s", __func__);
         return NO;
     }
     return [super pointInside:point withEvent:event];
 }
 
-#pragma mark - 
+#pragma mark -
 - (void)onUIDeviceOrientationDidChangeNotification:(NSNotification*)notification{
     [self adjustRotate];
 }

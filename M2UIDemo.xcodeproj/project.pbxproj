@@ -26,6 +26,7 @@
 		990E45CB188D140B004E2C98 /* MButtonTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45CA188D140B004E2C98 /* MButtonTabBarView.m */; };
 		990E45D0188D258A004E2C98 /* MMultiRowTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45CF188D258A004E2C98 /* MMultiRowTabViewController.m */; };
 		990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */; };
+		99223DB218E571A300505028 /* M2LoadingCoverView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99223DB118E571A300505028 /* M2LoadingCoverView_B.m */; };
 		9931BB121895022C00AFA667 /* M2ShowFromBottomView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */; };
 		9935F31618A9C4160016470A /* M2SimpleGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31518A9C4160016470A /* M2SimpleGalleryView.m */; };
 		9935F31A18A9C5820016470A /* MSimpleGalleryBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31918A9C5820016470A /* MSimpleGalleryBViewController.m */; };
@@ -177,6 +178,8 @@
 		990E45CF188D258A004E2C98 /* MMultiRowTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMultiRowTabViewController.m; sourceTree = "<group>"; };
 		990E45D1188D25A6004E2C98 /* MMultiRowTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMultiRowTabView.h; sourceTree = "<group>"; };
 		990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMultiRowTabView.m; sourceTree = "<group>"; };
+		99223DB018E571A300505028 /* M2LoadingCoverView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2LoadingCoverView_B.h; sourceTree = "<group>"; };
+		99223DB118E571A300505028 /* M2LoadingCoverView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2LoadingCoverView_B.m; sourceTree = "<group>"; };
 		9931BB101895022C00AFA667 /* M2ShowFromBottomView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFromBottomView_B.h; sourceTree = "<group>"; };
 		9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFromBottomView_B.m; sourceTree = "<group>"; };
 		9935F31418A9C4160016470A /* M2SimpleGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleGalleryView.h; sourceTree = "<group>"; };
@@ -518,6 +521,17 @@
 			name = "点击tab或滑动子view";
 			sourceTree = "<group>";
 		};
+		99223DAF18E5718D00505028 /* M2 */ = {
+			isa = PBXGroup;
+			children = (
+				9944DB1218E158FE00D21225 /* M2LoadingCoverView.h */,
+				9944DB1318E158FE00D21225 /* M2LoadingCoverView.m */,
+				99223DB018E571A300505028 /* M2LoadingCoverView_B.h */,
+				99223DB118E571A300505028 /* M2LoadingCoverView_B.m */,
+			);
+			name = M2;
+			sourceTree = "<group>";
+		};
 		9935F31218A9C3AB0016470A /* 图片浏览横屏旋转B_paging */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,10 +581,9 @@
 		9944DB0E18E1589700D21225 /* 遮罩 */ = {
 			isa = PBXGroup;
 			children = (
+				99223DAF18E5718D00505028 /* M2 */,
 				9944DB0F18E158E200D21225 /* MLoadingCoverViewController.h */,
 				9944DB1018E158E200D21225 /* MLoadingCoverViewController.m */,
-				9944DB1218E158FE00D21225 /* M2LoadingCoverView.h */,
-				9944DB1318E158FE00D21225 /* M2LoadingCoverView.m */,
 			);
 			name = "遮罩";
 			sourceTree = "<group>";
@@ -1365,6 +1378,7 @@
 				995F3AB7184C2D59005F349B /* AppDelegate.m in Sources */,
 				990E45C8188D13F3004E2C98 /* MButtonTabBarViewController.m in Sources */,
 				99EBBF7B188E1AE10093B9BB /* MTapTabPanSubViewViewController.m in Sources */,
+				99223DB218E571A300505028 /* M2LoadingCoverView_B.m in Sources */,
 				996332101883BAD30038BCE3 /* M2MultiRowTabbarView.m in Sources */,
 				99ED58AD188D0B7E001359F6 /* M2TabBarView_A.m in Sources */,
 				9963DD2A187D2F5F00571748 /* MImageGalleryView_A.m in Sources */,
