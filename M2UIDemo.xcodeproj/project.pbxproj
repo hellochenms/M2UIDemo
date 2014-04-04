@@ -28,6 +28,7 @@
 		990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */; };
 		99223DB218E571A300505028 /* M2LoadingCoverView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99223DB118E571A300505028 /* M2LoadingCoverView_B.m */; };
 		9931BB121895022C00AFA667 /* M2ShowFromBottomView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */; };
+		9933B46E18EEAE980017598B /* PhoneDDetailImageBrowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9933B46D18EEAE980017598B /* PhoneDDetailImageBrowerView.m */; };
 		9935F31618A9C4160016470A /* M2SimpleGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31518A9C4160016470A /* M2SimpleGalleryView.m */; };
 		9935F31A18A9C5820016470A /* MSimpleGalleryBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31918A9C5820016470A /* MSimpleGalleryBViewController.m */; };
 		9935F31D18A9C5950016470A /* MSimpleGalleryBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31C18A9C5950016470A /* MSimpleGalleryBView.m */; };
@@ -182,6 +183,8 @@
 		99223DB118E571A300505028 /* M2LoadingCoverView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2LoadingCoverView_B.m; sourceTree = "<group>"; };
 		9931BB101895022C00AFA667 /* M2ShowFromBottomView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFromBottomView_B.h; sourceTree = "<group>"; };
 		9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFromBottomView_B.m; sourceTree = "<group>"; };
+		9933B46C18EEAE980017598B /* PhoneDDetailImageBrowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneDDetailImageBrowerView.h; sourceTree = "<group>"; };
+		9933B46D18EEAE980017598B /* PhoneDDetailImageBrowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneDDetailImageBrowerView.m; sourceTree = "<group>"; };
 		9935F31418A9C4160016470A /* M2SimpleGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleGalleryView.h; sourceTree = "<group>"; };
 		9935F31518A9C4160016470A /* M2SimpleGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SimpleGalleryView.m; sourceTree = "<group>"; };
 		9935F31818A9C5820016470A /* MSimpleGalleryBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSimpleGalleryBViewController.h; sourceTree = "<group>"; };
@@ -408,6 +411,7 @@
 				990C2611187A9C8500B3E45A /* 可展开的详细信息 */,
 				99518FBF1887B28600A3F20E /* 评论Cell */,
 				9993F8531892059A00C94532 /* 星级评分 */,
+				9933B46A18EEAE6A0017598B /* 截图浏览 */,
 			);
 			name = "App详情页常用控件";
 			sourceTree = "<group>";
@@ -530,6 +534,23 @@
 				99223DB118E571A300505028 /* M2LoadingCoverView_B.m */,
 			);
 			name = M2;
+			sourceTree = "<group>";
+		};
+		9933B46A18EEAE6A0017598B /* 截图浏览 */ = {
+			isa = PBXGroup;
+			children = (
+				9933B46B18EEAE740017598B /* Phone高仿AppStore */,
+			);
+			name = "截图浏览";
+			sourceTree = "<group>";
+		};
+		9933B46B18EEAE740017598B /* Phone高仿AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				9933B46C18EEAE980017598B /* PhoneDDetailImageBrowerView.h */,
+				9933B46D18EEAE980017598B /* PhoneDDetailImageBrowerView.m */,
+			);
+			name = "Phone高仿AppStore";
 			sourceTree = "<group>";
 		};
 		9935F31218A9C3AB0016470A /* 图片浏览横屏旋转B_paging */ = {
@@ -1412,6 +1433,7 @@
 				99E8AF3F188FA2C80061F2EF /* MSimpleGalleryView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
+				9933B46E18EEAE980017598B /* PhoneDDetailImageBrowerView.m in Sources */,
 				99EBBFA0188E48120093B9BB /* MPanTabPanSubViewViewController.m in Sources */,
 				99518FD51887DA6800A3F20E /* M2CommentInputView_M1.m in Sources */,
 				9963DD64187E48ED00571748 /* MScrollableView.m in Sources */,

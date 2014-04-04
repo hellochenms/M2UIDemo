@@ -38,6 +38,9 @@
     activityView.frame = CGRectMake(50,50, 20, 20);
     [self.view addSubview:activityView];
     [activityView startAnimating];
+    
+    NSLog(@"%x", 101038356);
+    NSLog(@"%d", 0x0605B914);
 }
 
 
