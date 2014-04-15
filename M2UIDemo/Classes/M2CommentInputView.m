@@ -79,7 +79,7 @@
 }
 - (void)showWithReplyToUserName:(NSString *)userName{
     if (userName.length <= 0) {
-        _repleyToUserLabel.text = @"回复";
+        _repleyToUserLabel.text = @"评论";
     }else{
         _repleyToUserLabel.text = [NSString stringWithFormat:@"回复：%@", userName];
     }
