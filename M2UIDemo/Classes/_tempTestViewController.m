@@ -7,10 +7,9 @@
 //
 
 #import "_tempTestViewController.h"
-#import <objc/runtime.h>
-@interface _tempTestViewController (){
-    UIButton *_button;
-}
+#import "_tempTestView.h"
+@interface _tempTestViewController ()
+@property (nonatomic) _tempTestView *mainView;
 @end
 
 @implementation _tempTestViewController
@@ -19,7 +18,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
+        
+        CGRect frame = [UIScreen mainScreen].bounds;
+        frame.origin.y = 50;
+        frame.size.height = 300;
+        _mainView = [[_tempTestView alloc] initWithFrame:frame];
+        [self.view addSubview:_mainView];
     }
     return self;
 }
@@ -27,20 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    _button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    _button.frame = CGRectMake(0, 0, 50, 50);
-//    _button.backgroundColor = [UIColor blueColor];
-//    [_button addTarget:self action:@selector(onTapButton) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:_button];
-    self.view.backgroundColor = [UIColor blackColor];
-    
-    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    activityView.frame = CGRectMake(50,50, 20, 20);
-    [self.view addSubview:activityView];
-    [activityView startAnimating];
-    
-    NSLog(@"%x", 101038356);
-    NSLog(@"%d", 0x0605B914);
+
 }
 
 

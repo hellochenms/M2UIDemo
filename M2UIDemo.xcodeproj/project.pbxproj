@@ -28,7 +28,6 @@
 		990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */; };
 		99223DB218E571A300505028 /* M2LoadingCoverView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99223DB118E571A300505028 /* M2LoadingCoverView_B.m */; };
 		9931BB121895022C00AFA667 /* M2ShowFromBottomView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */; };
-		9933B46E18EEAE980017598B /* PhoneDDetailImageBrowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9933B46D18EEAE980017598B /* PhoneDDetailImageBrowerView.m */; };
 		9935F31618A9C4160016470A /* M2SimpleGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31518A9C4160016470A /* M2SimpleGalleryView.m */; };
 		9935F31A18A9C5820016470A /* MSimpleGalleryBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31918A9C5820016470A /* MSimpleGalleryBViewController.m */; };
 		9935F31D18A9C5950016470A /* MSimpleGalleryBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31C18A9C5950016470A /* MSimpleGalleryBView.m */; };
@@ -105,7 +104,6 @@
 		99BA20071859DE4B00EF5A74 /* help_phone1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99BA20031859DE4B00EF5A74 /* help_phone1.jpg */; };
 		99BA20081859DE4B00EF5A74 /* help_phone2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99BA20041859DE4B00EF5A74 /* help_phone2.jpg */; };
 		99BA20091859DE4B00EF5A74 /* help_phone3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99BA20051859DE4B00EF5A74 /* help_phone3.jpg */; };
-		99BA8E4B18F7EC9600AF4A29 /* PadDDetailImageBrowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA8E4A18F7EC9600AF4A29 /* PadDDetailImageBrowerView.m */; };
 		99C12F221884D90200B92D1C /* MImageGalleryViewController_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C12F211884D90200B92D1C /* MImageGalleryViewController_B.m */; };
 		99C12F251884D92000B92D1C /* MImageGalleryView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C12F241884D92000B92D1C /* MImageGalleryView_B.m */; };
 		99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C12F271884D99B00B92D1C /* M2GalleryView.m */; };
@@ -117,6 +115,8 @@
 		99C7C68518BD893000DA453F /* M2CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C7C68418BD893000DA453F /* M2CycleScrollView.m */; };
 		99D27C1D1855AE8000513BA9 /* refresh_blue_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D27C1B1855AE8000513BA9 /* refresh_blue_arrow.png */; };
 		99D27C1E1855AE8000513BA9 /* refresh_blue_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */; };
+		99D898331908B095006A8913 /* _tempTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D898321908B095006A8913 /* _tempTestView.m */; };
+		99D898361908B0B3006A8913 /* _tempTestContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D898351908B0B3006A8913 /* _tempTestContentView.m */; };
 		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
 		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */; };
 		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
@@ -184,8 +184,6 @@
 		99223DB118E571A300505028 /* M2LoadingCoverView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2LoadingCoverView_B.m; sourceTree = "<group>"; };
 		9931BB101895022C00AFA667 /* M2ShowFromBottomView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFromBottomView_B.h; sourceTree = "<group>"; };
 		9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFromBottomView_B.m; sourceTree = "<group>"; };
-		9933B46C18EEAE980017598B /* PhoneDDetailImageBrowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneDDetailImageBrowerView.h; sourceTree = "<group>"; };
-		9933B46D18EEAE980017598B /* PhoneDDetailImageBrowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneDDetailImageBrowerView.m; sourceTree = "<group>"; };
 		9935F31418A9C4160016470A /* M2SimpleGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleGalleryView.h; sourceTree = "<group>"; };
 		9935F31518A9C4160016470A /* M2SimpleGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SimpleGalleryView.m; sourceTree = "<group>"; };
 		9935F31818A9C5820016470A /* MSimpleGalleryBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSimpleGalleryBViewController.h; sourceTree = "<group>"; };
@@ -314,8 +312,6 @@
 		99BA20031859DE4B00EF5A74 /* help_phone1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help_phone1.jpg; sourceTree = "<group>"; };
 		99BA20041859DE4B00EF5A74 /* help_phone2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help_phone2.jpg; sourceTree = "<group>"; };
 		99BA20051859DE4B00EF5A74 /* help_phone3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help_phone3.jpg; sourceTree = "<group>"; };
-		99BA8E4918F7EC9600AF4A29 /* PadDDetailImageBrowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadDDetailImageBrowerView.h; sourceTree = "<group>"; };
-		99BA8E4A18F7EC9600AF4A29 /* PadDDetailImageBrowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadDDetailImageBrowerView.m; sourceTree = "<group>"; };
 		99C12F201884D90200B92D1C /* MImageGalleryViewController_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MImageGalleryViewController_B.h; sourceTree = "<group>"; };
 		99C12F211884D90200B92D1C /* MImageGalleryViewController_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MImageGalleryViewController_B.m; sourceTree = "<group>"; };
 		99C12F231884D92000B92D1C /* MImageGalleryView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MImageGalleryView_B.h; sourceTree = "<group>"; };
@@ -337,6 +333,10 @@
 		99C7C68618BDD1EC00DA453F /* M2CycleScrollSynchronizeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M2CycleScrollSynchronizeProtocol.h; sourceTree = "<group>"; };
 		99D27C1B1855AE8000513BA9 /* refresh_blue_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_blue_arrow.png; sourceTree = "<group>"; };
 		99D27C1C1855AE8000513BA9 /* refresh_blue_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_blue_arrow@2x.png"; sourceTree = "<group>"; };
+		99D898311908B095006A8913 /* _tempTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _tempTestView.h; sourceTree = "<group>"; };
+		99D898321908B095006A8913 /* _tempTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _tempTestView.m; sourceTree = "<group>"; };
+		99D898341908B0B3006A8913 /* _tempTestContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _tempTestContentView.h; sourceTree = "<group>"; };
+		99D898351908B0B3006A8913 /* _tempTestContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _tempTestContentView.m; sourceTree = "<group>"; };
 		99E06E6D187A4FFB0037ED3D /* MTVCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVCRootViewController.h; sourceTree = "<group>"; };
 		99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVCRootViewController.m; sourceTree = "<group>"; };
 		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView_Master.h; sourceTree = "<group>"; };
@@ -436,6 +436,10 @@
 			children = (
 				990C261C187BACDC00B3E45A /* _tempTestViewController.h */,
 				990C261D187BACDC00B3E45A /* _tempTestViewController.m */,
+				99D898311908B095006A8913 /* _tempTestView.h */,
+				99D898321908B095006A8913 /* _tempTestView.m */,
+				99D898341908B0B3006A8913 /* _tempTestContentView.h */,
+				99D898351908B0B3006A8913 /* _tempTestContentView.m */,
 			);
 			name = "_临时测试";
 			sourceTree = "<group>";
@@ -551,8 +555,6 @@
 		9933B46B18EEAE740017598B /* Phone高仿AppStore */ = {
 			isa = PBXGroup;
 			children = (
-				9933B46C18EEAE980017598B /* PhoneDDetailImageBrowerView.h */,
-				9933B46D18EEAE980017598B /* PhoneDDetailImageBrowerView.m */,
 			);
 			name = "Phone高仿AppStore";
 			sourceTree = "<group>";
@@ -1017,8 +1019,6 @@
 		99BA8E4818F7EC7700AF4A29 /* Pad高仿AppStore */ = {
 			isa = PBXGroup;
 			children = (
-				99BA8E4918F7EC9600AF4A29 /* PadDDetailImageBrowerView.h */,
-				99BA8E4A18F7EC9600AF4A29 /* PadDDetailImageBrowerView.m */,
 			);
 			name = "Pad高仿AppStore";
 			sourceTree = "<group>";
@@ -1401,6 +1401,7 @@
 				9971193518890C7B00039D8A /* MExtensibleItemTableView.m in Sources */,
 				9963DD61187E467100571748 /* MRearchThresholdView.m in Sources */,
 				9959642F1892502900DEE21C /* M2ShowFromBottomView.m in Sources */,
+				99D898331908B095006A8913 /* _tempTestView.m in Sources */,
 				9963DD12187CF75A00571748 /* M2ImageGalleryView_A.m in Sources */,
 				99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */,
 				990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */,
@@ -1446,11 +1447,11 @@
 				99E8AF3F188FA2C80061F2EF /* MSimpleGalleryView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
-				9933B46E18EEAE980017598B /* PhoneDDetailImageBrowerView.m in Sources */,
 				99EBBFA0188E48120093B9BB /* MPanTabPanSubViewViewController.m in Sources */,
 				99518FD51887DA6800A3F20E /* M2CommentInputView_M1.m in Sources */,
 				9963DD64187E48ED00571748 /* MScrollableView.m in Sources */,
 				997B41801857234000931A53 /* M2Toast.m in Sources */,
+				99D898361908B0B3006A8913 /* _tempTestContentView.m in Sources */,
 				99BA1FF91859D71D00EF5A74 /* StatusToastViewController.m in Sources */,
 				9935F31A18A9C5820016470A /* MSimpleGalleryBViewController.m in Sources */,
 				99EBBFA3188E48780093B9BB /* MPanTabPanSubViewView.m in Sources */,
@@ -1472,7 +1473,6 @@
 				990C2617187AA0C500B3E45A /* M2ExtensibleInfoView.m in Sources */,
 				9935F32518AA0D9E0016470A /* MRotateImageViewController.m in Sources */,
 				995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */,
-				99BA8E4B18F7EC9600AF4A29 /* PadDDetailImageBrowerView.m in Sources */,
 				99C12F2F1884E29500B92D1C /* MIGalleryViewCell_B.m in Sources */,
 				9971193218890C1F00039D8A /* MExtensibleItemTableViewController.m in Sources */,
 				990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */,
