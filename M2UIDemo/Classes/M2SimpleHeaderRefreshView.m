@@ -44,6 +44,12 @@
     return self;
 }
 
+#pragma mark -
+- (void)refreshLayout{
+    _loadingView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2, _loadingView.center.y);
+    _dateLabel.center = CGPointMake(CGRectGetWidth(self.bounds) / 2, _dateLabel.center.y);
+}
+
 #pragma mark - public
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self refreshLastUpdateDate];
@@ -61,7 +67,7 @@
         && _delegate
         && [_delegate respondsToSelector:@selector(onBeginLoadingInView:)]) {
         _isLoading = YES;
-
+        
         [self startLoadingAnimating];
         __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.2
