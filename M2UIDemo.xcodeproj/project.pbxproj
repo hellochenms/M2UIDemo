@@ -28,6 +28,8 @@
 		990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45D2188D25A6004E2C98 /* MMultiRowTabView.m */; };
 		99223DB218E571A300505028 /* M2LoadingCoverView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 99223DB118E571A300505028 /* M2LoadingCoverView_B.m */; };
 		9931BB121895022C00AFA667 /* M2ShowFromBottomView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */; };
+		993539C61953DAC8000E0750 /* HeaderRefreshSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993539C51953DAC8000E0750 /* HeaderRefreshSimpleViewController.m */; };
+		993539CA1953DAEE000E0750 /* M2SimpleHeaderRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 993539C91953DAEE000E0750 /* M2SimpleHeaderRefreshView.m */; };
 		9935F31618A9C4160016470A /* M2SimpleGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31518A9C4160016470A /* M2SimpleGalleryView.m */; };
 		9935F31A18A9C5820016470A /* MSimpleGalleryBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31918A9C5820016470A /* MSimpleGalleryBViewController.m */; };
 		9935F31D18A9C5950016470A /* MSimpleGalleryBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F31C18A9C5950016470A /* MSimpleGalleryBView.m */; };
@@ -184,6 +186,10 @@
 		99223DB118E571A300505028 /* M2LoadingCoverView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2LoadingCoverView_B.m; sourceTree = "<group>"; };
 		9931BB101895022C00AFA667 /* M2ShowFromBottomView_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFromBottomView_B.h; sourceTree = "<group>"; };
 		9931BB111895022C00AFA667 /* M2ShowFromBottomView_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFromBottomView_B.m; sourceTree = "<group>"; };
+		993539C41953DAC8000E0750 /* HeaderRefreshSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderRefreshSimpleViewController.h; sourceTree = "<group>"; };
+		993539C51953DAC8000E0750 /* HeaderRefreshSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderRefreshSimpleViewController.m; sourceTree = "<group>"; };
+		993539C81953DAEE000E0750 /* M2SimpleHeaderRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleHeaderRefreshView.h; sourceTree = "<group>"; };
+		993539C91953DAEE000E0750 /* M2SimpleHeaderRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SimpleHeaderRefreshView.m; sourceTree = "<group>"; };
 		9935F31418A9C4160016470A /* M2SimpleGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleGalleryView.h; sourceTree = "<group>"; };
 		9935F31518A9C4160016470A /* M2SimpleGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SimpleGalleryView.m; sourceTree = "<group>"; };
 		9935F31818A9C5820016470A /* MSimpleGalleryBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSimpleGalleryBViewController.h; sourceTree = "<group>"; };
@@ -559,6 +565,17 @@
 			name = "Phone高仿AppStore";
 			sourceTree = "<group>";
 		};
+		993539C31953DAA7000E0750 /* 下拉刷新简化版 */ = {
+			isa = PBXGroup;
+			children = (
+				993539C41953DAC8000E0750 /* HeaderRefreshSimpleViewController.h */,
+				993539C51953DAC8000E0750 /* HeaderRefreshSimpleViewController.m */,
+				993539C81953DAEE000E0750 /* M2SimpleHeaderRefreshView.h */,
+				993539C91953DAEE000E0750 /* M2SimpleHeaderRefreshView.m */,
+			);
+			name = "下拉刷新简化版";
+			sourceTree = "<group>";
+		};
 		9935F31218A9C3AB0016470A /* 图片浏览横屏旋转B_paging */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,9 +760,9 @@
 		995F3AAC184C2D59005F349B /* M2UIDemo */ = {
 			isa = PBXGroup;
 			children = (
-				995F3AD5184C2D96005F349B /* Classes */,
 				995F3AB5184C2D59005F349B /* AppDelegate.h */,
 				995F3AB6184C2D59005F349B /* AppDelegate.m */,
+				995F3AD5184C2D96005F349B /* Classes */,
 				995F3AB8184C2D59005F349B /* Images.xcassets */,
 				995F3AAD184C2D59005F349B /* Supporting Files */,
 			);
@@ -784,6 +801,8 @@
 		995F3AD5184C2D96005F349B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				995F3AD8184C2DC2005F349B /* RootViewController.h */,
+				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 				990C261B187BACBF00B3E45A /* _临时测试 */,
 				997B40FC1856B95600931A53 /* M2CoreUIKit */,
 				99711939188917AE00039D8A /* Common */,
@@ -800,8 +819,6 @@
 				9963DD2B187D40FC00571748 /* 键盘相关 */,
 				9963DD5A187E458F00571748 /* 上滑scrollView上推其他View */,
 				9959642218924E2600DEE21C /* 展示时遮罩点击收起的View */,
-				995F3AD8184C2DC2005F349B /* RootViewController.h */,
-				995F3AD9184C2DC2005F349B /* RootViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -810,6 +827,7 @@
 			isa = PBXGroup;
 			children = (
 				995F3ADC184C3102005F349B /* 下拉刷新 */,
+				993539C31953DAA7000E0750 /* 下拉刷新简化版 */,
 				9944DB0E18E1589700D21225 /* 遮罩 */,
 			);
 			name = "数据加载";
@@ -1441,9 +1459,11 @@
 				9963DD30187D41D200571748 /* MKeyboardInputViewController.m in Sources */,
 				99E8AF35188F9D0A0061F2EF /* M2SimpleGalleryView_A.m in Sources */,
 				990A25D418E286B4000CF4EA /* M2TapHalfStarView.m in Sources */,
+				993539CA1953DAEE000E0750 /* M2SimpleHeaderRefreshView.m in Sources */,
 				9935F31618A9C4160016470A /* M2SimpleGalleryView.m in Sources */,
 				9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */,
 				9944DB1118E158E200D21225 /* MLoadingCoverViewController.m in Sources */,
+				993539C61953DAC8000E0750 /* HeaderRefreshSimpleViewController.m in Sources */,
 				99E8AF3F188FA2C80061F2EF /* MSimpleGalleryView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,

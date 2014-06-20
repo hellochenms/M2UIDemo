@@ -44,6 +44,7 @@
                       ],
                   @[
                       @[@"下拉刷新", @"PullDownRefreshViewController"],
+                      @[@"下拉刷新简化版", @"HeaderRefreshSimpleViewController"],
                       @[@"遮罩", @"MLoadingCoverViewController"]
                       ],
                   @[
