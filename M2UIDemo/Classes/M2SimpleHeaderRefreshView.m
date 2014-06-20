@@ -10,7 +10,7 @@
 
 #define M2SHRV_DateTextPrefix   @"更新于："
 #define M2SHRV_DateTextUnknown  @"未知"
-#define M2SHRV_TriggerExtra     10
+#define M2SHRV_TriggerExtra     0
 
 @interface M2SimpleHeaderRefreshView()
 @property (nonatomic) UIImageView   *loadingView;
