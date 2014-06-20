@@ -27,7 +27,7 @@
     if (self) {
         // Initialization code
         _loadingView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-        _loadingView.image = [UIImage imageNamed:@"m2_72"];
+        _loadingView.image = [UIImage imageNamed:@"_temp_loading"];
         _loadingView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2, _loadingView.center.y);
         [self addSubview:_loadingView];
         
@@ -80,16 +80,15 @@
     }
 }
 - (void)endLoading:(UIScrollView*)scrollView isSuccess:(BOOL)isSuccess{
-    __weak typeof(self) weakSelf = self;
+    self.isLoading = NO;
+    if (isSuccess) {
+        _lastUpdateDate = [NSDate date];
+    }
+    
+    [self stopLoadingAnimating];
     [UIView animateWithDuration:0.2
                      animations:^{
                          scrollView.contentInset = UIEdgeInsetsZero;
-                     } completion:^(BOOL finished) {
-                         [weakSelf stopLoadingAnimating];
-                         if (isSuccess) {
-                             weakSelf.lastUpdateDate = [NSDate date];
-                         }
-                         weakSelf.isLoading = NO;
                      }];
 }
 
