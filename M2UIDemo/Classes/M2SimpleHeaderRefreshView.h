@@ -10,7 +10,8 @@
 @protocol M2SimpleHeaderRefreshViewDelegate;
 
 @interface M2SimpleHeaderRefreshView : UIView
-@property (nonatomic)       NSDate *lastUpdateDate;
+@property (nonatomic)           NSDate  *lastUpdateDate;
+@property (nonatomic, readonly) BOOL    isLoading;
 @property (nonatomic, weak) id<M2SimpleHeaderRefreshViewDelegate> delegate;
 - (void)refreshLayout;
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView;
