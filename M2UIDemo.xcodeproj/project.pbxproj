@@ -22,6 +22,8 @@
 		990C264E187BDBC000B3E45A /* MWaterFallMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C264D187BDBC000B3E45A /* MWaterFallMeViewController.m */; };
 		990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C2650187BDC2100B3E45A /* M2WaterFallView.m */; };
 		990C2655187BDE3400B3E45A /* chinadragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990C2654187BDE3400B3E45A /* chinadragon@2x.png */; };
+		990C671B196FE5A0005FD2B8 /* MLoadMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C671A196FE5A0005FD2B8 /* MLoadMoreViewController.m */; };
+		990C671E196FE832005FD2B8 /* M2LoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990C671D196FE832005FD2B8 /* M2LoadMoreView.m */; };
 		990E45C8188D13F3004E2C98 /* MButtonTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45C7188D13F3004E2C98 /* MButtonTabBarViewController.m */; };
 		990E45CB188D140B004E2C98 /* MButtonTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45CA188D140B004E2C98 /* MButtonTabBarView.m */; };
 		990E45D0188D258A004E2C98 /* MMultiRowTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990E45CF188D258A004E2C98 /* MMultiRowTabViewController.m */; };
@@ -174,6 +176,10 @@
 		990C264F187BDC2100B3E45A /* M2WaterFallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2WaterFallView.h; sourceTree = "<group>"; };
 		990C2650187BDC2100B3E45A /* M2WaterFallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2WaterFallView.m; sourceTree = "<group>"; };
 		990C2654187BDE3400B3E45A /* chinadragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chinadragon@2x.png"; sourceTree = "<group>"; };
+		990C6719196FE5A0005FD2B8 /* MLoadMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLoadMoreViewController.h; sourceTree = "<group>"; };
+		990C671A196FE5A0005FD2B8 /* MLoadMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLoadMoreViewController.m; sourceTree = "<group>"; };
+		990C671C196FE832005FD2B8 /* M2LoadMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2LoadMoreView.h; sourceTree = "<group>"; };
+		990C671D196FE832005FD2B8 /* M2LoadMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2LoadMoreView.m; sourceTree = "<group>"; };
 		990E45C6188D13F3004E2C98 /* MButtonTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButtonTabBarViewController.h; sourceTree = "<group>"; };
 		990E45C7188D13F3004E2C98 /* MButtonTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MButtonTabBarViewController.m; sourceTree = "<group>"; };
 		990E45C9188D140B004E2C98 /* MButtonTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButtonTabBarView.h; sourceTree = "<group>"; };
@@ -504,6 +510,17 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		990C6718196FE564005FD2B8 /* 无限滚动加载下页 */ = {
+			isa = PBXGroup;
+			children = (
+				990C6719196FE5A0005FD2B8 /* MLoadMoreViewController.h */,
+				990C671A196FE5A0005FD2B8 /* MLoadMoreViewController.m */,
+				990C671C196FE832005FD2B8 /* M2LoadMoreView.h */,
+				990C671D196FE832005FD2B8 /* M2LoadMoreView.m */,
+			);
+			name = "无限滚动加载下页";
+			sourceTree = "<group>";
+		};
 		990E45CC188D251A004E2C98 /* 多行 */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,6 +845,7 @@
 			children = (
 				995F3ADC184C3102005F349B /* 下拉刷新 */,
 				993539C31953DAA7000E0750 /* 下拉刷新简化版 */,
+				990C6718196FE564005FD2B8 /* 无限滚动加载下页 */,
 				9944DB0E18E1589700D21225 /* 遮罩 */,
 			);
 			name = "数据加载";
@@ -1466,6 +1484,7 @@
 				993539C61953DAC8000E0750 /* HeaderRefreshSimpleViewController.m in Sources */,
 				99E8AF3F188FA2C80061F2EF /* MSimpleGalleryView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
+				990C671B196FE5A0005FD2B8 /* MLoadMoreViewController.m in Sources */,
 				990C2651187BDC2100B3E45A /* M2WaterFallView.m in Sources */,
 				99EBBFA0188E48120093B9BB /* MPanTabPanSubViewViewController.m in Sources */,
 				99518FD51887DA6800A3F20E /* M2CommentInputView_M1.m in Sources */,
@@ -1492,6 +1511,7 @@
 				9993F856189205CD00C94532 /* MStarViewController.m in Sources */,
 				990C2617187AA0C500B3E45A /* M2ExtensibleInfoView.m in Sources */,
 				9935F32518AA0D9E0016470A /* MRotateImageViewController.m in Sources */,
+				990C671E196FE832005FD2B8 /* M2LoadMoreView.m in Sources */,
 				995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */,
 				99C12F2F1884E29500B92D1C /* MIGalleryViewCell_B.m in Sources */,
 				9971193218890C1F00039D8A /* MExtensibleItemTableViewController.m in Sources */,

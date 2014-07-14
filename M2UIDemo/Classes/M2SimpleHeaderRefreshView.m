@@ -33,6 +33,7 @@
         
         _dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, 200, 15)];
         _dateLabel.center = CGPointMake(CGRectGetWidth(self.bounds) / 2, _dateLabel.center.y);
+        _dateLabel.backgroundColor = [UIColor clearColor];
         _dateLabel.font = [UIFont systemFontOfSize:12];
         _dateLabel.textAlignment = NSTextAlignmentCenter;
         _dateLabel.text = [NSString stringWithFormat:@"%@ %@", M2SHRV_DateTextPrefix ,M2SHRV_DateTextUnknown];
