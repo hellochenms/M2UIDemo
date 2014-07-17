@@ -42,6 +42,8 @@
 		9935F32E18AA10910016470A /* MAdapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F32D18AA10910016470A /* MAdapterView.m */; };
 		9944DB1118E158E200D21225 /* MLoadingCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944DB1018E158E200D21225 /* MLoadingCoverViewController.m */; };
 		9944DB1418E158FE00D21225 /* M2LoadingCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944DB1318E158FE00D21225 /* M2LoadingCoverView.m */; };
+		99471D3F19761529006894AE /* M2AutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99471D3E19761529006894AE /* M2AutoScrollView.m */; };
+		99471D421976154C006894AE /* MAutoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99471D411976154C006894AE /* MAutoScrollViewController.m */; };
 		99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC11887B2B600A3F20E /* MCommentViewController.m */; };
 		99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC41887B2CF00A3F20E /* MCommentView.m */; };
 		99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99518FC71887B32E00A3F20E /* M2CommentCell.m */; };
@@ -49,8 +51,6 @@
 		9959642918924E6D00DEE21C /* MCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959642818924E6D00DEE21C /* MCoverView.m */; };
 		9959642C18924EE400DEE21C /* MCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959642B18924EE400DEE21C /* MCoverViewController.m */; };
 		9959642F1892502900DEE21C /* M2ShowFromBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959642E1892502900DEE21C /* M2ShowFromBottomView.m */; };
-		995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FAC1862ED9000A46778 /* TestTableViewController.m */; };
-		995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E3FB01862F48700A46778 /* TestCustomCell.m */; };
 		995E3FB41862F8C100A46778 /* 163_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 995E3FB31862F8C100A46778 /* 163_icon@2x.png */; };
 		995F3AA7184C2D59005F349B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995F3AA6184C2D59005F349B /* Foundation.framework */; };
 		995F3AA9184C2D59005F349B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995F3AA8184C2D59005F349B /* CoreGraphics.framework */; };
@@ -67,6 +67,7 @@
 		995F3ADA184C2DC2005F349B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995F3AD9184C2DC2005F349B /* RootViewController.m */; };
 		995F3ADF184C313C005F349B /* PullDownRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995F3ADE184C313C005F349B /* PullDownRefreshViewController.m */; };
 		995F3AE2184C3350005F349B /* M2BaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 995F3AE1184C334F005F349B /* M2BaseRefreshView.m */; };
+		99625B18197529C00032EE04 /* MSettingVersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99625B17197529C00032EE04 /* MSettingVersionViewController.m */; };
 		996332101883BAD30038BCE3 /* M2MultiRowTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963320F1883BAD30038BCE3 /* M2MultiRowTabbarView.m */; };
 		9963DD12187CF75A00571748 /* M2ImageGalleryView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD11187CF75A00571748 /* M2ImageGalleryView_A.m */; };
 		9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 9963DD14187CF77100571748 /* MImageGalleryViewController_A.m */; };
@@ -124,6 +125,8 @@
 		99E06E6F187A4FFB0037ED3D /* MTVCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E6E187A4FFB0037ED3D /* MTVCRootViewController.m */; };
 		99E06E75187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */; };
 		99E06E79187A5E230037ED3D /* white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E06E78187A5E230037ED3D /* white_rect@2x.png */; };
+		99E2378519766994008B915F /* MCell3AutoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E2378419766994008B915F /* MCell3AutoScrollViewController.m */; };
+		99E23788197669AD008B915F /* M2Cell3AutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E23787197669AD008B915F /* M2Cell3AutoScrollView.m */; };
 		99E8AF35188F9D0A0061F2EF /* M2SimpleGalleryView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8AF34188F9D0A0061F2EF /* M2SimpleGalleryView_A.m */; };
 		99E8AF39188F9D220061F2EF /* M2SimpleGalleryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8AF38188F9D220061F2EF /* M2SimpleGalleryViewCell.m */; };
 		99E8AF3C188FA2AC0061F2EF /* MSimpleGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E8AF3B188FA2AC0061F2EF /* MSimpleGalleryViewController.m */; };
@@ -216,6 +219,10 @@
 		9944DB1018E158E200D21225 /* MLoadingCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLoadingCoverViewController.m; sourceTree = "<group>"; };
 		9944DB1218E158FE00D21225 /* M2LoadingCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2LoadingCoverView.h; sourceTree = "<group>"; };
 		9944DB1318E158FE00D21225 /* M2LoadingCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2LoadingCoverView.m; sourceTree = "<group>"; };
+		99471D3D19761529006894AE /* M2AutoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2AutoScrollView.h; sourceTree = "<group>"; };
+		99471D3E19761529006894AE /* M2AutoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2AutoScrollView.m; sourceTree = "<group>"; };
+		99471D401976154C006894AE /* MAutoScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAutoScrollViewController.h; sourceTree = "<group>"; };
+		99471D411976154C006894AE /* MAutoScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAutoScrollViewController.m; sourceTree = "<group>"; };
 		99518FC01887B2B600A3F20E /* MCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCommentViewController.h; sourceTree = "<group>"; };
 		99518FC11887B2B600A3F20E /* MCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCommentViewController.m; sourceTree = "<group>"; };
 		99518FC31887B2CF00A3F20E /* MCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCommentView.h; sourceTree = "<group>"; };
@@ -230,10 +237,6 @@
 		9959642B18924EE400DEE21C /* MCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCoverViewController.m; sourceTree = "<group>"; };
 		9959642D1892502900DEE21C /* M2ShowFromBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ShowFromBottomView.h; sourceTree = "<group>"; };
 		9959642E1892502900DEE21C /* M2ShowFromBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ShowFromBottomView.m; sourceTree = "<group>"; };
-		995E3FAB1862ED9000A46778 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
-		995E3FAC1862ED9000A46778 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
-		995E3FAF1862F48700A46778 /* TestCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCustomCell.h; sourceTree = "<group>"; };
-		995E3FB01862F48700A46778 /* TestCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCustomCell.m; sourceTree = "<group>"; };
 		995E3FB31862F8C100A46778 /* 163_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "163_icon@2x.png"; sourceTree = "<group>"; };
 		995F3AA3184C2D59005F349B /* M2UIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M2UIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995F3AA6184C2D59005F349B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -257,6 +260,8 @@
 		995F3ADE184C313C005F349B /* PullDownRefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDownRefreshViewController.m; sourceTree = "<group>"; };
 		995F3AE0184C334F005F349B /* M2BaseRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2BaseRefreshView.h; sourceTree = "<group>"; };
 		995F3AE1184C334F005F349B /* M2BaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2BaseRefreshView.m; sourceTree = "<group>"; };
+		99625B16197529C00032EE04 /* MSettingVersionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSettingVersionViewController.h; sourceTree = "<group>"; };
+		99625B17197529C00032EE04 /* MSettingVersionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSettingVersionViewController.m; sourceTree = "<group>"; };
 		9963320E1883BAD30038BCE3 /* M2MultiRowTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView.h; sourceTree = "<group>"; };
 		9963320F1883BAD30038BCE3 /* M2MultiRowTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView.m; sourceTree = "<group>"; };
 		9963DD10187CF75A00571748 /* M2ImageGalleryView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ImageGalleryView_A.h; sourceTree = "<group>"; };
@@ -354,6 +359,10 @@
 		99E06E73187A50CF0037ED3D /* M2MultiRowTabbarView_Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MultiRowTabbarView_Master.h; sourceTree = "<group>"; };
 		99E06E74187A50CF0037ED3D /* M2MultiRowTabbarView_Master.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MultiRowTabbarView_Master.m; sourceTree = "<group>"; };
 		99E06E78187A5E230037ED3D /* white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_rect@2x.png"; sourceTree = "<group>"; };
+		99E2378319766994008B915F /* MCell3AutoScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCell3AutoScrollViewController.h; sourceTree = "<group>"; };
+		99E2378419766994008B915F /* MCell3AutoScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCell3AutoScrollViewController.m; sourceTree = "<group>"; };
+		99E23786197669AD008B915F /* M2Cell3AutoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Cell3AutoScrollView.h; sourceTree = "<group>"; };
+		99E23787197669AD008B915F /* M2Cell3AutoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Cell3AutoScrollView.m; sourceTree = "<group>"; };
 		99E8AF33188F9D0A0061F2EF /* M2SimpleGalleryView_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleGalleryView_A.h; sourceTree = "<group>"; };
 		99E8AF34188F9D0A0061F2EF /* M2SimpleGalleryView_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SimpleGalleryView_A.m; sourceTree = "<group>"; };
 		99E8AF37188F9D220061F2EF /* M2SimpleGalleryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SimpleGalleryViewCell.h; sourceTree = "<group>"; };
@@ -719,20 +728,8 @@
 			isa = PBXGroup;
 			children = (
 				9971192F18890B0600039D8A /* 可展开的section */,
-				995E3FAE1862ED9400A46778 /* 测试性能 */,
 			);
 			name = UITableView;
-			sourceTree = "<group>";
-		};
-		995E3FAE1862ED9400A46778 /* 测试性能 */ = {
-			isa = PBXGroup;
-			children = (
-				995E3FAB1862ED9000A46778 /* TestTableViewController.h */,
-				995E3FAC1862ED9000A46778 /* TestTableViewController.m */,
-				995E3FAF1862F48700A46778 /* TestCustomCell.h */,
-				995E3FB01862F48700A46778 /* TestCustomCell.m */,
-			);
-			name = "测试性能";
 			sourceTree = "<group>";
 		};
 		995E3FB21862F8C100A46778 /* table */ = {
@@ -829,7 +826,9 @@
 				995E3FAA1862ECF100A46778 /* UITableView */,
 				99ED58A2188D0AD4001359F6 /* Tabbar */,
 				99E06E6B187A4F540037ED3D /* Tabbar切换view */,
+				99625B19197530040032EE04 /* 列表页常用控件 */,
 				990C2610187A9C6400B3E45A /* App详情页常用控件 */,
+				99625B141975297F0032EE04 /* 设置页常用代码 */,
 				990C2622187BB0BF00B3E45A /* 平铺拉伸图片 */,
 				990C2647187BDB0A00B3E45A /* 瀑布流 */,
 				9963DD0D187CF59300571748 /* 图片浏览 */,
@@ -860,6 +859,43 @@
 				995F3AE1184C334F005F349B /* M2BaseRefreshView.m */,
 			);
 			name = "下拉刷新";
+			sourceTree = "<group>";
+		};
+		99625B141975297F0032EE04 /* 设置页常用代码 */ = {
+			isa = PBXGroup;
+			children = (
+				99625B15197529910032EE04 /* 检查更新 */,
+			);
+			name = "设置页常用代码";
+			sourceTree = "<group>";
+		};
+		99625B15197529910032EE04 /* 检查更新 */ = {
+			isa = PBXGroup;
+			children = (
+				99625B16197529C00032EE04 /* MSettingVersionViewController.h */,
+				99625B17197529C00032EE04 /* MSettingVersionViewController.m */,
+			);
+			name = "检查更新";
+			sourceTree = "<group>";
+		};
+		99625B19197530040032EE04 /* 列表页常用控件 */ = {
+			isa = PBXGroup;
+			children = (
+				99625B1A197530110032EE04 /* 轮播图 */,
+				99E2378219766964008B915F /* 3个Cell的轮播图 */,
+			);
+			name = "列表页常用控件";
+			sourceTree = "<group>";
+		};
+		99625B1A197530110032EE04 /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				99471D401976154C006894AE /* MAutoScrollViewController.h */,
+				99471D411976154C006894AE /* MAutoScrollViewController.m */,
+				99471D3D19761529006894AE /* M2AutoScrollView.h */,
+				99471D3E19761529006894AE /* M2AutoScrollView.m */,
+			);
+			name = "轮播图";
 			sourceTree = "<group>";
 		};
 		9963DD0D187CF59300571748 /* 图片浏览 */ = {
@@ -1176,6 +1212,17 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		99E2378219766964008B915F /* 3个Cell的轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				99E2378319766994008B915F /* MCell3AutoScrollViewController.h */,
+				99E2378419766994008B915F /* MCell3AutoScrollViewController.m */,
+				99E23786197669AD008B915F /* M2Cell3AutoScrollView.h */,
+				99E23787197669AD008B915F /* M2Cell3AutoScrollView.m */,
+			);
+			name = "3个Cell的轮播图";
+			sourceTree = "<group>";
+		};
 		99E8AF32188F9C4E0061F2EF /* 图片浏览横屏旋转 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1437,10 +1484,13 @@
 				9971193518890C7B00039D8A /* MExtensibleItemTableView.m in Sources */,
 				9963DD61187E467100571748 /* MRearchThresholdView.m in Sources */,
 				9959642F1892502900DEE21C /* M2ShowFromBottomView.m in Sources */,
+				99471D3F19761529006894AE /* M2AutoScrollView.m in Sources */,
+				99471D421976154C006894AE /* MAutoScrollViewController.m in Sources */,
 				99D898331908B095006A8913 /* _tempTestView.m in Sources */,
 				9963DD12187CF75A00571748 /* M2ImageGalleryView_A.m in Sources */,
 				99B6270A1856B82B0081DF4D /* CenterToastViewController.m in Sources */,
 				990C2614187AA0A900B3E45A /* MShowFullInfoViewController.m in Sources */,
+				99E2378519766994008B915F /* MCell3AutoScrollViewController.m in Sources */,
 				9993F85D1892063500C94532 /* MStarView.m in Sources */,
 				9963DD5E187E465A00571748 /* MRearchThresholdViewController.m in Sources */,
 				997B40FF1856B99D00931A53 /* M2ViewController.m in Sources */,
@@ -1458,9 +1508,9 @@
 				9944DB1418E158FE00D21225 /* M2LoadingCoverView.m in Sources */,
 				9963DD33187D443A00571748 /* MKeyboardInputView.m in Sources */,
 				99C2C15418C47628009AE0B9 /* M2IconTabBarView.m in Sources */,
-				995E3FB11862F48700A46778 /* TestCustomCell.m in Sources */,
 				990E45CB188D140B004E2C98 /* MButtonTabBarView.m in Sources */,
 				9935F31D18A9C5950016470A /* MSimpleGalleryBView.m in Sources */,
+				99E23788197669AD008B915F /* M2Cell3AutoScrollView.m in Sources */,
 				99EBBF7E188E1B080093B9BB /* MTapTabPanSubViewView.m in Sources */,
 				9963DD67187E502000571748 /* M2ScrollableViewObserver.m in Sources */,
 				99518FC81887B32E00A3F20E /* M2CommentCell.m in Sources */,
@@ -1498,6 +1548,7 @@
 				99FB6C4B18B74533003609C8 /* MCycleTabBarView.m in Sources */,
 				99711938188917A700039D8A /* MSubViewController.m in Sources */,
 				99C7C68518BD893000DA453F /* M2CycleScrollView.m in Sources */,
+				99625B18197529C00032EE04 /* MSettingVersionViewController.m in Sources */,
 				990E45D3188D25A6004E2C98 /* MMultiRowTabView.m in Sources */,
 				995F3AB3184C2D59005F349B /* main.m in Sources */,
 				99C7C63918BAE36300DA453F /* M2CycleScrollView_AF.m in Sources */,
@@ -1505,7 +1556,6 @@
 				99C12F251884D92000B92D1C /* MImageGalleryView_B.m in Sources */,
 				99FB6C4818B74508003609C8 /* MCycleTabBarViewController.m in Sources */,
 				99C12F281884D99B00B92D1C /* M2GalleryView.m in Sources */,
-				995E3FAD1862ED9000A46778 /* TestTableViewController.m in Sources */,
 				9935F32B18AA0E370016470A /* MTestAsyncImageView.m in Sources */,
 				997B41021856B9EB00931A53 /* M2NavigationController.m in Sources */,
 				9993F856189205CD00C94532 /* MStarViewController.m in Sources */,

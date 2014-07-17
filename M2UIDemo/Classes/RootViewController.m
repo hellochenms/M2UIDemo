@@ -31,7 +31,9 @@
                       @"UITableView",
                       @"TabBar",
                       @"TabBar切换View",
+                      @"列表页常用控件",
                       @"App详情页常用控件",
+                      @"设置页常用代码",
                       @"平铺拉伸图片",
                       @"瀑布流",
                       @"图片浏览",
@@ -56,7 +58,6 @@
                       @[@"启动帮助", @"LaunchHelpViewController"]
                       ],
                   @[
-                      @[@"测试性能", @"TestTableViewController"],
                       @[@"可展开的section", @"MExtensibleItemTableViewController"]
                       ],
                   @[
@@ -70,9 +71,16 @@
                       @[@"循环tab", @"MCycleTabBarViewController"]
                       ],
                   @[
+                      @[@"轮播图", @"MAutoScrollViewController"],
+                      @[@"3个Cell的轮播图", @"MCell3AutoScrollViewController"],
+                      ],
+                  @[
                       @[@"可展开的详细信息", @"MShowFullInfoViewController"],
                       @[@"评论Cell", @"MCommentViewController"],
                       @[@"星级评分", @"MStarViewController"]
+                      ],
+                  @[
+                      @[@"检查更新", @"MSettingVersionViewController"],
                       ],
                   @[
                       @[@"平铺拉伸图片", @"MResizableImageViewController"]
@@ -126,9 +134,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    if (![M2HelpView hasShowHelpDone]) {
-        [M2HelpView showImageNames:@[@"help_phone0.jpg", @"help_phone1.jpg", @"help_phone2.jpg", @"help_phone3.jpg"] inController:self];
-    }
+//    if (![M2HelpView hasShowHelpDone]) {
+//        [M2HelpView showImageNames:@[@"help_phone0.jpg", @"help_phone1.jpg", @"help_phone2.jpg", @"help_phone3.jpg"] inController:self];
+//    }
 }
 
 - (void)didReceiveMemoryWarning
