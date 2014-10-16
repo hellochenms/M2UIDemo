@@ -10,19 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
-#warning TODO:请根据您帮助图片上开始按钮的位置，修正下述常量
-
-// phone
-#define M2HelpView_Phone_CloseButton_Width 130.0
-#define M2HelpView_Phone_CloseButton_Height 45.0
-#define M2HelpView_Phone_CloseButton_BottomMargin 45.0
-
-// pad横屏
-#define M2HelpView_PadLand_CloseButton_Width 300.0
-#define M2HelpView_PadLand_CloseButton_Height 80.0
-#define M2HelpView_PadLand_CloseButton_BottomMargin 100.0
-
 @interface M2HelpView : UIView
+@property (nonatomic, readonly) UIButton *closeButton;
 + (BOOL)hasShowHelpDone;
-+ (void)showImageNames:(NSArray*)imageNames inController:(UIViewController*)controller;
+- (id)initWithImageNames:(NSArray*)imageNames;
+- (void)showInController:(UIViewController*)controller;
 @end

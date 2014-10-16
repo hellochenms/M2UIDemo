@@ -134,9 +134,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    if (![M2HelpView hasShowHelpDone]) {
-//        [M2HelpView showImageNames:@[@"help_phone0.jpg", @"help_phone1.jpg", @"help_phone2.jpg", @"help_phone3.jpg"] inController:self];
-//    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,7 @@
 
 #import "LaunchHelpViewController.h"
 #import "M2HelpView.h"
+#import "M2SettingHelpViewController.h"
 
 @interface LaunchHelpViewController ()
 
@@ -39,7 +40,14 @@
 }
 
 - (void)onTapButton:(UIButton*)button{
-    [M2HelpView showImageNames:@[@"help_phone0.jpg", @"help_phone1.jpg", @"help_phone2.jpg", @"help_phone3.jpg"] inController:self];
+    M2SettingHelpViewController *controller = [[M2SettingHelpViewController alloc] initWithImageNames:@[@"help_phone0.jpg", @"help_phone1.jpg", @"help_phone2.jpg", @"help_phone3.jpg"]];
+    __weak M2SettingHelpViewController *weakController = controller;
+    controller.closeButton.backgroundColor = [UIColor blueColor];
+    controller.tapCloseHandler = ^{
+        [weakController.navigationController popViewControllerAnimated:YES];
+    };
+    [self.navigationController pushViewController:controller animated:YES];
+    
 }
 
 @end

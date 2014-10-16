@@ -92,38 +92,38 @@
     [self addChildViewController:toViewController];
     
     // 无动画
-    __weak MTVCRootViewController *weakSelf = self;
-    [self transitionFromViewController:fromViewController
-                      toViewController:toViewController
-                              duration:0
-                               options:UIViewAnimationOptionTransitionNone
-                            animations:nil
-                            completion:^(BOOL finished) {//TODO:一直有个疑问，动画的block示例中为什么从来不用__block、__weak等
-                                [fromViewController removeFromParentViewController];
-                                [toViewController didMoveToParentViewController:self];
-                                weakSelf.lastIndex = index;
-                                weakSelf.tabbarView.userInteractionEnabled = YES;
-                            }];
-    
-    // 自己写动画的效果
-//    BOOL isToLeft = index > _lastIndex;
-//    CGRect frame = fromViewController.view.frame;
-//    toViewController.view.frame = CGRectMake(CGRectGetWidth(frame) * (isToLeft ? 1 : -1), CGRectGetMinY(frame), CGRectGetWidth(frame), CGRectGetHeight(frame));
 //    __weak MTVCRootViewController *weakSelf = self;
 //    [self transitionFromViewController:fromViewController
 //                      toViewController:toViewController
-//                              duration:0.25
+//                              duration:0
 //                               options:UIViewAnimationOptionTransitionNone
-//                            animations:^{
-//                                fromViewController.view.frame = CGRectMake(CGRectGetWidth(frame)  * (isToLeft ? -1 : 1), CGRectGetMinY(frame), CGRectGetWidth(frame), CGRectGetHeight(frame));
-//                                toViewController.view.frame = frame;
-//                            }
-//                            completion:^(BOOL finished) {
+//                            animations:nil
+//                            completion:^(BOOL finished) {//TODO:一直有个疑问，动画的block示例中为什么从来不用__block、__weak等
 //                                [fromViewController removeFromParentViewController];
 //                                [toViewController didMoveToParentViewController:self];
 //                                weakSelf.lastIndex = index;
 //                                weakSelf.tabbarView.userInteractionEnabled = YES;
 //                            }];
+    
+    // 自己写动画的效果
+    BOOL isToLeft = index > _lastIndex;
+    CGRect frame = fromViewController.view.frame;
+    toViewController.view.frame = CGRectMake(CGRectGetWidth(frame) * (isToLeft ? 1 : -1), CGRectGetMinY(frame), CGRectGetWidth(frame), CGRectGetHeight(frame));
+    __weak MTVCRootViewController *weakSelf = self;
+    [self transitionFromViewController:fromViewController
+                      toViewController:toViewController
+                              duration:0.25
+                               options:UIViewAnimationOptionTransitionNone
+                            animations:^{
+                                fromViewController.view.frame = CGRectMake(CGRectGetWidth(frame)  * (isToLeft ? -1 : 1), CGRectGetMinY(frame), CGRectGetWidth(frame), CGRectGetHeight(frame));
+                                toViewController.view.frame = frame;
+                            }
+                            completion:^(BOOL finished) {
+                                [fromViewController removeFromParentViewController];
+                                [toViewController didMoveToParentViewController:self];
+                                weakSelf.lastIndex = index;
+                                weakSelf.tabbarView.userInteractionEnabled = YES;
+                            }];
 }
 
 #pragma mark - tools

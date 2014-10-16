@@ -40,6 +40,7 @@
 		9935F32818AA0DB80016470A /* MRotateImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F32718AA0DB80016470A /* MRotateImageView.m */; };
 		9935F32B18AA0E370016470A /* MTestAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F32A18AA0E370016470A /* MTestAsyncImageView.m */; };
 		9935F32E18AA10910016470A /* MAdapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9935F32D18AA10910016470A /* MAdapterView.m */; };
+		9941DEEA19EF9A3F00FBC3BF /* M2SettingHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9941DEE919EF9A3F00FBC3BF /* M2SettingHelpViewController.m */; };
 		9944DB1118E158E200D21225 /* MLoadingCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944DB1018E158E200D21225 /* MLoadingCoverViewController.m */; };
 		9944DB1418E158FE00D21225 /* M2LoadingCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944DB1318E158FE00D21225 /* M2LoadingCoverView.m */; };
 		99471D3F19761529006894AE /* M2AutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99471D3E19761529006894AE /* M2AutoScrollView.m */; };
@@ -215,6 +216,8 @@
 		9935F32A18AA0E370016470A /* MTestAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTestAsyncImageView.m; sourceTree = "<group>"; };
 		9935F32C18AA10910016470A /* MAdapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAdapterView.h; sourceTree = "<group>"; };
 		9935F32D18AA10910016470A /* MAdapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAdapterView.m; sourceTree = "<group>"; };
+		9941DEE819EF9A3F00FBC3BF /* M2SettingHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2SettingHelpViewController.h; sourceTree = "<group>"; };
+		9941DEE919EF9A3F00FBC3BF /* M2SettingHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SettingHelpViewController.m; sourceTree = "<group>"; };
 		9944DB0F18E158E200D21225 /* MLoadingCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLoadingCoverViewController.h; sourceTree = "<group>"; };
 		9944DB1018E158E200D21225 /* MLoadingCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLoadingCoverViewController.m; sourceTree = "<group>"; };
 		9944DB1218E158FE00D21225 /* M2LoadingCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2LoadingCoverView.h; sourceTree = "<group>"; };
@@ -1073,6 +1076,8 @@
 				99BA1FFC1859DA4200EF5A74 /* LaunchHelpViewController.m */,
 				99BA1FFE1859DA4F00EF5A74 /* M2HelpView.h */,
 				99BA1FFF1859DA4F00EF5A74 /* M2HelpView.m */,
+				9941DEE819EF9A3F00FBC3BF /* M2SettingHelpViewController.h */,
+				9941DEE919EF9A3F00FBC3BF /* M2SettingHelpViewController.m */,
 			);
 			name = "启动帮助";
 			sourceTree = "<group>";
@@ -1471,6 +1476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9959642918924E6D00DEE21C /* MCoverView.m in Sources */,
+				9941DEEA19EF9A3F00FBC3BF /* M2SettingHelpViewController.m in Sources */,
 				99518FC21887B2B600A3F20E /* MCommentViewController.m in Sources */,
 				99C12F2B1884E1C200B92D1C /* M2GalleryViewCell.m in Sources */,
 				99518FC51887B2CF00A3F20E /* MCommentView.m in Sources */,
