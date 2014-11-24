@@ -20,6 +20,8 @@
     M2NavigationController *rootNaviController = [[M2NavigationController alloc] initWithRootViewController:rootController];
     self.window.rootViewController = rootNaviController;
     
+    NSLog(@"test  %s",  __func__);
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
