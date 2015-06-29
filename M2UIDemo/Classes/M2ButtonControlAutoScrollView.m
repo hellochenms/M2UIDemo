@@ -1,16 +1,16 @@
 //
-//  AutoScrollView.m
+//  M2ButtonControlAutoScrollView.m
 //  M2UIDemo
 //
-//  Created by Chen Meisong on 14-7-16.
-//  Copyright (c) 2014年 Chen Meisong. All rights reserved.
+//  Created by thatsoul on 15/6/29.
+//  Copyright (c) 2015年 Chen Meisong. All rights reserved.
 //
 
-#import "M2AutoScrollView.h"
+#import "M2ButtonControlAutoScrollView.h"
 
-static const NSInteger kM2ASV_AutoScrollInterval = 5;
+static const NSInteger kM2ASV_AutoScrollInterval = 3;
 
-@interface M2AutoScrollView()<UIScrollViewDelegate>
+@interface M2ButtonControlAutoScrollView()<UIScrollViewDelegate>
 @property (nonatomic) UIScrollView      *scrollView;
 @property (nonatomic) NSMutableArray    *cells;
 @property (nonatomic) NSInteger         totalCount;
@@ -20,7 +20,7 @@ static const NSInteger kM2ASV_AutoScrollInterval = 5;
 @property (nonatomic) UITapGestureRecognizer *tapRecognizer;
 @end
 
-@implementation M2AutoScrollView
+@implementation M2ButtonControlAutoScrollView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -42,7 +42,7 @@ static const NSInteger kM2ASV_AutoScrollInterval = 5;
     return self;
 }
 
-- (void)setDataSource:(id<M2AutoScrollViewDataSource>)dataSource{
+- (void)setDataSource:(id<M2ButtonControlAutoScrollViewDataSource>)dataSource{
     _dataSource = dataSource;
     [self reloadData];
 }
@@ -116,17 +116,17 @@ static const NSInteger kM2ASV_AutoScrollInterval = 5;
     self.skipTimerCurLoop = YES;
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//    NSLog(@"contentOffsetX(%f)  %s", scrollView.contentOffset.x, __func__);
+    //    NSLog(@"contentOffsetX(%f)  %s", scrollView.contentOffset.x, __func__);
     if (self.totalCount <= 1) {
         return;
     }
     double cellWidth = CGRectGetWidth(scrollView.bounds);
     double offsetX = scrollView.contentOffset.x;
     if (offsetX < cellWidth * 0.4) {
-//        NSLog(@"到达左边界，调整contentOffsetX  %s", __func__);
+        //        NSLog(@"到达左边界，调整contentOffsetX  %s", __func__);
         [scrollView setContentOffset:CGPointMake(offsetX + cellWidth * self.totalCount, 0)];
     }else if (offsetX > cellWidth * (self.totalCount + 0.6)){
-//        NSLog(@"到达右边界，调整contentOffsetX  %s", __func__);
+        //        NSLog(@"到达右边界，调整contentOffsetX  %s", __func__);
         [scrollView setContentOffset:CGPointMake(offsetX - cellWidth * self.totalCount, 0)];
     }
 }
@@ -154,7 +154,7 @@ static const NSInteger kM2ASV_AutoScrollInterval = 5;
     }
 }
 
-#pragma mark - 
+#pragma mark -
 - (void)onTimerFire{
     if (self.skipTimerCurLoop) {
         self.skipTimerCurLoop = NO;
@@ -183,9 +183,32 @@ static const NSInteger kM2ASV_AutoScrollInterval = 5;
     [self.timer invalidate];
 }
 
+#pragma mark - 
+- (void)turnPageLeft {
+    self.skipTimerCurLoop = YES;
+    double cellWidth = CGRectGetWidth(self.scrollView.bounds);
+    double targetOffsetX = self.scrollView.contentOffset.x + cellWidth;
+    [self.scrollView setContentOffset:CGPointMake(targetOffsetX, 0) animated:YES];
+    [self changeIndexFromOffsetX:targetOffsetX];
+}
+- (void)turnPageRight {
+    self.skipTimerCurLoop = YES;
+    double cellWidth = CGRectGetWidth(self.scrollView.bounds);
+    double targetOffsetX = self.scrollView.contentOffset.x - cellWidth;
+    [self.scrollView setContentOffset:CGPointMake(targetOffsetX, 0) animated:YES];
+    [self changeIndexFromOffsetX:targetOffsetX];
+}
+
+#pragma mark - setter/getter
+- (void)setScrollClipToBounds:(BOOL)scrollClipToBounds {
+    _scrollClipToBounds = scrollClipToBounds;
+    self.scrollView.clipsToBounds = scrollClipToBounds;
+}
+
 #pragma mark -
 - (void)dealloc{
     self.scrollView.delegate = nil;
 }
+
 
 @end

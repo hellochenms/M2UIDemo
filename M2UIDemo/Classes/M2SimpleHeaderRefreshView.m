@@ -28,6 +28,7 @@
         // Initialization code
         _loadingView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
         _loadingView.image = [UIImage imageNamed:@"_temp_loading"];
+        _loadingView.backgroundColor = [UIColor redColor];//TODO:
         _loadingView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2, _loadingView.center.y);
         [self addSubview:_loadingView];
         

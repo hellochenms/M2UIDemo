@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A04F7301B414E9A00DF0A5B /* M2ButtonControlAutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04F72F1B414E9A00DF0A5B /* M2ButtonControlAutoScrollView.m */; };
 		990A25D418E286B4000CF4EA /* M2TapHalfStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990A25D318E286B4000CF4EA /* M2TapHalfStarView.m */; };
 		990A25DB18E2A1FE000CF4EA /* common_star_left_normal@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25D718E2A1FE000CF4EA /* common_star_left_normal@2x~iphone.png */; };
 		990A25DC18E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A25D818E2A1FE000CF4EA /* common_star_left_selected@2x~iphone.png */; };
@@ -156,6 +157,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A04F72E1B414E9A00DF0A5B /* M2ButtonControlAutoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2ButtonControlAutoScrollView.h; sourceTree = "<group>"; };
+		1A04F72F1B414E9A00DF0A5B /* M2ButtonControlAutoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2ButtonControlAutoScrollView.m; sourceTree = "<group>"; };
 		990A25D218E286B4000CF4EA /* M2TapHalfStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2TapHalfStarView.h; sourceTree = "<group>"; };
 		990A25D318E286B4000CF4EA /* M2TapHalfStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2TapHalfStarView.m; sourceTree = "<group>"; };
 		990A25D718E2A1FE000CF4EA /* common_star_left_normal@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_star_left_normal@2x~iphone.png"; sourceTree = "<group>"; };
@@ -897,6 +900,8 @@
 				99471D411976154C006894AE /* MAutoScrollViewController.m */,
 				99471D3D19761529006894AE /* M2AutoScrollView.h */,
 				99471D3E19761529006894AE /* M2AutoScrollView.m */,
+				1A04F72E1B414E9A00DF0A5B /* M2ButtonControlAutoScrollView.h */,
+				1A04F72F1B414E9A00DF0A5B /* M2ButtonControlAutoScrollView.m */,
 			);
 			name = "轮播图";
 			sourceTree = "<group>";
@@ -1537,6 +1542,7 @@
 				9935F31618A9C4160016470A /* M2SimpleGalleryView.m in Sources */,
 				9963DD4B187D55BB00571748 /* M2TextInputView.m in Sources */,
 				9944DB1118E158E200D21225 /* MLoadingCoverViewController.m in Sources */,
+				1A04F7301B414E9A00DF0A5B /* M2ButtonControlAutoScrollView.m in Sources */,
 				993539C61953DAC8000E0750 /* HeaderRefreshSimpleViewController.m in Sources */,
 				99E8AF3F188FA2C80061F2EF /* MSimpleGalleryView.m in Sources */,
 				9963DD15187CF77100571748 /* MImageGalleryViewController_A.m in Sources */,
